@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="计算机," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="首先请注意：Linux不是Windows 　　简单的说,Linux是Unix克隆(Unix clone)或Unix风格(Unix alike)的操作系统(OS),在原代码级上兼容绝大部分Unix标准(指的是IEEE POSIX,System V,BSD),是一个支持多用户, 多进程,多线程,实时性较好的功能强大而稳定的操作系统.它可以运行在x86 PC,Sun Sparc,Digital Alp">
+<meta name="keywords" content="计算机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是Linux">
+<meta property="og:url" content="http://static.songruihua.com/archives/linux.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="首先请注意：Linux不是Windows 　　简单的说,Linux是Unix克隆(Unix clone)或Unix风格(Unix alike)的操作系统(OS),在原代码级上兼容绝大部分Unix标准(指的是IEEE POSIX,System V,BSD),是一个支持多用户, 多进程,多线程,实时性较好的功能强大而稳定的操作系统.它可以运行在x86 PC,Sun Sparc,Digital Alp">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://farm1.static.flickr.com/180/448103072_38b6dc2375_t.jpg">
+<meta property="og:updated_time" content="2018-10-16T08:40:20.291Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="什么是Linux">
+<meta name="twitter:description" content="首先请注意：Linux不是Windows 　　简单的说,Linux是Unix克隆(Unix clone)或Unix风格(Unix alike)的操作系统(OS),在原代码级上兼容绝大部分Unix标准(指的是IEEE POSIX,System V,BSD),是一个支持多用户, 多进程,多线程,实时性较好的功能强大而稳定的操作系统.它可以运行在x86 PC,Sun Sparc,Digital Alp">
+<meta name="twitter:image" content="http://farm1.static.flickr.com/180/448103072_38b6dc2375_t.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://static.songruihua.com/archives/linux.html"/>
+
+
+
+
+
+  <title>什么是Linux | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">宋瑞华</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Gopus Diobus Shiliotos</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://static.songruihua.com/archives/linux.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">什么是Linux</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2007-04-06T16:39:06+08:00">
+                2007-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/小品软件/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://farm1.static.flickr.com/180/448103072_38b6dc2375_t.jpg" alt="linux logo"></p>
+<p><strong><strong><a href="http://songruihua.blogbus.com/logs/4961693.html" target="_blank" rel="noopener">首先请注意：Linux不是Windows</a></strong></strong></p>
+<p>　　简单的说,Linux是Unix克隆(Unix clone)或Unix风格(Unix alike)的操作系统(OS),在原代码级上兼容绝大部分Unix标准(指的是IEEE POSIX,System V,BSD),是一个支持多用户, 多进程,多线程,实时性较好的功能强大而稳定的操作系统.它可以运行在x86 PC,Sun Sparc,Digital Alpha,680x0,PowerPC, MIPS等平台上,可以说Linux是目前运行硬件平台最多的操作系统. Linux最大的特点在于它是GNU(Gnu’s Not Unix—-有点分形与混沌的意味—-无限自包含,简单的说GNU是一种自由软件体系)的一员,遵循公共版权许可证(GPL),秉承”自由的思想,开放的源码”的原则,成千上万的专家/爱好者通过Internet在不断地完善并维护它,可以说Linux是计算机爱好者自己的操作系统.<br>　　追述Linux的历史直到1990年,Linus Torvalds还是芬兰赫尔辛基大学的一名学生,最初是用汇编语言写了一个在80386保护模式下处理多任务切换的程序,后来从Minix(Andy Tanenbaum教授所写的很小的Unix操作系统,主要用于操作系统教学)得到灵感,进一步产生了自认为狂妄的想法—-写一个比Minix更好的 Minix,于是开始写了一些硬件的设备驱动程序,一个小的文件系统,……,这样0.0.1版本的Linux就出来了,但是它只具有操作系统内核的勉强的雏形,甚至不能运行,你必须在有Minix的机器上编译以后才能玩.这时候Linus已经完全着迷而不想停止,决定踢开Minix,于是在 1991年10月5号发布Linux 0.0.2版本,在这个版本中已经可以运行bash(the GNU Bourne Again Shell—-一种用户与操作系统内核通讯的软件)和gcc(GNU C 编译器).从一开始,Linus就决定自由扩散Linux,包括原代码,他在comp.os.minix新闻讨论组里发布Linux 0.0.2时写到:<br>“Do you pine for nice days of Minix-1.1, when mem were men and wrote their own device drivers? Are you without a nice project and just dying to cut your teeth on a OS you can try to modify for your needs? Are you finding it frustrsting when everything works on Minix? No more all-nighters to get a nifty program working? Then this post might be just for you.<br>“As I mentioned a month ago, I’m working on a free version of a Minix-lookalike for AT-386 computers. It has finally reached the stage where it’s even usable(though may not be depending on what you want),and I am willing to put out the sources for wider distribution. It is just version 0.0.2 … but I’ve successfully run bash,gcc,gnu-make,gnu-sed,compress,etc.under it.”<br>　　随即Linux引起黑客们(hacker)的注意,通过计算机网络加入了Linux的内核开发,Linux倾向于成为一个黑客的系统—-直到今天,在Linux社区里内核的开发被认为是真正的编程.由于一批高水平黑客的加入,使Linux发展迅猛,到1993年底94年初,Linux 1.0终于诞生了! Linux 1.0已经是一个功能完备的操作系统,而且内核写得紧凑高效,可以充分发挥硬件的性能,在4M内存的80386机器上也表现得非常好,至今人们还在津津乐道于此,不过自从2.1.xx系列的内核Linux开始走高端的路子—-硬件的发展太快了,但是Linux不会失去它的本色.Linux具有良好的兼容性和可移植性,大约在1.3版本之后,开始向其他硬件平台上移植,包括号称最快的CPU—Digital Alpha(至少目前主频是最高的).所以不要总把Linux与低档硬件平台联系到一块,Linux发展到今天,这是一个误区,它只是将硬件的性能充分发挥出来而已,Linux必将从低端应用横扫到高端应用!<br>　　在Linux的发展历程上还有一件重要的事:Linux加入GNU并遵循公共版权许可证(GPL).此举大大加强了GNU和Linux,几乎所有应用的 GNU库/软件都移植到Linux,完善并提高了Linux的实用性,而GNU有了一个根基,我现在也搞不清楚到底是GNU Linux呢还是基于Linux的GNU. :-) 更重要的是遵循公共版权许可证,在继承自由软件的精神的前提下,不再排斥对自由软件的商业行为(如把自由软件打包以光盘形式出售),不排斥商家对自由软件进一步开发,不排斥在Linux上开发商业软件.从此Linux又开始了一次飞跃,出现了很多的Linux发行版,如Slackware,Redhat, Suse,TurboLinux,OpenLinux等十多种,而且还在增加,注意你不能说”Redhat Linux””Suse Linux””Slackware Linux”等等,Linux主要指操作系统内核,对所有发行版内核原代码都是一样的(但集成的内核版本可能因发行时间不同而有所不同).还有一些公司在 Linux上开发商业软件或把其他Unix平台的软件移植到Linux上来,如今很多IT业界的大腕如IBM,Intel,Oracle, Infomix,Sysbase,Corel,Netscape,CA,Novell等都宣布支持Linux! 商家的加盟弥补了纯自由软件的不足和发展障碍,Linux迅速普及到广大计算机爱好者,并且进入商业应用,正是打破某些公司垄断文化圈的希望所在!!<br>　　Linux是爱好者们通过Internet协同开发出来的,当然它的网络功能十分强大,比如你可以通过ftp,nfs等来安装Linux,用它来做网关等等.随着Linux的发展衍生出来的应用恐怕出乎Linus本人最初的预料,如有人用它来做路由器,有人来做嵌入式系统,有人来做实时性系统…… 常有新手问Linux能做什么,其实它不象那些中看不中用的操作系统,不在于你用它能干什么,而在于你想干什么!<br>　　Linux的兴起还给人们很多启迪与思考,如集市式软件开发的讨论,又如自由软件的精神……</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机/" rel="tag"># 计算机</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/627867.html" rel="next" title="关于短信的黑幕－－所有使用手机的朋友都要注意了">
+                <i class="fa fa-chevron-left"></i> 关于短信的黑幕－－所有使用手机的朋友都要注意了
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/linuxwindows.html" rel="prev" title="Linux不是Windows">
+                Linux不是Windows <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">宋瑞华</p>
+              <p class="site-description motion-element" itemprop="description">Song Ruihua</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">636</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">596</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">宋瑞华</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

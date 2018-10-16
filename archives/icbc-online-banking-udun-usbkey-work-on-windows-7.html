@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="支付宝,银行,淘宝,taobao,UKey,USBKey,U盾,Windows 7,Windows 8,Windows XP,Windows7,Windows8,XP,付款,优盾,工商,工商银行,工行,支付,淘宝付款,淘宝支付,网上付款,网上支付,网银," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文的目标受众是初次接触网络银行的所谓“小白”，请自诩高手的“老鸟”自行绕过。 1.什么是U盾？ U盾是中国工商银行推出的网上身份认证工具。工行会给每个申请U盾的用户一个数字证书，就跟身份证类似，当有钱要从账户中转出时，工行会要求用户出示该数字证书以证明其合法身份，但数字证书不能像身份证那样拿在手里，于是工行推出了一个类似优盘的移动存储设备用于存放数字证书，这个“U盘”就是所谓的U盾。 2.如何拿">
+<meta name="keywords" content="支付宝,银行,淘宝,taobao,UKey,USBKey,U盾,Windows 7,Windows 8,Windows XP,Windows7,Windows8,XP,付款,优盾,工商,工商银行,工行,支付,淘宝付款,淘宝支付,网上付款,网上支付,网银">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工商银行U盾全攻略 (兼容Windows 7 多图)">
+<meta property="og:url" content="http://static.songruihua.com/archives/icbc-online-banking-udun-usbkey-work-on-windows-7.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="本文的目标受众是初次接触网络银行的所谓“小白”，请自诩高手的“老鸟”自行绕过。 1.什么是U盾？ U盾是中国工商银行推出的网上身份认证工具。工行会给每个申请U盾的用户一个数字证书，就跟身份证类似，当有钱要从账户中转出时，工行会要求用户出示该数字证书以证明其合法身份，但数字证书不能像身份证那样拿在手里，于是工行推出了一个类似优盘的移动存储设备用于存放数字证书，这个“U盘”就是所谓的U盾。 2.如何拿">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://farm4.static.flickr.com/3653/3408201981_ce1f404350.jpg">
+<meta property="og:image" content="http://farm4.static.flickr.com/3600/3408201795_72a8b0a07f_o.png">
+<meta property="og:image" content="http://farm4.static.flickr.com/3410/3409010532_ac16c32dda.jpg">
+<meta property="og:image" content="http://farm4.static.flickr.com/3562/3408201897_543cff0d82.jpg">
+<meta property="og:image" content="http://farm4.static.flickr.com/3375/3409010740_d072ea3079.jpg">
+<meta property="og:updated_time" content="2018-10-16T08:40:20.296Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="工商银行U盾全攻略 (兼容Windows 7 多图)">
+<meta name="twitter:description" content="本文的目标受众是初次接触网络银行的所谓“小白”，请自诩高手的“老鸟”自行绕过。 1.什么是U盾？ U盾是中国工商银行推出的网上身份认证工具。工行会给每个申请U盾的用户一个数字证书，就跟身份证类似，当有钱要从账户中转出时，工行会要求用户出示该数字证书以证明其合法身份，但数字证书不能像身份证那样拿在手里，于是工行推出了一个类似优盘的移动存储设备用于存放数字证书，这个“U盘”就是所谓的U盾。 2.如何拿">
+<meta name="twitter:image" content="http://farm4.static.flickr.com/3653/3408201981_ce1f404350.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://static.songruihua.com/archives/icbc-online-banking-udun-usbkey-work-on-windows-7.html"/>
+
+
+
+
+
+  <title>工商银行U盾全攻略 (兼容Windows 7 多图) | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">宋瑞华</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Gopus Diobus Shiliotos</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://static.songruihua.com/archives/icbc-online-banking-udun-usbkey-work-on-windows-7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">工商银行U盾全攻略 (兼容Windows 7 多图)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-04-03T16:57:24+08:00">
+                2009-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/小品软件/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文的目标受众是初次接触网络银行的所谓“小白”，请自诩高手的“老鸟”自行绕过。</p>
+<p><strong>1.什么是U盾？</strong> U盾是中国工商银行推出的网上身份认证工具。工行会给每个申请U盾的用户一个数字证书，就跟身份证类似，当有钱要从账户中转出时，工行会要求用户出示该数字证书以证明其合法身份，但数字证书不能像身份证那样拿在手里，于是工行推出了一个类似优盘的移动存储设备用于存放数字证书，这个“U盘”就是所谓的U盾。 <strong>2.如何拿到U盾？</strong> 条件一：身份证 办U盾需要到柜台，没身份证不行。 条件二：一个工行账户 已经有工行账户的话可以不新开户，但鉴于即使是U盾也有被盗用的可能，所以建议为网上交易开一个专门的账户，平时不要存太多的钱，需要交易时临时存入，立马支付，存有几十万现金的账户最好不要在网上留下任何痕迹（压根就别再键盘上输入），要取钱去银行柜台办理，这样保险。 服务台的人会给你两张表，一张开户申请表，一张网上银行申请表，在后一张表上不要勾选“电子口令卡”，要勾选“U盾”。等叫到号了去柜台交上两张表，说明开户办U盾，然后等着签N次字，输入N次密码。 <strong>3.如何为网上支付做好准备？</strong> 全新的U盾里面是没有数字证书的空盘，你的数字证书还在工行的网络系统中，你需要将此数字证书导入到U盾后，U盾才能成为一个身份认证工具，由于事关财产安全，工行将这一过程弄的相对复杂，所以不要妄想回家后插上U盾就能支付这样的美事了，一步一步来吧。我对电脑算是比较熟悉的了，第一次用也被搞到头大，网上的解释都不是很直观，所以我决定配图详细介绍一下导入过程，以方便后来人。 第一步：安装软件 你不必要知道或理解这连个软件是干什么用的，下载并安装吧。 登录 <a href="http://www.flickr.com/photos/ruihua/3408201981/" title="Capture-ICBC-5 by Ruihua, on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3653/3408201981_ce1f404350.jpg" alt="Capture-ICBC-5"></a> 软件一：工行目前提供5种证书驱动程序，请根据你领到的U盾的品牌和型号（不知道的话看说明书）下载相应程序。我持有的是品牌是捷德，其他品牌如出现使用障碍请致电中国工商银行或到柜台咨询。 软件二：控件程序是必须要下载的，并且U盾只能在IE下使用，如果你不知IE为何物那么你肯定不会为此烦恼的，放心吧。 以管理员帐户登录Windows，关闭所有窗口，逐一安装这两个程序，目前我的亲身经历是Windows Server 2008 32位 标准版、Windows Vista 32位 家庭基础版，Windows 7 32位 Build 7068，Windows 7 64位四个操作系统可以正常安装，我已经不用XP所以没有试用，应该是可以用的。 第二步：登录<a href="https://mybank.icbc.com.cn/icbc/perbank/index.jsp" title="https://mybank.icbc.com.cn/icbc/perbank/index.jsp" target="_blank" rel="noopener">https://mybank.icbc.com.cn/icbc/perbank/index.jsp</a> <a href="http://www.flickr.com/photos/ruihua/3408201795/" title="Capture-ICBC-1 by Ruihua, on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3600/3408201795_72a8b0a07f_o.png" alt="Capture-ICBC-1"></a></p>
+<p>请记住工行的官方域名是 <strong>icbc.com.cn</strong>，以后如果遇到 lcbc.com.cn，iobc.com.cn 这样的欺诈网站千万不要输入自己的账户密码，这些网站的网页布局跟工行官方网站一模一样，能蒙倒不少人，所以大家进行网上金融操作时一定要格外注意网站的域名。</p>
+<p>第二步：输入卡号和密码登录 <a href="http://www.flickr.com/photos/ruihua/3409010532/" title="Capture-ICBC-2 by Ruihua, on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3410/3409010532_ac16c32dda.jpg" alt="Capture-ICBC-2"></a></p>
+<blockquote>
+<p><strong>关于密码</strong> 工行的卡和网上银行（带U盾）共涉及4个不同的密码</p>
+<ol>
+<li>取款密码：仅在银行柜台或ATM机上使用，网上银行业务不能用；</li>
+<li>登陆密码：网上银行系统登陆</li>
+<li>支付密码：网上银行存款的转出（含支付、转账、缴费等业务）；</li>
+<li>U盾密码：插入U盾后，用于确认U盾合法使用的密码。</li>
+</ol>
+<p>第一个密码只能在网下使用，后三个只能在网上使用，互不干扰。 U盾支付要求用户满足四个条件：账户号码、登录密码、支付密码、U盾实体。知道账户（卡号）和登录密码可以登录工行的个人网上银行后台进行余额查询等操作，但是如果想让钱从账户转出必须再提供支付密码和U盾实体，否则不能转出，这也是为什么U盾的安全系数如此之高了，网上什么黑客、木马、病毒再牛不也就是偷偷你的账户密码等“数字”吗，只要U盾仍在你手中盗贼就就奈何不了你的人民币。</p>
+</blockquote>
+<p>第三步：修改密码 <a href="http://www.flickr.com/photos/ruihua/3408201897/" title="Capture-ICBC-2.5 by Ruihua, on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3562/3408201897_543cff0d82.jpg" alt="Capture-ICBC-2.5"></a> 第一次登录管理后台你需要修改登录密码，支付密码暂时不需要改，最好不要将这两个密码设为一样的，支付密码必须是6～8位，但登录密码可以很长（比如我的就是十多位密码） 第四步：选择菜单中的“U盾管理”–“U盾自助下载”，根据提示插入U盾，输入在用户柜台设置的支付密码，最后提示导入成功即可。 <a href="http://www.flickr.com/photos/ruihua/3409010740/" title="Capture-ICBC-4 by Ruihua, on Flickr" target="_blank" rel="noopener"><img src="http://farm4.static.flickr.com/3375/3409010740_d072ea3079.jpg" alt="Capture-ICBC-4"></a> <strong>4.如何使用U盾支付？</strong> 在不同的地方消费，支付方法略有不同，但大体可归纳为： 1.选择银行（当然是工行了） 2.输入账户（卡号） 3.输入转账金额 4.跳转到工行网上银行（<strong>此时一定要注意域名是否是icbc.com.cn</strong>） 5.输入登录密码（可能没有这一步） 6.要求插入U盾 7.要求输入支付密码 8.提示支付成功 9.立刻将U盾拔出（无需像U盘那样“安全移除硬件”，直接拔掉）</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/支付宝/" rel="tag"># 支付宝</a>
+          
+            <a href="/tags/银行/" rel="tag"># 银行</a>
+          
+            <a href="/tags/淘宝/" rel="tag"># 淘宝</a>
+          
+            <a href="/tags/taobao/" rel="tag"># taobao</a>
+          
+            <a href="/tags/UKey/" rel="tag"># UKey</a>
+          
+            <a href="/tags/USBKey/" rel="tag"># USBKey</a>
+          
+            <a href="/tags/U盾/" rel="tag"># U盾</a>
+          
+            <a href="/tags/Windows-7/" rel="tag"># Windows 7</a>
+          
+            <a href="/tags/Windows-8/" rel="tag"># Windows 8</a>
+          
+            <a href="/tags/Windows-XP/" rel="tag"># Windows XP</a>
+          
+            <a href="/tags/Windows7/" rel="tag"># Windows7</a>
+          
+            <a href="/tags/Windows8/" rel="tag"># Windows8</a>
+          
+            <a href="/tags/XP/" rel="tag"># XP</a>
+          
+            <a href="/tags/付款/" rel="tag"># 付款</a>
+          
+            <a href="/tags/优盾/" rel="tag"># 优盾</a>
+          
+            <a href="/tags/工商/" rel="tag"># 工商</a>
+          
+            <a href="/tags/工商银行/" rel="tag"># 工商银行</a>
+          
+            <a href="/tags/工行/" rel="tag"># 工行</a>
+          
+            <a href="/tags/支付/" rel="tag"># 支付</a>
+          
+            <a href="/tags/淘宝付款/" rel="tag"># 淘宝付款</a>
+          
+            <a href="/tags/淘宝支付/" rel="tag"># 淘宝支付</a>
+          
+            <a href="/tags/网上付款/" rel="tag"># 网上付款</a>
+          
+            <a href="/tags/网上支付/" rel="tag"># 网上支付</a>
+          
+            <a href="/tags/网银/" rel="tag"># 网银</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/welcome-comrade-from-cambodia.html" rel="next" title="欢迎柬埔寨战友">
+                <i class="fa fa-chevron-left"></i> 欢迎柬埔寨战友
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/fuck-spam-comment.html" rel="prev" title="干死垃圾评论">
+                干死垃圾评论 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">宋瑞华</p>
+              <p class="site-description motion-element" itemprop="description">Song Ruihua</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">636</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">596</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">宋瑞华</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
