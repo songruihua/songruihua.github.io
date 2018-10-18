@@ -246,9 +246,9 @@
     
       <category term="音乐" scheme="http://static.songruihua.com/tags/%E9%9F%B3%E4%B9%90/"/>
     
-      <category term="索尼" scheme="http://static.songruihua.com/tags/%E7%B4%A2%E5%B0%BC/"/>
-    
       <category term="耳机" scheme="http://static.songruihua.com/tags/%E8%80%B3%E6%9C%BA/"/>
+    
+      <category term="索尼" scheme="http://static.songruihua.com/tags/%E7%B4%A2%E5%B0%BC/"/>
     
   </entry>
   
@@ -331,9 +331,9 @@
     
       <category term="音乐" scheme="http://static.songruihua.com/tags/%E9%9F%B3%E4%B9%90/"/>
     
-      <category term="耳机" scheme="http://static.songruihua.com/tags/%E8%80%B3%E6%9C%BA/"/>
-    
       <category term="Sony" scheme="http://static.songruihua.com/tags/Sony/"/>
+    
+      <category term="耳机" scheme="http://static.songruihua.com/tags/%E8%80%B3%E6%9C%BA/"/>
     
   </entry>
   

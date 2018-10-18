@@ -1836,7 +1836,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2b8559;
+  background: #a718ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3009,4 +3009,25 @@ pre .javascript .function {
   font-family: "楷体";
   font-weight: bold;
   font-size: 25px;
+}
+.powered-by .theme-link {
+  margin-top: 20px;
+}
+.powered-by .theme-link a {
+  display: inline-block;
+  padding: 0 15px;
+  color: #f00;
+  border: 1px solid #fc6423;
+  border-radius: 4px;
+}
+.powered-by .theme-link a i {
+  color: #00f;
+  font-size: 14px;
+}
+.powered-by .theme-link a:hover {
+  color: #00f;
+  background: #00f;
+}
+.powered-by .theme-link a:hover i {
+  color: #00f;
 }
