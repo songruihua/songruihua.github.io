@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="博客,转载," />
+  <meta name="keywords" content="转载,博客," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="以下文章摘自:http://www.williamlong.info/archives/890.html 读者吴智勇推荐了一篇他翻译的关于博客技巧的文章到月光博客，文章名为《101步让你成为一个优秀的博客》，有一定的参考价值，以下为全文。 101步让你成为一个优秀的博客 我发现最成功的博客都有相似的成功步骤，经过长期的研究和学习，我发现写博客虽然没有表面上看起来那么简单但是，经过一定的努力，我想每">
-<meta name="keywords" content="博客,转载">
+<meta name="keywords" content="转载,博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="101步让你成为一个优秀的博客">
 <meta property="og:url" content="http://static.songruihua.com/archives/101.html">
@@ -445,9 +445,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/博客/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
-          
             <a href="/tags/转载/" rel="tag"><i class="fa fa-tag"></i> 转载</a>
+          
+            <a href="/tags/博客/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
           
         </div>
       
@@ -822,6 +822,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz',
+        appKey: 'BO9vxg1rb0UMzG8oA3ckJcaO',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

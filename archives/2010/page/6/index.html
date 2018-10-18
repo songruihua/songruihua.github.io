@@ -412,7 +412,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/archives/twitter-weekly-updates-for-2010-01-24.html" itemprop="url">
+            <a class="post-title-link" href="/archives/twitter-weekly-updates-for-2010-01-24-2.html" itemprop="url">
               
                 <span itemprop="name">Twitter Weekly Updates for 2010-01-24</span>
               
@@ -449,7 +449,7 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/archives/twitter-weekly-updates-for-2010-01-24-2.html" itemprop="url">
+            <a class="post-title-link" href="/archives/twitter-weekly-updates-for-2010-01-24.html" itemprop="url">
               
                 <span itemprop="name">Twitter Weekly Updates for 2010-01-24</span>
               
@@ -1031,6 +1031,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz',
+        appKey: 'BO9vxg1rb0UMzG8oA3ckJcaO',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

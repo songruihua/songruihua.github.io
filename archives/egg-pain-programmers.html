@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="蛋疼,程序," />
+  <meta name="keywords" content="程序,蛋疼," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="虽说是程序员问的，不过内容和编程本身其实并没什么太大关系，请各位听我细细道来。StackOverflow是一个程序员向的问答网站，广大程序员们在上面交流经验、提问答疑，三天前，一位名叫Freewind的用户发布了下面这个问题：   我在用Java编写一段比较两个字符串时间间隔的程序，然而当我比较“1927-12-31 23:54:07”和“1927-12-31 23:54:08”这两个时间时，输出">
-<meta name="keywords" content="蛋疼,程序">
+<meta name="keywords" content="程序,蛋疼">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蛋疼的程序员">
 <meta property="og:url" content="http://static.songruihua.com/archives/egg-pain-programmers.html">
@@ -385,6 +385,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/archives/egg-pain-programmers.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/egg-pain-programmers.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -460,9 +470,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/蛋疼/" rel="tag"><i class="fa fa-tag"></i> 蛋疼</a>
-          
             <a href="/tags/程序/" rel="tag"><i class="fa fa-tag"></i> 程序</a>
+          
+            <a href="/tags/蛋疼/" rel="tag"><i class="fa fa-tag"></i> 蛋疼</a>
           
         </div>
       
@@ -518,9 +528,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDMyMi8xNjg0OQ=="></div>
     </div>
-
   
 
 
@@ -837,26 +845,37 @@
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-
-
-
-
-
-
-
-
-
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz',
+        appKey: 'BO9vxg1rb0UMzG8oA3ckJcaO',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

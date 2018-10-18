@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="快捷键,HK4WIN," />
+  <meta name="keywords" content="HK4WIN,快捷键," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="2012年3月15日， HK4WIN 的0.11版本发布。 谨以此版本纪念２０１１年秋天的那些成长的烦恼  0.11 Build 20120315更新详情 1.新加任务栏托盘图标及菜单。 2.系统自带的Windows Media Player在安装解码包后可以播放大多数格式的多媒体文件，但由于缺少顺手的快捷键让很多人转投其他播放器，0.11版本为Windows Media Player加入两个快捷">
-<meta name="keywords" content="快捷键,HK4WIN">
+<meta name="keywords" content="HK4WIN,快捷键">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快捷键 HK4WIN 0.11 版本发布">
 <meta property="og:url" content="http://static.songruihua.com/archives/hk4win-011.html">
@@ -385,6 +385,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/archives/hk4win-011.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/hk4win-011.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -452,9 +462,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/快捷键/" rel="tag"><i class="fa fa-tag"></i> 快捷键</a>
-          
             <a href="/tags/HK4WIN/" rel="tag"><i class="fa fa-tag"></i> HK4WIN</a>
+          
+            <a href="/tags/快捷键/" rel="tag"><i class="fa fa-tag"></i> 快捷键</a>
           
         </div>
       
@@ -510,9 +520,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDMyMi8xNjg0OQ=="></div>
     </div>
-
   
 
 
@@ -829,26 +837,37 @@
 
 
   
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-
-
-
-
-
-
-
-
-
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz',
+        appKey: 'BO9vxg1rb0UMzG8oA3ckJcaO',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
