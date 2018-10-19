@@ -96,13 +96,13 @@
 <meta property="og:site_name" content="宋瑞华">
 <meta property="og:description" content="虽说是程序员问的，不过内容和编程本身其实并没什么太大关系，请各位听我细细道来。StackOverflow是一个程序员向的问答网站，广大程序员们在上面交流经验、提问答疑，三天前，一位名叫Freewind的用户发布了下面这个问题：   我在用Java编写一段比较两个字符串时间间隔的程序，然而当我比较“1927-12-31 23:54:07”和“1927-12-31 23:54:08”这两个时间时，输出">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://img.cnbeta.com/newsimg/110812/14571201438079743.png">
-<meta property="og:image" content="http://img.cnbeta.com/newsimg/110812/145713199177554.jpg">
-<meta property="og:updated_time" content="2018-10-16T08:40:20.312Z">
+<meta property="og:image" content="https://img.cnbeta.com/newsimg/110812/14571201438079743.png">
+<meta property="og:image" content="https://img.cnbeta.com/newsimg/110812/145713199177554.jpg">
+<meta property="og:updated_time" content="2018-10-19T01:30:46.585Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="蛋疼的程序员">
 <meta name="twitter:description" content="虽说是程序员问的，不过内容和编程本身其实并没什么太大关系，请各位听我细细道来。StackOverflow是一个程序员向的问答网站，广大程序员们在上面交流经验、提问答疑，三天前，一位名叫Freewind的用户发布了下面这个问题：   我在用Java编写一段比较两个字符串时间间隔的程序，然而当我比较“1927-12-31 23:54:07”和“1927-12-31 23:54:08”这两个时间时，输出">
-<meta name="twitter:image" content="http://img.cnbeta.com/newsimg/110812/14571201438079743.png">
+<meta name="twitter:image" content="https://img.cnbeta.com/newsimg/110812/14571201438079743.png">
 
 
 
@@ -451,7 +451,7 @@
       
 
       
-        <p>虽说是程序员问的，不过内容和编程本身其实并没什么太大关系，请各位听我细细道来。StackOverflow是一个程序员向的问答网站，广大程序员们在上面交流经验、提问答疑，三天前，一位名叫Freewind的用户发布了<a href="http://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result" target="_blank" rel="noopener">下面这个问题</a>： <img src="http://img.cnbeta.com/newsimg/110812/14571201438079743.png" alt="[程序员段子] 1927年12月31日午夜一秒谜案"></p>
+        <p>虽说是程序员问的，不过内容和编程本身其实并没什么太大关系，请各位听我细细道来。StackOverflow是一个程序员向的问答网站，广大程序员们在上面交流经验、提问答疑，三天前，一位名叫Freewind的用户发布了<a href="https://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result" target="_blank" rel="noopener">下面这个问题</a>： <img src="https://img.cnbeta.com/newsimg/110812/14571201438079743.png" alt="[程序员段子] 1927年12月31日午夜一秒谜案"></p>
 <blockquote>
 <p>我在用Java编写一段比较两个字符串时间间隔的程序，然而当我比较“1927-12-31 23:54:07”和“1927-12-31 23:54:08”这两个时间时，输出结果却不是1……而是353。 当我把两个时间分别往后调整1秒，变成“1927-12-31 23:54:08”和“1927-12-31 23:54:09”，结果就又是1了！——可为什么那两个时间的结果，却是353呢？</p>
 </blockquote>
@@ -459,9 +459,9 @@
 <blockquote>
 <p>sun.util.calendar.ZoneInfo[id=”Asia/Shanghai”, offset=28800000,dstSavings=0, useDaylight=false, transitions=19, lastRule=null]</p>
 </blockquote>
-<p>（……没错，Freewind君，似乎是一位魔都死程。不知道这里有没有人认识这位老兄？） 在这份追加信息出现仅仅两分钟之后，StackOverflow站上的问答狂人Jon Skeet<a href="http://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result/6841479#6841479" target="_blank" rel="noopener">给出了如下答复</a>——</p>
+<p>（……没错，Freewind君，似乎是一位魔都死程。不知道这里有没有人认识这位老兄？） 在这份追加信息出现仅仅两分钟之后，StackOverflow站上的问答狂人Jon Skeet<a href="https://stackoverflow.com/questions/6841333/why-is-subtracting-these-two-times-in-1927-giving-a-strange-result/6841479#6841479" target="_blank" rel="noopener">给出了如下答复</a>——</p>
 <blockquote>
-<p>这是因为上海的时区在12月31日发生了变化。 请看<a href="http://www.timeanddate.com/worldclock/clockchange.html?n=237&amp;amp;year=1927" target="_blank" rel="noopener">这里</a>。（网页截图如下） <img src="http://img.cnbeta.com/newsimg/110812/145713199177554.jpg" alt="[程序员段子] 1927年12月31日午夜一秒谜案"> <em>（1928年1月1日0点0分，当地时间由<a href="http://baike.baidu.com/view/2553310.htm" target="_blank" rel="noopener">地方平时（Local Mean Time）</a>改为北京时间/中国标准时间）</em> 简单地说，在1927年末的最后那一个午夜，时钟被往回拨了5分52秒。所以“1927-12-31 23:54:08”这一秒，事实上，发生了两次，而看起来在计算当地时间时，Java将其视为了后面那一个时间点，于是就产生了这一差别。 这正是时区世界的奇妙与不可思议啊。</p>
+<p>这是因为上海的时区在12月31日发生了变化。 请看<a href="https://www.timeanddate.com/worldclock/clockchange.html?n=237&amp;amp;year=1927" target="_blank" rel="noopener">这里</a>。（网页截图如下） <img src="https://img.cnbeta.com/newsimg/110812/145713199177554.jpg" alt="[程序员段子] 1927年12月31日午夜一秒谜案"> <em>（1928年1月1日0点0分，当地时间由<a href="https://baike.baidu.com/view/2553310.htm" target="_blank" rel="noopener">地方平时（Local Mean Time）</a>改为北京时间/中国标准时间）</em> 简单地说，在1927年末的最后那一个午夜，时钟被往回拨了5分52秒。所以“1927-12-31 23:54:08”这一秒，事实上，发生了两次，而看起来在计算当地时间时，Java将其视为了后面那一个时间点，于是就产生了这一差别。 这正是时区世界的奇妙与不可思议啊。</p>
 </blockquote>
 <p>在StackFlow网民们纷纷膜拜Jon Skeet的神速之时，其他程序员也以测试的方式验证了这一结果的正确——美国时间木有这个问题。看来，当一枚程序员，有时真的需要上通天文、下知地理啊…… 新闻来源:煎蛋</p>
 

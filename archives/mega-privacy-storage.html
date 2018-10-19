@@ -96,12 +96,12 @@
 <meta property="og:site_name" content="宋瑞华">
 <meta property="og:description" content="继BT下载网站海盗湾（Pirate Bay）采取策略将全部服务转至云端之后，天才黑客Kim Dotcom 和他的Megaupload团队也开始发力，加入这场和警方之间的“捉迷藏”中。MPEG 格式文件处理服务提供商Wired近日联系到Dotcom及其商业合作伙伴Mathias Ortmann，双方就如何保存Megaupload的修改版这一问题进行了商谈。洽谈结果是Megaupload将改头换面，变">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bcs.duapp.com/songruihua-storage//blog/201309//0711250327351700.jpg">
-<meta property="og:updated_time" content="2018-10-16T08:40:20.315Z">
+<meta property="og:image" content="https://bcs.duapp.com/songruihua-storage//blog/201309//0711250327351700.jpg">
+<meta property="og:updated_time" content="2018-10-19T01:30:59.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最安全的网盘MEGA的加密原理">
 <meta name="twitter:description" content="继BT下载网站海盗湾（Pirate Bay）采取策略将全部服务转至云端之后，天才黑客Kim Dotcom 和他的Megaupload团队也开始发力，加入这场和警方之间的“捉迷藏”中。MPEG 格式文件处理服务提供商Wired近日联系到Dotcom及其商业合作伙伴Mathias Ortmann，双方就如何保存Megaupload的修改版这一问题进行了商谈。洽谈结果是Megaupload将改头换面，变">
-<meta name="twitter:image" content="http://bcs.duapp.com/songruihua-storage//blog/201309//0711250327351700.jpg">
+<meta name="twitter:image" content="https://bcs.duapp.com/songruihua-storage//blog/201309//0711250327351700.jpg">
 
 
 
@@ -451,7 +451,7 @@
 
       
         <p>继BT下载网站海盗湾（Pirate Bay）采取策略将全部服务转至云端之后，天才黑客Kim Dotcom 和他的Megaupload团队也开始发力，加入这场和警方之间的“捉迷藏”中。MPEG 格式文件处理服务提供商Wired近日联系到Dotcom及其商业合作伙伴Mathias Ortmann，双方就如何保存Megaupload的修改版这一问题进行了商谈。洽谈结果是Megaupload将改头换面，变身名为 “Mega”的新服务重出江湖。</p>
-<p><img src="http://bcs.duapp.com/songruihua-storage//blog/201309//0711250327351700.jpg" alt=""> 这个新服务可以安全躲过政府的突击检查，不会收到侵权起诉。据Wired透露，关键在于所有上传至Mega分享的文件“首 先会在客户的浏览器中被一键加密。这里使用的是一种叫做高级加密标准（AES）的算法。”在此之后，用户会“收到解密密钥。”新的安全性功 能中最重要的一个方面在于它将遵守版权法律的责任放给了每个独立的用户身上，因为“解密密钥不随Mega一起存储”，这样一来，“Mega就无从知道其用 户上传的内容，也无需对此负责。”这项技术同时也能更好的保护用户自己的数据，因为没有解密密钥，盗取信息者就无法读取数据。 Dotcom告知Wired：“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p>
+<p><img src="https://bcs.duapp.com/songruihua-storage//blog/201309//0711250327351700.jpg" alt=""> 这个新服务可以安全躲过政府的突击检查，不会收到侵权起诉。据Wired透露，关键在于所有上传至Mega分享的文件“首 先会在客户的浏览器中被一键加密。这里使用的是一种叫做高级加密标准（AES）的算法。”在此之后，用户会“收到解密密钥。”新的安全性功 能中最重要的一个方面在于它将遵守版权法律的责任放给了每个独立的用户身上，因为“解密密钥不随Mega一起存储”，这样一来，“Mega就无从知道其用 户上传的内容，也无需对此负责。”这项技术同时也能更好的保护用户自己的数据，因为没有解密密钥，盗取信息者就无法读取数据。 Dotcom告知Wired：“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p>
 <p>加密原理：</p>
 <h2 id="1、创建新帐号"><a href="#1、创建新帐号" class="headerlink" title="1、创建新帐号"></a>1、创建新帐号</h2><p>当一个新帐号创建之后，会产生两个随机钥匙：“Master Key（主钥匙）”和”RSA Key（公私钥匙对），2048 bit”。这两个钥匙的作用会在下面讲解。 其中 Master Key 和 RSA Key 的私钥部分会使用帐号的密码（使用 AES 128 算法）加密后储存在服务器上，而 RSA Key 的公钥部分则直接明文储存在服务器上。</p>
 <h2 id="2、上传文件"><a href="#2、上传文件" class="headerlink" title="2、上传文件"></a>2、上传文件</h2><p>上传一个文件时，客户端会产生一个随机钥匙（File Key），然后通过 AES 128 算法对文件内容进行加密并上传到服务器，最后这个 File Key 会使用 Master Key 加密后也上传到服务器。 简单来说文件内容的加密过程为：帐号密码 –(加密)–&gt; Master Key –(加密)–&gt; File Key –(加密)–&gt; 文件名和内容 –&gt; 服务器。</p>
