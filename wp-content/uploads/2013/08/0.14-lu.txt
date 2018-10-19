@@ -1,0 +1,6 @@
+[LiveUpdate]
+VerLatestMain=0
+VerLatestSub=14
+VerLatestURL=http://hk4win.googlecode.com/files/HK4WIN-0.14.exe
+VerLatestHome=http://www.songruihua.com/hk4win-whatsnew-014
+LULatest=2
