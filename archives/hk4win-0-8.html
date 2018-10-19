@@ -92,7 +92,7 @@
 <meta name="keywords" content="HK4WIN,快捷键">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HK4WIN快捷键程序  第0.8版本发布">
-<meta property="og:url" content="http://static.songruihua.com/archives/hk4win-0-8.html">
+<meta property="og:url" content="https://www.songruihua.com/archives/hk4win-0-8.html">
 <meta property="og:site_name" content="宋瑞华">
 <meta property="og:description" content="HK4WIN 简介HK4WIN (HotKeys for WINdows) 是一款针对Windows系统的快捷键程序，HK4WIN可使得经常使用的系统功能通过快捷键的方式触发。此次新发布的0.8版本新加入很多功能，同时修正了0.7版本中的若干bug，推荐下载、更新。  更新详情：0.8 Build 20110620 1.从0.7版本开始加入的“快捷键功能开关”设计不够合理，导致许多功能在刚启动HK">
 <meta property="og:locale" content="zh-Hans">
@@ -132,7 +132,7 @@
 
 
 
-  <link rel="canonical" href="http://static.songruihua.com/archives/hk4win-0-8.html"/>
+  <link rel="canonical" href="https://www.songruihua.com/archives/hk4win-0-8.html"/>
 
 
 
@@ -320,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://static.songruihua.com/archives/hk4win-0-8.html">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/hk4win-0-8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="宋瑞华">
@@ -464,7 +464,7 @@
 
       
         <h3 id="HK4WIN-简介"><a href="#HK4WIN-简介" class="headerlink" title="HK4WIN 简介"></a>HK4WIN 简介</h3><p>HK4WIN (<em>HotKeys for WINdows</em>) 是一款针对Windows系统的快捷键程序，HK4WIN可使得经常使用的系统功能通过快捷键的方式触发。此次新发布的0.8版本新加入很多功能，同时修正了0.7版本中的若干bug，推荐下载、更新。</p>
-<p><a href="https://www.songruihua.com/hk4win-dl" target="_blank" rel="noopener"><img src="https://songruihua-image.googlecode.com/files/down2.jpg" alt=""></a></p>
+<p><a href="https://www.songruihua.com/hk4win-dl"><img src="https://songruihua-image.googlecode.com/files/down2.jpg" alt=""></a></p>
 <h3 id="更新详情："><a href="#更新详情：" class="headerlink" title="更新详情："></a>更新详情：</h3><p><strong>0.8 Build 20110620</strong></p>
 <p>1.从0.7版本开始加入的“快捷键功能开关”设计不够合理，导致许多功能在刚启动HK4WIN时有效，但过一会自动失效，经检查原因是：每一个被加上 “开关”的功能在触发之前都要读取ini文件以检查是开还是关，这导致某些功能失效。0.8版本做出改进：在HK4WIN启动的时候读取所有开关状态并保 存在内存中，这样每次判断开关状态就不必读取ini文件了，直接从内存读取即可，但这导致修改开关之后必须按 Ctrl+Alt+Shift+F5 重启HK4WIN才能生效。</p>
 <p>2.彻底解决Win+C打开控制面板不稳定的bug。</p>
@@ -478,7 +478,7 @@
 <p>10.在窗口标题栏上实现滚轮控制：标题栏向上滚轮最大化窗口，向下滚轮恢复/最小化窗口，按下滚轮关闭窗口，以上这些操作均不必选中窗口，即目标窗口不必在“最前”，只要鼠标放在窗口标题栏上就可对其操作。另外任务栏上向下滚轮最小化所有窗口（显示桌面）。 按 下Ctrl+Alt+Shift+Z打开设置窗口，搜索WheelDown_MinFx，它的值决定了在Firefox4+的标签页栏向下滚动鼠标滚轮是 否将其最小化，如果你平时上网时打开很多标签页，需要用滚轮左右滑动标签页栏，建议保持默认值0（不最小化），如果打开的标签页不多则建议修改为1，这样 可以方便地将Firefox最小化。InstantMinimizeWindow的值决定了在已经最大化的窗口的标题栏上向下滚轮实现什么操作，1为直接 最小化（默认），0为“向下还原”到最大化之前的大小。</p>
 <p>11.RShift+滚轮(Fn0339)调整当前任意窗口的透明度。为防止窗口“找不到”了，对透明度有所限制，不能太过透明。想要调整某个窗口的透明度，必须先将其置于其他窗口之前，这一点和上面的“10.在窗口标题栏上实现滚轮控制”有所不同。</p>
 <p>12.定时自动关机功能得到加强：同时按左右Ctrl键启动定时关机功能，有两种定时模式。模式一为倒计时模式，可直接输入一个整数，例如30，那么电脑 会在半小时即30分钟后自动关机，这种模式支持最长3天内的自动关机，所以最大限值4320；模式二为定时模式，可输入一个具体的时间，即直接指定自动关 机时间(24小时制)，例如21:05，这种模式仅支持24小时内的自动关机。 另外，如果要每天执行自动关机，可以按 Ctrl+Alt+Shift+Z 打开设置窗口，搜索AutoShutdownTime，将其等号后改为具体时间，例如17:35，这样每天下午5点半下班后电脑会自动关机，就不要总想着 关电脑这事了。注意修改完成之后记得保存，并且需要按 Ctrl+Alt+Shift+F5 重启HK4WIN才能生效，如果关机时电脑处于睡眠或休眠状态则自动关机无效，如果HK4WIN被中途关闭同样无效。</p>
-<p><a href="https://www.songruihua.com/hk4win-dl" target="_blank" rel="noopener"><img src="https://songruihua-image.googlecode.com/files/down2.jpg" alt=""></a></p>
+<p><a href="https://www.songruihua.com/hk4win-dl"><img src="https://songruihua-image.googlecode.com/files/down2.jpg" alt=""></a></p>
 
       
     </div>
