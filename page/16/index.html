@@ -317,6 +317,202 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/reading-notes-matlab-01.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/reading-notes-matlab-01.html" itemprop="url">读书笔记：MATLAB（01）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-11-15T00:21:59+08:00">
+                2011-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <!--span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/archives/reading-notes-matlab-01.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/reading-notes-matlab-01.html" itemprop="commentCount"></span>
+                </a>
+              </span-->
+            
+          
+
+          
+          
+             <span id="/archives/reading-notes-matlab-01.html" class="leancloud_visitors" data-flag-title="读书笔记：MATLAB（01）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">共</span>
+                
+                <span title="共">
+                  1.3k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">约需</span>
+                
+                <span title="约需">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天开始写读书笔记，第一本书是《高等应用数学问题的MATLAB求解》。 MATLAB语言是科学研究者首选的计算机数学语言。大多数学生缺乏对应用数学问题的全面了解，不清楚什么问题能用数学描述，什么样的数学问题能求解，以至于走了很多弯路。通过学习MATLAB语言可以使数学问题求解能力显著提高，即使对某些数学公式理解不够深刻，只要学习了MATLAB语言也能容易地求解类似问题，毕竟科学研究者和工程技术人员通常不考虑为什么这样做，而只考虑结果是什么。借助MATLAB数学基础不深厚的人同样能轻易利用计算机解决高深的应用数学问题。 <strong>第1章 计算机数学语言概述</strong> <strong>1.1为什么学习计算机数学语言</strong> 并不是所有数学问题都能手工推导的，手工推导有时是不易、不可靠、不精确甚至是不可能的，所以需要计算机的帮助。用计算机的方式有两种，其一是数值分析，其二是计算机语言，前者只能解数值计算问题，后者还可以解决像公式推导这样的问题。 许多专门的学科在介绍原理与方法时一般采用简单的例子，回避高阶和复杂的例子，这样得到的方法和结论只是理论上的，用于解决现实的实际问题往往是比较困难的，所以需要借助计算机数学语言。 <strong>1.2 数学问题的解析解与数值解</strong> 数学家往往关注解析解以及解的存在性的严格证明，而工程技术人员通常只关心最后的数值解。数学上，解析解不存在的情况很普遍，例如圆周率就没有解析解，工程技术人员也不关心圆周率是怎么求得的，只是想知道能满足精度要求的数值，一般的计算取3.1416即可，粗略的计算取3.14也未尝不可。 <strong>第2章 MATLAB语言程序设计基础</strong> MATLAB的主要特点： 简介高效 一条语句顶C/C++数百条 科学运算能力强大 MATLAB以矩阵为基本单元 绘图功能 论文中必须给出二维或三维图形 工具箱 为各专业量身定制 动态系统仿真 转用ANSYS等专业软件 <strong>2.1 MATLAB程序设计语言基础</strong> <strong>2.1.1 MATLAB语言的变量和常量</strong> 变量必须由字母打头，且区分大小写。 MATLAB保留的变量： eps——浮点运算误差限，默认2.2201e-16，若某个值小于eps则会被视为0 i,j——循环变量，用于纯虚数量，应恢复i=sqrt(-1) inf——无穷大，-inf为无穷小，若除数为0，MATLAB也不会中止运算，而是给出一个“除0”警告，并将结果赋成inf NaN——not a number不定式，用于0/0，inf/inf运算 lasterr、lastwarn、pi <strong>2.1.2 数据结构</strong> 数值型数据：一般为double()，在图形处理等计算中通常使用uint8()uint16()int8()int32()等，u表示无正负号，数字表示位数。 符号型数据：用于推导公式和解析解法，使用前首先需要将采用的变量申明为符号变量 syms list props，例如syms a b，props可以是real,positive等。 变精度算法函数vpa()可以将符号型数值以任意精度显示出来，vpa(pi)将显示圆周率的32位有效数字， vpa(pi,100)将显示圆周率的100位有效数字，pi也可以换成矩阵。 其他数据结构：字符串型数据、多位数组、单元数组、类于对象。 <strong>2.1.3 MATLAB的基本语句结构</strong> 分两种：直接赋值语句、函数调用语句 直接赋值语句： 末尾带分号则不会显示运算结果，不带则直接显示 如果没有指定变量，则结果赋予保留变量ans 注释以%打头 矩阵输入：A=[1,2,3;4 5,6;7 8 9] 函数调用语句:[返回变量列表]=函数名(输入变量列表) 一个函数名对应一个.m文件或MATLAB内部函数。 []可以用逗号和空格分隔[U,S,V]，(X,Y,Z)只能用逗号分隔，为了避免混乱以后所有分隔用逗号完成。 <strong>2.1.4 冒号表达式与子矩阵提取</strong> v1=1:0.2:pi 向量v1=1 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0 v2=1:pi v2=1 2 3 v3=pi:-1:1 v3=3.1416 2.1416 1.1416 v4=1:-1:pi Empty matrix 提取子矩阵： :表示整行或整列 end表示最后一行或一列 B1=A(1:2:end,[2,3,4]) %奇数行234列 B2=A([1,2,3],[2,3,4]) %123行234列 B1=A(end:-1:1,:) %上下翻转，最后一行排在第一行，列排序不变。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/truecrypt.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2144,202 +2340,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/a-letter-to-civil-engineering-students.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/a-letter-to-civil-engineering-students.html" itemprop="url">[转]写给现在和将来在工地上工作的同学的一封信</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-09-28T00:55:35+08:00">
-                2011-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/又土又木/" itemprop="url" rel="index">
-                    <span itemprop="name">又土又木</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <!--span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/archives/a-letter-to-civil-engineering-students.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/archives/a-letter-to-civil-engineering-students.html" itemprop="commentCount"></span>
-                </a>
-              </span-->
-            
-          
-
-          
-          
-             <span id="/archives/a-letter-to-civil-engineering-students.html" class="leancloud_visitors" data-flag-title="[转]写给现在和将来在工地上工作的同学的一封信">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">已阅</span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">共</span>
-                
-                <span title="共">
-                  2.3k 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">约需</span>
-                
-                <span title="约需">
-                  7 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>或许你现在背井离乡，生活过的马马虎虎，拿着2-3千的工资，晚上吹着空调有电视看有电脑玩，这就够了，但是未来在哪里？ 下面的话请耐心看完，也许会对你有一些的帮助！ 每年，建筑业都会吸纳很大一部分大学毕业生，在这些职场新人庆幸找到工作，对未来充满憧憬的时候，他们的前辈——已在建筑业内打拼了几年的师兄师姐们——却怀着深深的忧虑，他们不知道未来会怎样？他们不知道何时会因为受不了折磨而放弃? <strong>职业生涯的O形路口</strong> 不管何种企业，大学毕业生进入其中从技术员干起。两三年过去了，这些大学生的职位会从技术员、技术骨干慢慢做到总工程师、项目经理，工资也从2K、3K变为5K。看起来有着不错的职业发展，然而事实上他们中大部分人的职位会停留在技术骨干这个阶段，工资也会停留在3K至4K左右，之后再难有进展。到总工或者项目经理，工资发展到5K以上对绝大多数大学生来说是很难实现的，在当今的关系社会能力显得那么微不足道。当大部分人在前进的道路上停留下来后，他们就将在职业生涯的Ｏ形路口无休止地循环，看不到尽头，当尽头出现之日，很可能就是他们放弃之时。 建筑业公司的人事部做的就是致力于招人,尤其是中铁或者路桥公司，或者说低工资招人,而不是致力于留住人，因为人才市场上有的是价廉物美的新毕业生。当年，你花了一年左右的时间就能轻松胜任所担任的职务，那么你的师弟师妹凭什么就不可以呢？尤其是在工地上,他们往往以每月1千多的工资招募一个大学毕业生，两年后，当他的工资需要增长时,将其换掉,再招一个毕业生,如此往复循环，将人力成本控制到最低。这些企业的核心竞争力就是廉价的劳动力成本。 老话说男怕入错行,入行后想再转行的难度显而易见。当你进入建筑行业,再转入其他行业的可能性极低。你只能在这个行业内转,如果哪天离心力过大,被甩出圈子,那将是一切悲剧的开端。或者你去干甲方或者你去做监理，工地是别想轻易离开了。当项目完工，你难道又开始候鸟迁徙？常年不能和家人团聚，同事领导间的猜忌矛盾重重恶化，昼夜加班打混凝土，得不到好的休息，每次喝酒喝到吐为止，健康让人担忧。 <strong>与世隔绝的社会生活</strong> 人是社会化的生物，和前程黯淡相比，与世隔绝的工地生活更能使人自卑与绝望。你努力挣扎向上，想脱出这种钢筋混凝土的生活，最终发现是那么的无力，而年华却已老去。 当你走出大学进入工地，你会发现自己的生活世界是那么狭小，你的活动范围和那些天天重复同一个工作的钢筋工、木工并没有什么区别。除了上班和睡觉，你最重要的活动就是去超市购买所需的生活用品。其他的社会生活最多也就是与同事斗地主、诈金花、喝酒，你建立不起自己的社会资源。你孤身一人在外地打拼，身边没有父母亲人，只有一帮同病相怜的同事，当你需要帮助的时候，需要维护自己的权益的时候，身边的人都无能为力。你的生活圈是那么的狭窄，人际交往显得那么苍白。有一天工程结束，你离开了现在的工地去到另外一个工地，那无奈的漂泊注定了总是在重复地画着大小不一但形状相似的圈。 春夏秋冬四季转换，你的工作服也在冬夏间轮转，你和所有的外地人都没有明显区别。在本地人眼中你们都只是打工的而已。如果你很乐观的话，倒是可以把公司的工作服看作是一种福利，冬夏各两套，从周一穿到周日，基本上不需要再多买什么衣服。毕竟你可以自由地穿自己衣服的时间一个月只有那么一两天。工地食堂每天会给员工提供伙食标准为十块钱左右的工作餐。伙食费有些公司要从员工工资里扣除，有些公司则当作一种福利完全免费。但食堂饭菜的难以下咽很多人都深有体会，只能奢望偶尔在饭店里的应酬了。 在这种生活状态下，婚姻成为很多大学生不敢面对的问题。你的生活圈决定了你交际的人大多和你一样，大家同病相怜，没有能力去摘取爱情的果实。工地三十左右的单身柜族比比皆是，不是不想结婚，是找不到结婚的人，是没有女孩愿意嫁给一个常年不回家的男人，是不敢面对没有房子的婚姻，是不敢承担那贫贱夫妻百事哀的未来！或多或少也包含一种无奈！ 如果你已成婚，那最让你纠结的就是孩子的入学以及对父母的照顾。你只是暂住在本地，你的孩子没有权力上那些好的公办学校，或者说你没有能力交那么大一笔的赞助费，而民办学校的教学质量又不能让你放心。毕竟，读书是你能想到的唯一能改变自己孩子未来的救命稻草。你只好无奈地将你年幼的儿女送回老家，回到爷爷奶奶身边成为留守儿童。每周的电话是你最开心的时刻，在外的苦累在孩子的笑声中都会消融。你在心里默默企求上苍，让自己的父母和孩子平平安安，无病无灾。任何一点风吹雨打就可能让你刚刚起步的家陷入泥沼。 你每年只能回家一到两次看一下逐渐老去的父母和日渐长大的孩子。因为没有假期，因为路途太远往返不便，因为所有的因为。为了生存，你离开生活了二十年的家乡，但在他乡却无力构建一个属于自己的家，如同水中浮萍，没有根，心也不能降落。 明天在哪里? 来到城市的大学生对未来最大的期望是能走出父辈贫苦生活的轮回，让自己进入更高一个阶层，为下一辈创造一个更好的起点。但当你已年入不惑，自身可以贩卖的价值已所剩无几，而城市却不再需要你的时候，你难过落魄地回到老家，让你的儿女从你二三十年前的起点重新出发，再画着一个和你一样的圆？作为大学生的你无力改变自己的命运，难道你能保证你的下一代能顺利地考上大学并改变命运……？ 城市很大，外面的世界也很精彩，在这个只许进很难出的围城里，作为打工的大学生们你是否有了足够的储备以避免属于你的精彩落幕呢？！ 如果你现在感觉很触动，很现实，不放好好的静下心来好好的想想自己的未来在哪里，自己是愿意拿着两三千，三四千的工资安稳的想这样生活着，还是有自己的理想，社会是残酷的，师哥师姐们用他们的亲身体会告诉了我们，再大的理想会在我们打工安稳的工地生活中给磨灭的！ 此时的你不防想想： 1、我的理想是什么？ 2、我下一个目标在哪里？（当你把第一个想通的时候，这个就是你眼前摆着的问题，是你拟定计划的开始。） 3、我有能力做什么？（这是一个最关键的问题，但也是一个次要的问题，因为能力是培养的，当你的理想和目标都明确是，只要你坚持不懈的向着自己的理想和目标走去，能力自然就要得到提高！但现在你一定要认清自己的能力，这样才能为自己定好目标。） 以上内容希望对同学们有所帮助！ 感触。。。。。。。。。。。。。。。。。。。。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2394,7 +2394,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">636</span>
+                  <span class="site-state-item-count">637</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2416,7 +2416,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">596</span>
+                  <span class="site-state-item-count">597</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
