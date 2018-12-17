@@ -167,6 +167,8 @@
         <span class="logo-line-before"><i></i></span>
         <!--span class="site-title">宋瑞华</span-->
 		<span class="site-title"><img src="/images/logo.gif"></span>
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -333,6 +335,202 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/lxc.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/lxc.html" itemprop="url">流星锤——专为《打僵尸》而设计的鼠标自动点击程序</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-02-15T01:09:33+08:00">
+                2011-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/小品软件/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <!--span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/archives/lxc.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/archives/lxc.html" itemprop="commentCount"></span>
+                </a>
+              </span-->
+            
+          
+
+          
+          
+             <span id="/archives/lxc.html" class="leancloud_visitors" data-flag-title="流星锤——专为《打僵尸》而设计的鼠标自动点击程序">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">共</span>
+                
+                <span title="共">
+                  736 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">约需</span>
+                
+                <span title="约需">
+                  2 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>流星锤是一个专为游戏《植物大战僵尸》中的迷你游戏《打僵尸》而设计的鼠标自动循环点击程序。本程序开源，原代码见 <a href="https://www.songruihua.com/lxc">songruihua.com/lxc</a>。 《打僵尸》游戏源自经典游戏《打地鼠》，也就是若干个洞，地鼠一冒头就打死，复杂的游戏则涉及了正反两种角色，只许打反面角色。《打僵尸》则进一步发展了这一设计：僵尸不断从坟墓里冒出，玩家用锤子将其打死，若带着帽子则需打两下，带着水桶需打三下；可以用工具铲除坟墓以减少僵尸的产生，也可用工具暂时定住僵尸。 但是玩这个游戏需要不断地高频率地点击鼠标左键，既伤手腕又损鼠标。于是我自己编写了一个小程序，名叫流星锤。其基本原理是，每隔n毫秒（可通过更改n值达到调速的目的）就自动点击一下鼠标左键，同时鼠标会在上下方向的四个位置（编号1~4）循环移动，移动顺序为132413241324……，以此提高消灭僵尸的效率；左右方向不自动移动，需手动移动鼠标，即在流星锤运行时鼠标仍可使用。 使用说明： 1.按 S 键开始自动循环点击。 2.按 1~5 键（主键盘区）调节点击速度，默认为5（最慢）。 3.虽然根本没必要，但如确实想放植物，按 W 键（或空格键）暂停/恢复自动点击（暂停时托盘图标变红）。 4.按 E 键关闭流星锤。 5.如发现W、1~5、空格等键无效，或出现错误自动点击请按 E 键退出。 6.开始游戏前请将锤子放在第一、二行界线与第四、五列界线的交点处，这样每锤一次即可消灭相邻两行草坪上的僵尸，即形成一条“火线”，僵尸一触即死，当然游戏进行时可移动鼠标控制流星锤以增加游戏的趣味性，但请不要向右上角移动，以免点击到菜单按钮。 在编写流星锤的同时，我也编写了<a href="https://www.songruihua.com/zdc">自动锤</a>。自动锤只能实现鼠标的自动点击，并不能自动移动鼠标位置，不能形成“火线”，但自动锤可用于需要频繁点击鼠标的其他应用环境，如一些射击类游戏。流星锤则是《打僵尸》游戏专用。 免责声明： 本程序运行时会进行高频率的自动点击鼠标左键操作，本程序作者不对因此造成的任何后果承担任何法律责任。为避免意外，请在全屏模式下玩游戏，并在退出游戏前按下E键以退出本程序。 点击下载 流星锤</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -2156,207 +2354,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/the-good-news-cities-rise-in-property-prices-declining.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/the-good-news-cities-rise-in-property-prices-declining.html" itemprop="url">好消息：大城市房价上涨幅度逐年下降</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2010-06-13T13:17:23+08:00">
-                2010-06-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/经济之道/" itemprop="url" rel="index">
-                    <span itemprop="name">经济之道</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <!--span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/archives/the-good-news-cities-rise-in-property-prices-declining.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/archives/the-good-news-cities-rise-in-property-prices-declining.html" itemprop="commentCount"></span>
-                </a>
-              </span-->
-            
-          
-
-          
-          
-             <span id="/archives/the-good-news-cities-rise-in-property-prices-declining.html" class="leancloud_visitors" data-flag-title="好消息：大城市房价上涨幅度逐年下降">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">已阅</span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">共</span>
-                
-                <span title="共">
-                  205 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">约需</span>
-                
-                <span title="约需">
-                  1 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>好消息：大城市房价上涨幅度逐年下降 2004年房价每平方米4000元； 2005年为6000元，才升2000元； 2006年为8800元，上涨幅度为46.7%，比上一年的50%下降了3.3%； 2007年为12800元，上涨幅度为45.45%，比上一年下降1.2%%； 2009年为18000元，上涨幅度为40.63%，大幅度下降4.18%； 2010年为24000元，上涨幅度为33.33%，大幅度下降7.3%。 从以上数据可以看出，我朝房价上涨幅度逐年下降 ，上涨量不大，不影响市民的购买力。 ZF非常关注民生，并没有不顾人民死活，那些造谣强制拆迁致人自杀的反动反革命分子快去自首吧，给你们定煽动颠覆国家政权罪时能从轻处罚。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/22/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/">24</a><span class="space">&hellip;</span><a class="page-number" href="/page/64/">64</a><a class="extend next" rel="next" href="/page/24/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/22/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/64/">64</a><a class="extend next" rel="next" href="/page/24/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2406,7 +2408,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">638</span>
+                  <span class="site-state-item-count">639</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2428,7 +2430,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">597</span>
+                  <span class="site-state-item-count">598</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2495,6 +2497,8 @@
 
           
 
+		  
+		  
         </div>
       </section>
 
