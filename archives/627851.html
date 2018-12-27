@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="转载,土木,就业," />
+  <meta name="keywords" content="土木,转载,就业," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="仅以此文献给土木行业中的年轻人 第一部分 大学毕业生如何找工作 大学毕业生找工作的确是一件很大事情。在找工作之前，要明确自己究竟想要从事什么工作，自己的水平能干什么。如果你只是一个不太有名气的学校毕业的，还是先找到工作为妙，不要幻想太多。土木行业很重视经验的，不管是从事设计也好，施工也好。能吃苦的同学、失恋的、想逃避社会的、喜欢当官的、喜欢大自然的、性格孤僻的可以去施工单位，在施工单位混出来人">
-<meta name="keywords" content="转载,土木,就业">
+<meta name="keywords" content="土木,转载,就业">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一个老工程技术人员对土木年轻人的忠告(转)">
 <meta property="og:url" content="https://www.songruihua.com/archives/627851.html">
@@ -428,17 +428,6 @@
 
           
           
-             <span id="/archives/627851.html" class="leancloud_visitors" data-flag-title="一个老工程技术人员对土木年轻人的忠告(转)">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">已阅</span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
 
           
 
@@ -510,9 +499,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/转载/" rel="tag"><i class="fa fa-tag"></i> 转载</a>
-          
             <a href="/tags/土木/" rel="tag"><i class="fa fa-tag"></i> 土木</a>
+          
+            <a href="/tags/转载/" rel="tag"><i class="fa fa-tag"></i> 转载</a>
           
             <a href="/tags/就业/" rel="tag"><i class="fa fa-tag"></i> 就业</a>
           
@@ -1241,113 +1230,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("n5cAOhjCB1cnnuGbwhAwFTdc-gzGzoHsz", "Ugz5kE5rSJegg2EEggP2aWi4");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 

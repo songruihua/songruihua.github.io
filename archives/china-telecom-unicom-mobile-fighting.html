@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="手机,竞争,电信," />
+  <meta name="keywords" content="竞争,手机,电信," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="眼下正式大学新生开学的日子，几乎每个新生都会选择到校报到后办一个学校所在地得SIM卡，然后用上个三四年，重组之后的电信、联通、移动三家运营商针对学生市场展开了激烈得市场竞争，但这三家都是工信部的孩子，都认为有老爹在上面罩着，天不怕，地不怕，就有些涉嫌破坏和谐社会得举动了。  移动在校园展开“斩翼行动” 校园推广竞争激烈 浙江台州移动联通上演全武行 湖南大学生抗议中国电信霸王绑定条款 校园BBS被封">
-<meta name="keywords" content="手机,竞争,电信">
+<meta name="keywords" content="竞争,手机,电信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="电信、联通、移动三国混战之最新战况">
 <meta property="og:url" content="https://www.songruihua.com/archives/china-telecom-unicom-mobile-fighting.html">
@@ -428,17 +428,6 @@
 
           
           
-             <span id="/archives/china-telecom-unicom-mobile-fighting.html" class="leancloud_visitors" data-flag-title="电信、联通、移动三国混战之最新战况">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">已阅</span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
 
           
 
@@ -518,9 +507,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/手机/" rel="tag"><i class="fa fa-tag"></i> 手机</a>
-          
             <a href="/tags/竞争/" rel="tag"><i class="fa fa-tag"></i> 竞争</a>
+          
+            <a href="/tags/手机/" rel="tag"><i class="fa fa-tag"></i> 手机</a>
           
             <a href="/tags/电信/" rel="tag"><i class="fa fa-tag"></i> 电信</a>
           
@@ -1249,113 +1238,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("n5cAOhjCB1cnnuGbwhAwFTdc-gzGzoHsz", "Ugz5kE5rSJegg2EEggP2aWi4");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 
