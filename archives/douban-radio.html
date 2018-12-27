@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="自由,电台,豆瓣,音乐," />
+  <meta name="keywords" content="电台,自由,豆瓣,音乐," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="音乐，无论白雪如交响，抑或巴人如流行，都是这个时代的文化中不可或缺的一部分，身为21世纪人士，尤其是青少年，不听音乐的话就很让人无语了，人人都有自己的喜好、取舍，我们不要讥讽去听交响音乐会的人ZB，也不必嘲笑喜欢R&amp;amp;B的人NC，各有所好，各取所需。 但在这个文化多元化的时代，你是否担心自己成为一个音乐上的“井底之蛙”。你或许很喜欢周杰伦，但你也许从没有听过许巍，你也许酷爱劲爆DJ舞曲，但">
-<meta name="keywords" content="自由,电台,豆瓣,音乐">
+<meta name="keywords" content="电台,自由,豆瓣,音乐">
 <meta property="og:type" content="article">
 <meta property="og:title" content="豆瓣电台——引领自己的音乐路">
 <meta property="og:url" content="https://www.songruihua.com/archives/douban-radio.html">
@@ -428,6 +428,21 @@
 
           
           
+             <span id="/archives/douban-radio.html" class="leancloud_visitors" data-flag-title="豆瓣电台——引领自己的音乐路">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
 
           
 
@@ -504,9 +519,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/自由/" rel="tag"><i class="fa fa-tag"></i> 自由</a>
-          
             <a href="/tags/电台/" rel="tag"><i class="fa fa-tag"></i> 电台</a>
+          
+            <a href="/tags/自由/" rel="tag"><i class="fa fa-tag"></i> 自由</a>
           
             <a href="/tags/豆瓣/" rel="tag"><i class="fa fa-tag"></i> 豆瓣</a>
           
@@ -738,7 +753,8 @@
 
   <div class="theme-info">Theme based on <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT-Pisces</a>.</div>
 
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
 
         
@@ -1237,6 +1253,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz", "BO9vxg1rb0UMzG8oA3ckJcaO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="土木,转载,就业," />
+  <meta name="keywords" content="转载,土木,就业," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="1、土木工程与建筑的区别与联系是什么？   （1） 经济、实用与美观   土木讲究的是：经济、实用、在保证以上两点的情况下考虑美观。这是土木与建筑最大的不同。与国外相反，国外建筑师多于土木工程师。由于经济发展的限制，过去我们国家比较不注重外形。过去建设部提出，我们要搞建筑这一行，首先要经济，再一个是适用，第三个是在可能的条件下照顾美观。随着人们生活水平的提高，现在很多的建筑都考虑造型的美观，所以目">
-<meta name="keywords" content="土木,转载,就业">
+<meta name="keywords" content="转载,土木,就业">
 <meta property="og:type" content="article">
 <meta property="og:title" content="土木工程职业生涯规划热点问题分析">
 <meta property="og:url" content="https://www.songruihua.com/archives/627960.html">
@@ -428,6 +428,21 @@
 
           
           
+             <span id="/archives/627960.html" class="leancloud_visitors" data-flag-title="土木工程职业生涯规划热点问题分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
 
           
 
@@ -531,9 +546,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/土木/" rel="tag"><i class="fa fa-tag"></i> 土木</a>
-          
             <a href="/tags/转载/" rel="tag"><i class="fa fa-tag"></i> 转载</a>
+          
+            <a href="/tags/土木/" rel="tag"><i class="fa fa-tag"></i> 土木</a>
           
             <a href="/tags/就业/" rel="tag"><i class="fa fa-tag"></i> 就业</a>
           
@@ -763,7 +778,8 @@
 
   <div class="theme-info">Theme based on <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT-Pisces</a>.</div>
 
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
 
         
@@ -1262,6 +1278,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz", "BO9vxg1rb0UMzG8oA3ckJcaO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

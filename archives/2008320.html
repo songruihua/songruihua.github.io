@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="政治是酱缸的底,新闻,外交," />
+  <meta name="keywords" content="政治是酱缸的底,外交,新闻," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="2008年3月20日下午，外交部发言人秦刚举行例行记者会，就近期拉萨发生的打砸抢烧严重暴力犯罪事件等问题答问。 　　秦刚：大家下午好。现在我愿意回答大家提问。 　　问：你能否告诉我中国政府现在在西藏地区部署了多少警力？有报道称在甘肃和四川等地区也发生了一些事件。中国政府采取了哪些措施平息？是否动用了解放军？根据《北京奥运会及其筹备期间外国记者在华采访规定》，外国记者可自由在华采访，为什么现在外">
-<meta name="keywords" content="政治是酱缸的底,新闻,外交">
+<meta name="keywords" content="政治是酱缸的底,外交,新闻">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2008年3月20日外交部发言人秦刚举行例行记者会">
 <meta property="og:url" content="https://www.songruihua.com/archives/2008320.html">
@@ -428,6 +428,21 @@
 
           
           
+             <span id="/archives/2008320.html" class="leancloud_visitors" data-flag-title="2008年3月20日外交部发言人秦刚举行例行记者会">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
 
           
 
@@ -555,9 +570,9 @@
           
             <a href="/tags/政治是酱缸的底/" rel="tag"><i class="fa fa-tag"></i> 政治是酱缸的底</a>
           
-            <a href="/tags/新闻/" rel="tag"><i class="fa fa-tag"></i> 新闻</a>
-          
             <a href="/tags/外交/" rel="tag"><i class="fa fa-tag"></i> 外交</a>
+          
+            <a href="/tags/新闻/" rel="tag"><i class="fa fa-tag"></i> 新闻</a>
           
         </div>
       
@@ -785,7 +800,8 @@
 
   <div class="theme-info">Theme based on <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT-Pisces</a>.</div>
 
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
 
         
@@ -1284,6 +1300,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz", "BO9vxg1rb0UMzG8oA3ckJcaO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 

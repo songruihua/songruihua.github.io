@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="大学不是象牙塔,转载,北京," />
+  <meta name="keywords" content="转载,大学不是象牙塔,北京," />
 
 
 
@@ -89,7 +89,7 @@
 
 
 <meta name="description" content="明年中国在读博士生数量将超过美国。这意味着什么？专科生、本科生、硕士生、博士生，中国从规模上已经全方位成为世界高等教育大国。    　　然而一个国家的教育要真正崛起不仅仅在于规模。我认为当前中国高等教育发展的主要矛盾就是“社会公众接受高质量高等教育的迫切需要，和我们国家优质高等教育资源严重短缺”之间的矛盾。说白了，老百姓现在不仅想上大学，而且要上好大学。    　　1999年以前，上大学很难，">
-<meta name="keywords" content="大学不是象牙塔,转载,北京">
+<meta name="keywords" content="转载,大学不是象牙塔,北京">
 <meta property="og:type" content="article">
 <meta property="og:title" content="北京师范大学校长钟秉林：从上大学到上好大学">
 <meta property="og:url" content="https://www.songruihua.com/archives/627974.html">
@@ -406,6 +406,21 @@
 
           
           
+             <span id="/archives/627974.html" class="leancloud_visitors" data-flag-title="北京师范大学校长钟秉林：从上大学到上好大学">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
 
           
 
@@ -500,9 +515,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/大学不是象牙塔/" rel="tag"><i class="fa fa-tag"></i> 大学不是象牙塔</a>
-          
             <a href="/tags/转载/" rel="tag"><i class="fa fa-tag"></i> 转载</a>
+          
+            <a href="/tags/大学不是象牙塔/" rel="tag"><i class="fa fa-tag"></i> 大学不是象牙塔</a>
           
             <a href="/tags/北京/" rel="tag"><i class="fa fa-tag"></i> 北京</a>
           
@@ -732,7 +747,8 @@
 
   <div class="theme-info">Theme based on <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT-Pisces</a>.</div>
 
-
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
 
         
@@ -1231,6 +1247,113 @@
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("LUbdqQqzQ2fCWlj5POQPpAPb-gzGzoHsz", "BO9vxg1rb0UMzG8oA3ckJcaO");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
