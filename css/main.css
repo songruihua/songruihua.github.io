@@ -1836,7 +1836,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #83e3ff;
+  background: #6b2a9e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3039,4 +3039,7 @@ pre .javascript .function {
   background-attachment: scroll;
   background-size: 204px 86px;
   height: 86px;
+}
+.posts-collapse .post-title {
+  margin-left: 100px;
 }
