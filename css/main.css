@@ -1836,7 +1836,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4d70dd;
+  background: #c3aa70;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3034,12 +3034,27 @@ pre .javascript .function {
   border: 0px solid;
 }
 .custom-logo-site-title {
-  background: url("/images/logo.gif") no-repeat;
+  background: url("/images/SONG-LOGO.png") no-repeat;
   background-position: center center;
   background-attachment: scroll;
-  background-size: 204px 86px;
-  height: 86px;
+  background-size: 200px 50px;
+  height: 50px;
+}
+body ::selection {
+  background: #000;
+  color: #fff;
+}
+body ::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+body ::-webkit-selection {
+  background: #000;
+  color: #fff;
 }
 .posts-collapse .post-title {
   margin-left: 100px;
+}
+.site-subtitle {
+  font-size: 15px;
 }
