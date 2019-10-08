@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.songruihua.com/"/>
-  <updated>2019-03-27T08:47:00.801Z</updated>
+  <updated>2019-10-08T11:07:00.634Z</updated>
   <id>https://www.songruihua.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安阳一日游</title>
+    <link href="https://www.songruihua.com/archives/anyang.html"/>
+    <id>https://www.songruihua.com/archives/anyang.html</id>
+    <published>2019-10-06T14:22:22.000Z</published>
+    <updated>2019-10-08T11:07:00.634Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/anyang20191006_104509.jpg" alt=" Desk Congtai Park"></p><center>上午十一点左右从邯郸出发,坐高铁是次要的,主要是让孩子近距离看看真高铁</center><br><img src="https://s.songruihua.com/images/anyang20191006_172001.jpg" alt=" Desk Congtai Park"><br><center>下午五点半左右从安阳返回,跑了一天,桌子也累了</center>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/anyang20191006_104509.jpg&quot; alt=&quot; Desk Congtai Park&quot;&gt;&lt;/p&gt;
+&lt;center&gt;上午十一点左右从邯郸出发,坐高铁是次要的,主要是让孩子近距离
+      
+    
+    </summary>
+    
+      <category term="静静的爱" scheme="https://www.songruihua.com/categories/%E9%9D%99%E9%9D%99%E7%9A%84%E7%88%B1/"/>
+    
+    
+      <category term="桌子" scheme="https://www.songruihua.com/tags/%E6%A1%8C%E5%AD%90/"/>
+    
+      <category term="安阳" scheme="https://www.songruihua.com/tags/%E5%AE%89%E9%98%B3/"/>
+    
+      <category term="亲子" scheme="https://www.songruihua.com/tags/%E4%BA%B2%E5%AD%90/"/>
+    
+  </entry>
   
   <entry>
     <title>互报家门</title>
@@ -67,9 +97,9 @@
     
       <category term="桌子" scheme="https://www.songruihua.com/tags/%E6%A1%8C%E5%AD%90/"/>
     
-      <category term="北湖公园" scheme="https://www.songruihua.com/tags/%E5%8C%97%E6%B9%96%E5%85%AC%E5%9B%AD/"/>
-    
       <category term="亲子" scheme="https://www.songruihua.com/tags/%E4%BA%B2%E5%AD%90/"/>
+    
+      <category term="北湖公园" scheme="https://www.songruihua.com/tags/%E5%8C%97%E6%B9%96%E5%85%AC%E5%9B%AD/"/>
     
   </entry>
   
@@ -542,33 +572,6 @@
       <category term="商业" scheme="https://www.songruihua.com/tags/%E5%95%86%E4%B8%9A/"/>
     
       <category term="内存" scheme="https://www.songruihua.com/tags/%E5%86%85%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fostex HP-A4解码耳放一体机</title>
-    <link href="https://www.songruihua.com/archives/fostex-hp-a4.html"/>
-    <id>https://www.songruihua.com/archives/fostex-hp-a4.html</id>
-    <published>2017-08-03T01:43:29.000Z</published>
-    <updated>2018-12-28T02:06:38.687Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/fostex-hp-a4.jpg" alt="耳放解码一体Fostex HP-A4"> Fostex（丰达）是一家日本的老牌音频设备制造商，从耳机，音箱，录音设备到解码器什么都做，亦代工iphone/ipod的原配耳塞。著名的Denon D7000是由这家公司设计和生产的，感觉很有点儿像电源产业的台达，低调而实力极强。 这款Fostex HP-A4是丰达试水HiFi产品之后的精品之一。机内配置了DSD128以及PCM1792A解码芯片，能同时支持高达DSD 5.6MHZ以及PCM 192kHz的解码功能，其回放功能能媲美外观、功能一流的HP-A8C，是用家的又一优质选择。此外，HP-A4采用USB供电，机身仅有113mm X 34mm X 155mm大，纤细轻巧、方便实用；机内拥有独立时钟，能减少jitter产生；两段增益设计，能适配更为广泛的耳机一起使用，让用家随时随地能享受高品质的音乐。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/fostex-hp-a4.jpg&quot; alt=&quot;耳放解码一体Fostex HP-A4&quot;&gt; Fostex（丰达）是一家日本的老牌音频设备制造商，从耳机，音箱，录音设备到解码器什么都做，亦代工ip
-      
-    
-    </summary>
-    
-      <category term="硬件玩家" scheme="https://www.songruihua.com/categories/%E7%A1%AC%E4%BB%B6%E7%8E%A9%E5%AE%B6/"/>
-    
-    
-      <category term="音乐" scheme="https://www.songruihua.com/tags/%E9%9F%B3%E4%B9%90/"/>
-    
-      <category term="Hi-Fi" scheme="https://www.songruihua.com/tags/Hi-Fi/"/>
     
   </entry>
   
