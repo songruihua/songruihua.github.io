@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.songruihua.com/"/>
-  <updated>2020-08-19T08:36:02.884Z</updated>
+  <updated>2020-08-23T05:32:23.166Z</updated>
   <id>https://www.songruihua.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>朱山的鳄鱼</title>
+    <link href="https://www.songruihua.com/archives/zhushan.html"/>
+    <id>https://www.songruihua.com/archives/zhushan.html</id>
+    <published>2020-08-22T06:20:22.000Z</published>
+    <updated>2020-08-23T05:32:23.166Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/zhushan.jpg" alt=" 朱山的鳄鱼"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/zhushan.jpg&quot; alt=&quot; 朱山的鳄鱼&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="静静的爱" scheme="https://www.songruihua.com/categories/%E9%9D%99%E9%9D%99%E7%9A%84%E7%88%B1/"/>
+    
+    
+      <category term="公园" scheme="https://www.songruihua.com/tags/%E5%85%AC%E5%9B%AD/"/>
+    
+      <category term="朱山" scheme="https://www.songruihua.com/tags/%E6%9C%B1%E5%B1%B1/"/>
+    
+      <category term="永年" scheme="https://www.songruihua.com/tags/%E6%B0%B8%E5%B9%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>雨中登九龙山</title>
@@ -546,31 +576,6 @@
     
     
       <category term="儿子" scheme="https://www.songruihua.com/tags/%E5%84%BF%E5%AD%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我家的猫</title>
-    <link href="https://www.songruihua.com/archives/my-cat.html"/>
-    <id>https://www.songruihua.com/archives/my-cat.html</id>
-    <published>2017-12-25T03:22:24.000Z</published>
-    <updated>2018-11-19T00:47:06.120Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/my-cat.jpg" alt="我家的猫"><br>这只猫2000年来到我家，当时就是一个毛球，刚断奶，之后在我家十几年，生性温顺，不怕人，生仔三四窝吧，2012年左右离家出走，没有再回来过，死在外面了，她可能老年痴呆忘记回家的路了，也可能像书上说的预感自己大限将至，故意死在外面的。她是一只好猫。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/my-cat.jpg&quot; alt=&quot;我家的猫&quot;&gt;&lt;br&gt;这只猫2000年来到我家，当时就是一个毛球，刚断奶，之后在我家十几年，生性温顺，不怕人，生仔三四窝吧，2012年左右离家出走，没有再回来
-      
-    
-    </summary>
-    
-      <category term="定格历史" scheme="https://www.songruihua.com/categories/%E5%AE%9A%E6%A0%BC%E5%8E%86%E5%8F%B2/"/>
-    
-    
-      <category term="猫" scheme="https://www.songruihua.com/tags/%E7%8C%AB/"/>
     
   </entry>
   
