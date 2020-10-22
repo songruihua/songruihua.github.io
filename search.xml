@@ -463,8 +463,8 @@
         <category>硬件玩家</category>
       </categories>
       <tags>
-        <tag>游戏</tag>
         <tag>显卡</tag>
+        <tag>游戏</tag>
         <tag>GTA5</tag>
       </tags>
   </entry>
@@ -3153,8 +3153,8 @@
       <tags>
         <tag>改革</tag>
         <tag>政治</tag>
-        <tag>大学</tag>
         <tag>教授</tag>
+        <tag>大学</tag>
       </tags>
   </entry>
   <entry>
@@ -3361,8 +3361,8 @@
         <category>又土又木</category>
       </categories>
       <tags>
-        <tag>大学</tag>
         <tag>流感</tag>
+        <tag>大学</tag>
       </tags>
   </entry>
   <entry>
@@ -3584,8 +3584,8 @@
         <tag>竞争</tag>
         <tag>谷歌</tag>
         <tag>商业</tag>
-        <tag>央视</tag>
         <tag>绿坝</tag>
+        <tag>央视</tag>
         <tag>色情</tag>
       </tags>
   </entry>
@@ -3650,8 +3650,8 @@
         <category>又土又木</category>
       </categories>
       <tags>
-        <tag>大学</tag>
         <tag>讲座</tag>
+        <tag>大学</tag>
         <tag>吃惊</tag>
         <tag>海报</tag>
       </tags>
@@ -3897,8 +3897,8 @@
         <category>网络爬虫</category>
       </categories>
       <tags>
-        <tag>假冒</tag>
         <tag>淘宝</tag>
+        <tag>假冒</tag>
         <tag>诺顿</tag>
       </tags>
   </entry>
@@ -3926,7 +3926,6 @@
       <tags>
         <tag>支付宝</tag>
         <tag>银行</tag>
-        <tag>淘宝</tag>
         <tag>taobao</tag>
         <tag>UKey</tag>
         <tag>USBKey</tag>
@@ -3943,6 +3942,7 @@
         <tag>工商银行</tag>
         <tag>工行</tag>
         <tag>支付</tag>
+        <tag>淘宝</tag>
         <tag>淘宝付款</tag>
         <tag>淘宝支付</tag>
         <tag>网上付款</tag>
