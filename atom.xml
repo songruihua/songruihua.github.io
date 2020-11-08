@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.songruihua.com/"/>
-  <updated>2020-09-28T08:04:30.508Z</updated>
+  <updated>2020-11-08T11:05:28.279Z</updated>
   <id>https://www.songruihua.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>升级500M宽带</title>
+    <link href="https://www.songruihua.com/archives/500m.html"/>
+    <id>https://www.songruihua.com/archives/500m.html</id>
+    <published>2020-11-08T10:57:22.000Z</published>
+    <updated>2020-11-08T11:05:28.279Z</updated>
+    
+    <content type="html"><![CDATA[<p>集团号套餐内包含200M宽带,现在发现联通提供宽度提速服务,每月另外收费20元,升级到500M宽带。让安装人员换了光猫,实测网速可达670M左右,Steam下载峰值80MB/s左右,还是不错的。手机测速也能达到同样的速度,不过隔一堵墙后只有不到300M了。</p><p><img src="https://s.songruihua.com/images/500M.png" alt=" 500M宽带"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;集团号套餐内包含200M宽带,现在发现联通提供宽度提速服务,每月另外收费20元,升级到500M宽带。让安装人员换了光猫,实测网速可达670M左右,Steam下载峰值80MB/s左右,还是不错的。手机测速也能达到同样的速度,不过隔一堵墙后只有不到300M了。&lt;/p&gt;
+&lt;p&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="硬件玩家" scheme="https://www.songruihua.com/categories/%E7%A1%AC%E4%BB%B6%E7%8E%A9%E5%AE%B6/"/>
+    
+    
+      <category term="宽带" scheme="https://www.songruihua.com/tags/%E5%AE%BD%E5%B8%A6/"/>
+    
+      <category term="邯郸" scheme="https://www.songruihua.com/tags/%E9%82%AF%E9%83%B8/"/>
+    
+      <category term="联通" scheme="https://www.songruihua.com/tags/%E8%81%94%E9%80%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>邯郸园博园</title>
@@ -554,31 +584,6 @@
       <category term="网络" scheme="https://www.songruihua.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
       <category term="路由器" scheme="https://www.songruihua.com/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HGST Ultrastar He10 8TB氦气密封式企业级硬盘</title>
-    <link href="https://www.songruihua.com/archives/hgst-ultrastar-he10-8tb-hdd.html"/>
-    <id>https://www.songruihua.com/archives/hgst-ultrastar-he10-8tb-hdd.html</id>
-    <published>2018-03-08T08:10:21.000Z</published>
-    <updated>2018-11-19T06:29:54.376Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/hgst-ultrastar-he10-8tb-hdd-1.jpg" alt="Ultrastar He10"> HGST 拥有业界高性能硬盘 — Ultrastar He10，为无忧数据中心奠定了基础。 He10 采用 PMR 技术，可随时使用于任何企业级容量应用程序或环境中。 第三代 HelioSeal® 技术经过现场验证，功耗在业界最低，帮助数据中心架构师满足环保目标和要求。 He10 可实现 250万 小时 MTBF，基于其前版的成功设计，其可靠性在目前市场中最高。 相信 HGST 和 Ultrastar He10 能为您的数据中心提供更大容量、更高效率、更强可靠性和更多价值。</p><h4 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h4><ul><li>3.5 英寸标准外形，容量达 8TB</li><li>PMR 技术适用于所有企业级容量应用程序与环境</li><li>可靠的、经现场验证的第 3 代设计</li><li>业内最佳功能（瓦/TB）</li><li>与 8TB 空气硬盘相比：<ul><li>- 功效高 56％（瓦/TB）</li><li>- 可靠性高 25％</li></ul></li><li>SATA3 6Gb/s</li><li>250万 小时 MTBF 等级认证和 5 年有限质保</li><li>即时安全擦除 (ISE) 和自加密硬盘 (SED) 选项</li></ul><h4 id="应用-环境"><a href="#应用-环境" class="headerlink" title="应用/环境"></a>应用/环境</h4><ul><li>容量密度和电源效率至关重要的企业和数据中心应用</li><li>云计算和超大规模存储</li><li>大规模横向扩展型高密度数据中心 (MSO)</li><li>使用 Ceph™ 和 Hadoop® 等对象存储解决方案的大量存储器，以支持海量数据分析</li><li>中央管理的视频监控</li><li>可随时应用于所有主流企业级容量应用程序</li><li>对硬盘可靠性有较高要求的存储高价值文件的工作站和服务器</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/hgst-ultrastar-he10-8tb-hdd-1.jpg&quot; alt=&quot;Ultrastar He10&quot;&gt; HGST 拥有业界高性能硬盘 — Ultrastar He10，为无忧数据中
-      
-    
-    </summary>
-    
-      <category term="硬件玩家" scheme="https://www.songruihua.com/categories/%E7%A1%AC%E4%BB%B6%E7%8E%A9%E5%AE%B6/"/>
-    
-    
-      <category term="硬盘" scheme="https://www.songruihua.com/tags/%E7%A1%AC%E7%9B%98/"/>
     
   </entry>
   

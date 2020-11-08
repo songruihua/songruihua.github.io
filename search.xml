@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[升级500M宽带]]></title>
+    <url>%2Farchives%2F500m.html</url>
+    <content type="text"><![CDATA[集团号套餐内包含200M宽带,现在发现联通提供宽度提速服务,每月另外收费20元,升级到500M宽带。让安装人员换了光猫,实测网速可达670M左右,Steam下载峰值80MB/s左右,还是不错的。手机测速也能达到同样的速度,不过隔一堵墙后只有不到300M了。]]></content>
+      <categories>
+        <category>硬件玩家</category>
+      </categories>
+      <tags>
+        <tag>宽带</tag>
+        <tag>邯郸</tag>
+        <tag>联通</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[邯郸园博园]]></title>
     <url>%2Farchives%2Fyuanboyuan.html</url>
     <content type="text"><![CDATA[河北省第四届（邯郸）园林博览会于2020年9月16日在邯郸开幕，河北省园林博览园也将正式开放。]]></content>
@@ -463,8 +476,8 @@
         <category>硬件玩家</category>
       </categories>
       <tags>
-        <tag>显卡</tag>
         <tag>游戏</tag>
+        <tag>显卡</tag>
         <tag>GTA5</tag>
       </tags>
   </entry>
@@ -532,8 +545,8 @@
         <category>又土又木</category>
       </categories>
       <tags>
-        <tag>道路</tag>
         <tag>邯郸</tag>
+        <tag>道路</tag>
         <tag>沁河</tag>
       </tags>
   </entry>
@@ -545,9 +558,9 @@
         <category>又土又木</category>
       </categories>
       <tags>
+        <tag>邯郸</tag>
         <tag>开发区</tag>
         <tag>道路</tag>
-        <tag>邯郸</tag>
       </tags>
   </entry>
   <entry>
@@ -558,8 +571,8 @@
         <category>又土又木</category>
       </categories>
       <tags>
-        <tag>桥梁</tag>
         <tag>邯郸</tag>
+        <tag>桥梁</tag>
       </tags>
   </entry>
   <entry>
@@ -899,8 +912,8 @@
         <category>社会百态</category>
       </categories>
       <tags>
-        <tag>农村</tag>
         <tag>邯郸</tag>
+        <tag>农村</tag>
       </tags>
   </entry>
   <entry>
@@ -3153,8 +3166,8 @@
       <tags>
         <tag>改革</tag>
         <tag>政治</tag>
-        <tag>教授</tag>
         <tag>大学</tag>
+        <tag>教授</tag>
       </tags>
   </entry>
   <entry>
@@ -3361,8 +3374,8 @@
         <category>又土又木</category>
       </categories>
       <tags>
-        <tag>流感</tag>
         <tag>大学</tag>
+        <tag>流感</tag>
       </tags>
   </entry>
   <entry>
@@ -3584,8 +3597,8 @@
         <tag>竞争</tag>
         <tag>谷歌</tag>
         <tag>商业</tag>
-        <tag>绿坝</tag>
         <tag>央视</tag>
+        <tag>绿坝</tag>
         <tag>色情</tag>
       </tags>
   </entry>
@@ -3650,8 +3663,8 @@
         <category>又土又木</category>
       </categories>
       <tags>
-        <tag>讲座</tag>
         <tag>大学</tag>
+        <tag>讲座</tag>
         <tag>吃惊</tag>
         <tag>海报</tag>
       </tags>
@@ -3897,8 +3910,8 @@
         <category>网络爬虫</category>
       </categories>
       <tags>
-        <tag>淘宝</tag>
         <tag>假冒</tag>
+        <tag>淘宝</tag>
         <tag>诺顿</tag>
       </tags>
   </entry>
@@ -3926,6 +3939,7 @@
       <tags>
         <tag>支付宝</tag>
         <tag>银行</tag>
+        <tag>淘宝</tag>
         <tag>taobao</tag>
         <tag>UKey</tag>
         <tag>USBKey</tag>
@@ -3942,7 +3956,6 @@
         <tag>工商银行</tag>
         <tag>工行</tag>
         <tag>支付</tag>
-        <tag>淘宝</tag>
         <tag>淘宝付款</tag>
         <tag>淘宝支付</tag>
         <tag>网上付款</tag>
@@ -4566,8 +4579,8 @@
       </categories>
       <tags>
         <tag>政治是酱缸的底</tag>
-        <tag>新闻</tag>
         <tag>外交</tag>
+        <tag>新闻</tag>
       </tags>
   </entry>
   <entry>
