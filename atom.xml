@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.songruihua.com/"/>
-  <updated>2020-11-08T11:05:28.279Z</updated>
+  <updated>2021-06-29T06:59:59.436Z</updated>
   <id>https://www.songruihua.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开天辟地第一回</title>
+    <link href="https://www.songruihua.com/archives/newhouse.html"/>
+    <id>https://www.songruihua.com/archives/newhouse.html</id>
+    <published>2021-06-29T05:30:00.000Z</published>
+    <updated>2021-06-29T06:59:59.436Z</updated>
+    
+    <content type="html"><![CDATA[<p>第一次冲水洗澡按摩,感受到了自由的曙光。</p><p><img src="https://s.songruihua.com/images/dabeicheng.jpg" alt=" 自由的曙光"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;第一次冲水洗澡按摩,感受到了自由的曙光。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/dabeicheng.jpg&quot; alt=&quot; 自由的曙光&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="扯淡龙门" scheme="https://www.songruihua.com/categories/%E6%89%AF%E6%B7%A1%E9%BE%99%E9%97%A8/"/>
+    
+    
+      <category term="邯郸" scheme="https://www.songruihua.com/tags/%E9%82%AF%E9%83%B8/"/>
+    
+      <category term="大北城" scheme="https://www.songruihua.com/tags/%E5%A4%A7%E5%8C%97%E5%9F%8E/"/>
+    
+      <category term="新居" scheme="https://www.songruihua.com/tags/%E6%96%B0%E5%B1%85/"/>
+    
+  </entry>
   
   <entry>
     <title>升级500M宽带</title>
@@ -557,33 +588,6 @@
     
     
       <category term="日本" scheme="https://www.songruihua.com/tags/%E6%97%A5%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubnt EdgeRouter ER-4千兆以太网路由器</title>
-    <link href="https://www.songruihua.com/archives/ubnt-edgerouter-er-4.html"/>
-    <id>https://www.songruihua.com/archives/ubnt-edgerouter-er-4.html</id>
-    <published>2018-06-13T05:10:52.000Z</published>
-    <updated>2018-11-16T07:42:56.755Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/ER4-1.jpg" alt="er4-1"><br><img src="https://s.songruihua.com/images/ER4-2.jpg" alt="er4-2"><br><img src="https://s.songruihua.com/images/ER4-3.png" alt="er4"></p><p> <a href="https://www.chiphell.com/article-19840-6.html" target="_blank" rel="noopener">EdgeRouter 4为我们带来的不仅是每秒处理高达 340 万个数据包的能力，线速率高达 4 Gbps的强悍性能，还有灵活的组网方式、功能的丰富以及超强的可玩性。对于喜欢捣腾网络的玩家来说，EdgeRouter 4无疑是一款令人兴奋的产品，事实上Ubnt的商用产品在性能，可玩性，拓展性上都远高于消费级的产品，但价格又并不那么的“商业级”。</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/ER4-1.jpg&quot; alt=&quot;er4-1&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://s.songruihua.com/images/ER4-2.jpg&quot; alt=&quot;er4-2&quot;&gt;&lt;br
-      
-    
-    </summary>
-    
-      <category term="硬件玩家" scheme="https://www.songruihua.com/categories/%E7%A1%AC%E4%BB%B6%E7%8E%A9%E5%AE%B6/"/>
-    
-    
-      <category term="网络" scheme="https://www.songruihua.com/tags/%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="路由器" scheme="https://www.songruihua.com/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
     
   </entry>
   

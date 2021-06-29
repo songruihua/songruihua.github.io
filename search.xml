@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[开天辟地第一回]]></title>
+    <url>%2Farchives%2Fnewhouse.html</url>
+    <content type="text"><![CDATA[第一次冲水洗澡按摩,感受到了自由的曙光。]]></content>
+      <categories>
+        <category>扯淡龙门</category>
+      </categories>
+      <tags>
+        <tag>邯郸</tag>
+        <tag>大北城</tag>
+        <tag>新居</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[升级500M宽带]]></title>
     <url>%2Farchives%2F500m.html</url>
     <content type="text"><![CDATA[集团号套餐内包含200M宽带,现在发现联通提供宽度提速服务,每月另外收费20元,升级到500M宽带。让安装人员换了光猫,实测网速可达670M左右,Steam下载峰值80MB/s左右,还是不错的。手机测速也能达到同样的速度,不过隔一堵墙后只有不到300M了。]]></content>
@@ -1982,8 +1995,8 @@
         <category>文化娱乐</category>
       </categories>
       <tags>
-        <tag>蛋疼</tag>
         <tag>分娩</tag>
+        <tag>蛋疼</tag>
       </tags>
   </entry>
   <entry>
@@ -2175,8 +2188,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>程序</tag>
         <tag>蛋疼</tag>
+        <tag>程序</tag>
       </tags>
   </entry>
   <entry>
@@ -3216,9 +3229,9 @@
         <category>扯淡龙门</category>
       </categories>
       <tags>
-        <tag>新闻</tag>
         <tag>美国</tag>
         <tag>自由</tag>
+        <tag>新闻</tag>
         <tag>总统</tag>
       </tags>
   </entry>
@@ -3350,8 +3363,8 @@
       </categories>
       <tags>
         <tag>改革</tag>
-        <tag>新闻</tag>
         <tag>房子</tag>
+        <tag>新闻</tag>
       </tags>
   </entry>
   <entry>
@@ -4578,9 +4591,9 @@
         <category>定格历史</category>
       </categories>
       <tags>
-        <tag>外交</tag>
         <tag>政治是酱缸的底</tag>
         <tag>新闻</tag>
+        <tag>外交</tag>
       </tags>
   </entry>
   <entry>
@@ -4774,9 +4787,9 @@
         <category>定格历史</category>
       </categories>
       <tags>
-        <tag>政治是酱缸的底</tag>
         <tag>日本</tag>
         <tag>爱国</tag>
+        <tag>政治是酱缸的底</tag>
       </tags>
   </entry>
   <entry>
@@ -5765,8 +5778,8 @@
         <category>网络爬虫</category>
       </categories>
       <tags>
-        <tag>政治是酱缸的底</tag>
         <tag>谷歌</tag>
+        <tag>政治是酱缸的底</tag>
       </tags>
   </entry>
   <entry>
@@ -6017,8 +6030,8 @@
         <category>经济之道</category>
       </categories>
       <tags>
-        <tag>手机</tag>
         <tag>移动</tag>
+        <tag>手机</tag>
         <tag>中国移动</tag>
         <tag>电话</tag>
         <tag>短信</tag>
