@@ -340,6 +340,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/mega-privacy-storage.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/mega-privacy-storage.html" itemprop="url">最安全的网盘MEGA的加密原理</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-09-16T18:45:03+08:00">
+                2013-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络爬虫/" itemprop="url" rel="index">
+                    <span itemprop="name">网络爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/archives/mega-privacy-storage.html" class="leancloud_visitors" data-flag-title="最安全的网盘MEGA的加密原理">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">已阅</span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">共</span>
+                
+                <span title="共">
+                  1.2k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">约需</span>
+                
+                <span title="约需">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>继BT下载网站海盗湾（Pirate Bay）采取策略将全部服务转至云端之后，天才黑客Kim Dotcom 和他的Megaupload团队也开始发力，加入这场和警方之间的“捉迷藏”中。MPEG 格式文件处理服务提供商Wired近日联系到Dotcom及其商业合作伙伴Mathias Ortmann，双方就如何保存Megaupload的修改版这一问题进行了商谈。洽谈结果是Megaupload将改头换面，变身名为 “Mega”的新服务重出江湖。</p>
+<p><img src="https://s.songruihua.com/images/mega-privacy-storage.png" alt=""> 这个新服务可以安全躲过政府的突击检查，不会收到侵权起诉。据Wired透露，关键在于所有上传至Mega分享的文件“首 先会在客户的浏览器中被一键加密。这里使用的是一种叫做高级加密标准（AES）的算法。”在此之后，用户会“收到解密密钥。”新的安全性功 能中最重要的一个方面在于它将遵守版权法律的责任放给了每个独立的用户身上，因为“解密密钥不随Mega一起存储”，这样一来，“Mega就无从知道其用 户上传的内容，也无需对此负责。”这项技术同时也能更好的保护用户自己的数据，因为没有解密密钥，盗取信息者就无法读取数据。 Dotcom告知Wired：“哪怕服务器遗失，政府突击数据中心或者有人黑掉了服务器，数据也不会泄露。无论用户上传了什么到网站上，这些东西都会被妥善保管，没有密钥就无法读取。”</p>
+<p>加密原理：</p>
+<h2 id="1、创建新帐号"><a href="#1、创建新帐号" class="headerlink" title="1、创建新帐号"></a>1、创建新帐号</h2><p>当一个新帐号创建之后，会产生两个随机钥匙：“Master Key（主钥匙）”和”RSA Key（公私钥匙对），2048 bit”。这两个钥匙的作用会在下面讲解。 其中 Master Key 和 RSA Key 的私钥部分会使用帐号的密码（使用 AES 128 算法）加密后储存在服务器上，而 RSA Key 的公钥部分则直接明文储存在服务器上。</p>
+<h2 id="2、上传文件"><a href="#2、上传文件" class="headerlink" title="2、上传文件"></a>2、上传文件</h2><p>上传一个文件时，客户端会产生一个随机钥匙（File Key），然后通过 AES 128 算法对文件内容进行加密并上传到服务器，最后这个 File Key 会使用 Master Key 加密后也上传到服务器。 简单来说文件内容的加密过程为：帐号密码 –(加密)–&gt; Master Key –(加密)–&gt; File Key –(加密)–&gt; 文件名和内容 –&gt; 服务器。</p>
+<h2 id="3、下载文件"><a href="#3、下载文件" class="headerlink" title="3、下载文件"></a>3、下载文件</h2><p>下载一个文件时，客户端会下载：加密后的文件数据、加密后的 File Key、加密后的 Master Key。然后在客户端通过这样的一个过程来解密： 帐号密码 –(解密)–&gt; Master Key –(解密)–&gt; File Key –(解密)–&gt; 文件名和内容。</p>
+<h2 id="4、共享文件"><a href="#4、共享文件" class="headerlink" title="4、共享文件"></a>4、共享文件</h2><p>共享一个文件给另一个 Mega 用户时，相应文件的 File Key 会通过 RSA 算法加密后发送给接收者，接收者得到 File Key 之后会用自己的 Master Key 加密并储存起来。 File Key 的传输过程是： 共享者 -&gt; File Key 明文 -&gt; 用接收者的 RSA Public Key 加密 -&gt; 站内发送 -&gt; 接收者 -&gt; 接收者的 RSA Private Key 解密 -&gt; File Key 明文。 这一步因为文档里没有很明确的表达，所以我不知道有没有理解错误。</p>
+<h2 id="5、公开发布文件"><a href="#5、公开发布文件" class="headerlink" title="5、公开发布文件"></a>5、公开发布文件</h2><p>公开发布一个文件（即 Public 共享）时，文件的 File Key 的明文会附加到共享地址（URL），所以下载者使用这个URL就能下载并且解密文件内容。</p>
+<h2 id="6、用户登录验证"><a href="#6、用户登录验证" class="headerlink" title="6、用户登录验证"></a>6、用户登录验证</h2><p>用户登录时，密码并不会提交到服务器进行验证。具体过程是：服务器使用用户的 RSA Public Key 加密一个身份凭证（Access Token）并发送给用户，用户用自己的密码先尝试解密 Master Key，然后再用 Master Key 尝试解密自己的 RSA Private Key，最后用 RSA Private Key 解密 Access Token。如果用户密码正确，则能得到正确的 Access Token，用户使用正确的 Access Token 则可以进入自己的空间了。 从上面的工作原理可见，网站本身以及网络的中间环节，都不知道原始的文件内容、File Key/RSA Private Key、Master Key，因为他们被一环扣一环地加密起来，所有解密的最终关键在于用户的帐号密码，但帐号密码恰好从来都没有提交过给网站或者经过网络中间环节传输。所 以，这样的安全模型的确能够把用户的数据保护起来。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/rip-ray-dolby.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2057,197 +2255,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/false-rich-handsome-pseudo-white-beauty.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/false-rich-handsome-pseudo-white-beauty.html" itemprop="url">假高富帅遭遇伪白富美</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2013-08-05T02:50:42+08:00">
-                2013-08-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/扯淡龙门/" itemprop="url" rel="index">
-                    <span itemprop="name">扯淡龙门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/archives/false-rich-handsome-pseudo-white-beauty.html" class="leancloud_visitors" data-flag-title="假高富帅遭遇伪白富美">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">已阅</span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">共</span>
-                
-                <span title="共">
-                  1.2k 字
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">约需</span>
-                
-                <span title="约需">
-                  4 分钟
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>住豪宅、开宝马、身穿阿玛尼……这样的男子，标准的高帅富。瓜子脸、白皮肤、高挑身材……这样的女子，标准的白富美。</strong>这样两个人，在微信上认识了，经过一个月的电话热恋，确定恋爱关系，并约定在现实中见面。本以为是金风玉露一相逢，胜却人间无数。<strong>没想到，见面不到半个小时，男的破口大骂，女的闹着要跳河。</strong></p>
-<p><strong>这是怎么回事？</strong> <strong>上微信摇一摇</strong> <strong>高富帅与白富美一见倾心</strong> 女青年小陈，25岁，贵州人，到了谈婚论嫁的年纪，她一心想找个高富帅。 男青年小张，29岁，河南人，家里催得最急的还是马上结婚，他一心想找个白富美。 两个年轻人总想着自己能找到理想伴侣，但梦想很丰满，现实很骨感。两人都没找到。 怎么办？上网。小陈和小张迷上了微信。 一个多月前，小陈通过微信“摇一摇”功能，“摇”到了小张，双方互加好友后，立即在微信上聊得火热。 小张说，自己是个单身“富二代”，现在正在温州创业，住的是豪宅、开的是宝马、身穿“阿玛尼”、腕戴 “欧米茄”。 小陈说，自己是个美女，身材好，长相好，皮肤好。 口说无凭，双方开始互发照片。 小张的照片上，他站在厂房门口，还开着奔驰、宝马，出去旅游。他说，这些都是自己的财产。 小陈的照片上，她有着瓜子脸、白皮肤、高挑身材，从各个角度上看都是个美女。 看到照片，两个年轻人都觉得，对方就是自己想找的那个人。不久，两人就通过电话确立了恋爱关系。 <strong>高富帅骑着小电驴</strong> <strong>白富美满脸是雀斑</strong> 电话里，他们卿卿我我地谈了一个月，开始不满足于只通电话，想要真正见上一面了。 “我很想你，可是厂里很忙，走不开。”小张说。 “我能请假，我去温州看你！”小陈很善解人意。 两人约好时间和地点。7月31日，小陈从贵州坐了一天的火车赶到温州。 在火车上，小陈都没合过眼。她想象着下了火车，就能看到男朋友小张开着宝马车来接自己；以后她会和男朋友一起，过着幸福而富裕的日子。 小张也是一夜难眠。他想着马上就能见到照片上那个美丽的女孩，牵着她的手，迎来大家羡慕的眼光。 在焦急的等待中，8月1日，双方见面了。 没有甜蜜的拥抱，没有嘘寒问暖的关心。双方大眼瞪小眼，互相瞪了几分钟，不约而同大骂：“骗子！” 小陈见到的小张，骑着一辆小电驴，穿着一身地摊货，哪有什么宝马，什么阿玛尼、欧米茄。 小张见到的小陈，皮肤粗糙，满脸雀斑“像炸开了的芝麻”，哪里有照片上那么美丽动人。 原来一切都是场“美丽的误会”。 <strong>双方互骂骗子</strong> <strong>女方气得要跳河</strong> 两个年轻人这个时候才搞清楚，对方根本就不是自己心目中的那个人。 小张是温州一家鞋厂的打工仔，平常还顺带给老板开个车。老板的宝马和客户的奔驰，都被小张拍了照片，发给了小陈。 当天，小张本来打算开着老板的宝马车去接小陈的，结果那天老板自己把车开走了；没有办法，小张只能开着自己的小电驴接小陈。 而小陈呢，她也是个普通的打工仔，微信上的照片，都是精心PS过的。 闹了半天，对方也是个打工仔，而非高富帅与白富美，两个年轻人谁都瞧不上谁，都觉得对方欺骗了自己。 在大街上，两人就吵开了，互骂对方是骗子。 小陈越想越激动，一心梦想嫁给白马王子的她，却在小张身上浪费了一个多月的感情，她气得跑到路边一座桥上，站在围栏外就想往河里跳。 旁边人赶紧报警。温州南白象派出所的民警赶到现场时，小陈站在大桥围栏外，手指着桥上小张不停骂：“骗子，欺骗我的感情！浪费我的时间！你们不要过来，不然我马上跳下去！” 这个时候，小张一脸尴尬，不时嘟囔：“你自己不也是骗子……” 民警苦劝了半个小时，才把小陈从桥上劝了下来。 一场“见网友”的闹剧，这才结束。小陈最后伤心地坐上了开往贵州老家的火车。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2302,7 +2309,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">566</span>
+                  <span class="site-state-item-count">567</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2398,7 +2405,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright"> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2021</span>
+        <div class="copyright"> <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2022</span>
   <!--span class="with-love">
     <i class="fa fa-user"></i>
   </span-->
