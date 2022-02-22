@@ -1836,7 +1836,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #49f201;
+  background: #65c8f7;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3057,8 +3057,11 @@ body ::-webkit-selection {
 }
 .post-body {
   float: none;
-  margin-top: -30px;
+  margin-top: 50px;
   width: auto !important;
+}
+.post-header {
+  margin-bottom: -20px;
 }
 .site-subtitle {
   font-size: 16px;
