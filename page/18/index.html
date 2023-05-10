@@ -333,6 +333,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/reading-notes-matlab-02.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/reading-notes-matlab-02.html" itemprop="url">读书笔记：MATLAB（02）</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-11-16T00:56:00+08:00">
+                2011-11-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>2.2 基本数学运算</strong> <strong>2.2.1 矩阵的代数运算</strong> 矩阵转置：如果矩阵元素含有复数元素，则转置后取其共轭复数值，称为Hermit转置，记为B=A<em>,MATLAB中用A’表示。而矩阵的一般转置用A.’表示。 加减法运算：A和B的维数若相同，则相应元素相加减；若二者之一为标量，则遍加减于每个元素；否则报错。 矩阵乘法：C=A\</em>B，并不需要指定二者的维数，若不相容则报错 矩阵的左除：A\B表示A-1B 矩阵的右除：B/A表示B A-1 矩阵翻转：fliplr(A)左右翻转，flipud(A)上下翻转，rot90(A)逆时针翻转90度 矩阵乘方运算：只有方阵可进行乘方运算，B=A^x 点运算：这是一种特殊且非常重要的运算，即对应元素的直接运算，这要求二者维数相同。A.*B、A.^x、A.^A <strong>2.2.2 矩阵的逻辑运算</strong> 逻辑运算的结果是一个矩阵，矩阵的元素非0即1。 与运算：C=A&amp;B，只有当AB所有元素非0，C才为1，否则C取0 或运算：C=A|B，只有当AB所有元素为0，C才为0，否则C取1 非运算：C=~A，只有当A元素为0，C为1，否则C取0 异或运算：C=xor(A,B)，只有当AB元素一个非0，一个为0，C才为1，否则取0，即只有二者逻辑结果不同才可取1，若相同则取0 <strong>2.2.3 矩阵的比较运算</strong> 一般比较运算的结果是一个矩阵，矩阵的元素非0即1。 C=A&gt;B仅当A的元素大于B的对应元素C才取1，否则C取0. 类似的还有&lt; 、&gt;=、&lt; =、==、~=等 find()、all()、any()函数 find()函数用于从矩阵中提取满足条件的元素的下标，下标的表示方式有两种： 第一种，依次将矩阵的第一列、第二列•••排列成一个列向量，输出结果为这个列向量的下标，例如A=[1,2,3;4,5,6;7,8,9]变形为列向量就是A1={1,4,7,2,5,8,3,7,9}，find(A&gt;=5)’的结果是3 5 6 8 9即A1列向量中的这些下标的元素满足大于等于5的筛选条件。 第二种，更为直观地输出行列下标，[i,j]=find(B&gt;4);[i,j]的输出结果为 ans = 3 1 2 2 3 2 2 3 3 3 左侧为行标，右侧为列标 all()、any()函数返回的都是一个行向量，元素的数量跟A矩阵的列数相等，每个元素非0即1。 all(A&gt;4)返回的行向量表示A矩阵中哪一列的所有元素都大于4 any(A&gt;4)返回的行向量表示A矩阵中哪一列中存在至少一个元素大于4 <strong>2.2.4 解析结果的化简和变换</strong> 变量s用于表示解析式之前必须首先声明符号变量syms s s1=simple(s)自动选择最简格式进行化简 [s1,var1]=simple(s)，字符串变量var1输出自动选择的化简方法的名称 常用的化简方法有： collect()合并同类项 expand()展开多项式 factor()因式分解 numden()提取多项式的分子和分母 sincos()三角函数化简 subs()用于变量替换 &gt;&gt; syms a b c x m p q &gt;&gt; f=a*x^2+b*x+c; &gt;&gt; g=subs(f,a,m) g =m*x^2 + b*x + c &gt;&gt; h=subs(g,{b,c},{p,q}) h =m*x^2 + p*x + q <strong>2.2.5 基本数论运算</strong> floor()向负无穷方向取整 ceil()向正无穷方向取整 round就近取整 fix趋零取整 [n,m]=rat(A)将A中所有元素变换成最简有理数，分子存储在矩阵n中，分母m中 rem(A,B)A中元素对B中元素求模得出的余数 gcd(n,m) 最大公约数 lcm(n,m)最小公倍数 factor质因数分解 isprime是否为质数，以0/1表示 A=1:100;B=A(isprime(A)) <strong>2.3 流程结构</strong> ;表示当前代码未结束输入，但是需要换行，所以并不会立刻执行计算；有时一行代码中间也使用;表示在一行中书写原本应该多行书写的代码。 for、while、if、switch case、try catch 如果能对整个矩阵进行运算时，尽量不要采用循环结构 s=0; for i=1:100 s=s+1; … end case{,,,} try,A catch,B end 首先试探性地执行A，如果没有错误则end，否则将错误信息赋值给lasterr并中止A转而执行B。A通常是高效但不稳定的算法，B通常是低效但稳定的算法，B也可用于说明A中的错误原因。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/reading-notes-matlab-01.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1750,157 +1896,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/a-letter-to-civil-engineering-students.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/a-letter-to-civil-engineering-students.html" itemprop="url">[转]写给现在和将来在工地上工作的同学的一封信</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-09-28T00:55:35+08:00">
-                2011-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/又土又木/" itemprop="url" rel="index">
-                    <span itemprop="name">又土又木</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>或许你现在背井离乡，生活过的马马虎虎，拿着2-3千的工资，晚上吹着空调有电视看有电脑玩，这就够了，但是未来在哪里？ 下面的话请耐心看完，也许会对你有一些的帮助！ 每年，建筑业都会吸纳很大一部分大学毕业生，在这些职场新人庆幸找到工作，对未来充满憧憬的时候，他们的前辈——已在建筑业内打拼了几年的师兄师姐们——却怀着深深的忧虑，他们不知道未来会怎样？他们不知道何时会因为受不了折磨而放弃? <strong>职业生涯的O形路口</strong> 不管何种企业，大学毕业生进入其中从技术员干起。两三年过去了，这些大学生的职位会从技术员、技术骨干慢慢做到总工程师、项目经理，工资也从2K、3K变为5K。看起来有着不错的职业发展，然而事实上他们中大部分人的职位会停留在技术骨干这个阶段，工资也会停留在3K至4K左右，之后再难有进展。到总工或者项目经理，工资发展到5K以上对绝大多数大学生来说是很难实现的，在当今的关系社会能力显得那么微不足道。当大部分人在前进的道路上停留下来后，他们就将在职业生涯的Ｏ形路口无休止地循环，看不到尽头，当尽头出现之日，很可能就是他们放弃之时。 建筑业公司的人事部做的就是致力于招人,尤其是中铁或者路桥公司，或者说低工资招人,而不是致力于留住人，因为人才市场上有的是价廉物美的新毕业生。当年，你花了一年左右的时间就能轻松胜任所担任的职务，那么你的师弟师妹凭什么就不可以呢？尤其是在工地上,他们往往以每月1千多的工资招募一个大学毕业生，两年后，当他的工资需要增长时,将其换掉,再招一个毕业生,如此往复循环，将人力成本控制到最低。这些企业的核心竞争力就是廉价的劳动力成本。 老话说男怕入错行,入行后想再转行的难度显而易见。当你进入建筑行业,再转入其他行业的可能性极低。你只能在这个行业内转,如果哪天离心力过大,被甩出圈子,那将是一切悲剧的开端。或者你去干甲方或者你去做监理，工地是别想轻易离开了。当项目完工，你难道又开始候鸟迁徙？常年不能和家人团聚，同事领导间的猜忌矛盾重重恶化，昼夜加班打混凝土，得不到好的休息，每次喝酒喝到吐为止，健康让人担忧。 <strong>与世隔绝的社会生活</strong> 人是社会化的生物，和前程黯淡相比，与世隔绝的工地生活更能使人自卑与绝望。你努力挣扎向上，想脱出这种钢筋混凝土的生活，最终发现是那么的无力，而年华却已老去。 当你走出大学进入工地，你会发现自己的生活世界是那么狭小，你的活动范围和那些天天重复同一个工作的钢筋工、木工并没有什么区别。除了上班和睡觉，你最重要的活动就是去超市购买所需的生活用品。其他的社会生活最多也就是与同事斗地主、诈金花、喝酒，你建立不起自己的社会资源。你孤身一人在外地打拼，身边没有父母亲人，只有一帮同病相怜的同事，当你需要帮助的时候，需要维护自己的权益的时候，身边的人都无能为力。你的生活圈是那么的狭窄，人际交往显得那么苍白。有一天工程结束，你离开了现在的工地去到另外一个工地，那无奈的漂泊注定了总是在重复地画着大小不一但形状相似的圈。 春夏秋冬四季转换，你的工作服也在冬夏间轮转，你和所有的外地人都没有明显区别。在本地人眼中你们都只是打工的而已。如果你很乐观的话，倒是可以把公司的工作服看作是一种福利，冬夏各两套，从周一穿到周日，基本上不需要再多买什么衣服。毕竟你可以自由地穿自己衣服的时间一个月只有那么一两天。工地食堂每天会给员工提供伙食标准为十块钱左右的工作餐。伙食费有些公司要从员工工资里扣除，有些公司则当作一种福利完全免费。但食堂饭菜的难以下咽很多人都深有体会，只能奢望偶尔在饭店里的应酬了。 在这种生活状态下，婚姻成为很多大学生不敢面对的问题。你的生活圈决定了你交际的人大多和你一样，大家同病相怜，没有能力去摘取爱情的果实。工地三十左右的单身柜族比比皆是，不是不想结婚，是找不到结婚的人，是没有女孩愿意嫁给一个常年不回家的男人，是不敢面对没有房子的婚姻，是不敢承担那贫贱夫妻百事哀的未来！或多或少也包含一种无奈！ 如果你已成婚，那最让你纠结的就是孩子的入学以及对父母的照顾。你只是暂住在本地，你的孩子没有权力上那些好的公办学校，或者说你没有能力交那么大一笔的赞助费，而民办学校的教学质量又不能让你放心。毕竟，读书是你能想到的唯一能改变自己孩子未来的救命稻草。你只好无奈地将你年幼的儿女送回老家，回到爷爷奶奶身边成为留守儿童。每周的电话是你最开心的时刻，在外的苦累在孩子的笑声中都会消融。你在心里默默企求上苍，让自己的父母和孩子平平安安，无病无灾。任何一点风吹雨打就可能让你刚刚起步的家陷入泥沼。 你每年只能回家一到两次看一下逐渐老去的父母和日渐长大的孩子。因为没有假期，因为路途太远往返不便，因为所有的因为。为了生存，你离开生活了二十年的家乡，但在他乡却无力构建一个属于自己的家，如同水中浮萍，没有根，心也不能降落。 明天在哪里? 来到城市的大学生对未来最大的期望是能走出父辈贫苦生活的轮回，让自己进入更高一个阶层，为下一辈创造一个更好的起点。但当你已年入不惑，自身可以贩卖的价值已所剩无几，而城市却不再需要你的时候，你难过落魄地回到老家，让你的儿女从你二三十年前的起点重新出发，再画着一个和你一样的圆？作为大学生的你无力改变自己的命运，难道你能保证你的下一代能顺利地考上大学并改变命运……？ 城市很大，外面的世界也很精彩，在这个只许进很难出的围城里，作为打工的大学生们你是否有了足够的储备以避免属于你的精彩落幕呢？！ 如果你现在感觉很触动，很现实，不放好好的静下心来好好的想想自己的未来在哪里，自己是愿意拿着两三千，三四千的工资安稳的想这样生活着，还是有自己的理想，社会是残酷的，师哥师姐们用他们的亲身体会告诉了我们，再大的理想会在我们打工安稳的工地生活中给磨灭的！ 此时的你不防想想： 1、我的理想是什么？ 2、我下一个目标在哪里？（当你把第一个想通的时候，这个就是你眼前摆着的问题，是你拟定计划的开始。） 3、我有能力做什么？（这是一个最关键的问题，但也是一个次要的问题，因为能力是培养的，当你的理想和目标都明确是，只要你坚持不懈的向着自己的理想和目标走去，能力自然就要得到提高！但现在你一定要认清自己的能力，这样才能为自己定好目标。） 以上内容希望对同学们有所帮助！ 感触。。。。。。。。。。。。。。。。。。。。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/57/">57</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/58/">58</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1946,7 +1946,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">570</span>
+                  <span class="site-state-item-count">571</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

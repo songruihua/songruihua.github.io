@@ -434,6 +434,17 @@ th {
 td {
   border-bottom-width: 1px;
 }
+.srh-table {
+  margin-top: 0px;
+  padding-top: -200px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  table-layout: auto;
+  word-wrap: break-all;
+}
 html,
 body {
   height: 100%;
@@ -1836,7 +1847,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a7ff33;
+  background: #084a0e;
 }
 .links-of-blogroll {
   font-size: 13px;
