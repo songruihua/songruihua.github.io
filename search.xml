@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[辞旧迎新]]></title>
+    <url>%2Farchives%2Fnewstart.html</url>
+    <content type="text"><![CDATA[但行尽力，莫问前程。]]></content>
+      <categories>
+        <category>定格历史</category>
+      </categories>
+      <tags>
+        <tag>工作</tag>
+        <tag>医院</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows各版本技术支持结束日期]]></title>
     <url>%2Farchives%2Fwindows-lifecycle-end-of-life-date.html</url>
     <content type="text"><![CDATA[版本 发布日期 主要支持结束日期 外延支持结束日期 Win10 22H2 (E) 18 Oct 2022 14 Oct 2025 14 Oct 2025 Win10 22H2 (W) 18 Oct 2022 14 Oct 2025 14 Oct 2025 Win11 22H2 (E) 20 Sep 2022 14 Oct 2025 14 Oct 2025 Win11 22H2 (W) 20 Sep 2022 08 Oct 2024 08 Oct 2024 Win10 21H2 IoT (L) 16 Nov 2021 12 Jan 2027 13 Jan 2032 Win10 21H2 (L) 16 Nov 2021 12 Jan 2027 12 Jan 2027 Win10 21H2 (E) 16 Nov 2021 11 Jun 2024 11 Jun 2024 Win10 21H2 (W) 16 Nov 2021 13 Jun 2023 13 Jun 2023 Win11 21H2 (E) 04 Oct 2021 08 Oct 2024 08 Oct 2024 Win11 21H2 (W) 04 Oct 2021 10 Oct 2023 10 Oct 2023 Win10 21H1 (E)(W) 18 May 2021 13 Dec 2022 13 Dec 2022 Win10 20H2 (E) 20 Oct 2020 09 May 2023 09 May 2023 Win10 20H2 (W) 20 Oct 2020 10 May 2022 10 May 2022 Win10 2004 (E)(W) 11 (27 May 2020 14 Dec 2021 14 Dec 2021 Win10 1909 (E) 12 Nov 2019 10 May 2022 10 May 2022 Win10 1909 (W) 12 Nov 2019 11 May 2021 11 May 2021 Win10 1903 (E)(W) 29 Aug 2019 08 Dec 2020 08 Dec 2020 Win10 1809 (L) 13 Nov 2018 09 Jan 2024 09 Jan 2029 Win10 1809 (E) 13 Nov 2018 11 May 2021 11 May 2021 Win10 1809 (W) 13 Nov 2018 10 Nov 2020 10 Nov 2020 Win10 1803 (E) 30 Apr 2018 11 May 2020 11 May 2021 Win10 1803 (W) 30 Apr 2018 12 Nov 2019 11 May 2020 Win10 1709 (E) 17 Oct 2017 13 Oct 2020 13 Sep 2020 Win10 1709 (W) 17 Oct 2017 09 Apr 2019 09 Apr 2019 Win10 1703 (E) 11 Apr 2017 08 Oct 2019 08 Oct 2019 Win10 1703 (W) 11 Apr 2017 09 Oct 2018 09 Oct 2018 Win10 1607 (L) 02 Aug 2016 12 Oct 2021 (13 Oct 2026 Win10 1607 (E) 02 Aug 2016 09 Apr 2019 09 Apr 2019 Win10 1607 (W) 02 Aug 2016 10 Apr 2018 10 Apr 2018 Win10 1511 (E)(W) 10 Nov 2015 10 Oct 2017 10 Oct 2017 Win10 1507 (L) 29 Jul 2015 13 Oct 2020 14 Oct 2025 Win10 1507 (E)(W) 29 Jul 2015 09 May 2017 09 May 2017 Windows 8.1 13 Nov 2013 09 Jan 2018 10 Jan 2023 Windows 8 30 Oct 2012 12 Jan 2016 12 Jan 2016 Windows 7 SP1 22 Feb 2011 13 Jan 2015 14 Jan 2020 Windows Vista SP2 29 Apr 2009 10 Apr 2012 11 Apr 2017 Windows XP SP3 21 Apr 2008 14 Apr 2009 08 Apr 2014 符号 说明 E Enterprise, Education IoT Enterprise editions W Home, Pro, Pro Education Pro for Workstations editions L Long-Term Servicing Channel]]></content>
@@ -561,8 +573,8 @@
       </categories>
       <tags>
         <tag>微软</tag>
-        <tag>Windows</tag>
         <tag>Win10</tag>
+        <tag>Windows</tag>
         <tag>激活</tag>
       </tags>
   </entry>
@@ -1567,8 +1579,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>HK4WIN</tag>
         <tag>快捷键</tag>
+        <tag>HK4WIN</tag>
       </tags>
   </entry>
   <entry>
@@ -1639,8 +1651,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>HK4WIN</tag>
         <tag>快捷键</tag>
+        <tag>HK4WIN</tag>
       </tags>
   </entry>
   <entry>
@@ -1779,8 +1791,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>HK4WIN</tag>
         <tag>快捷键</tag>
+        <tag>HK4WIN</tag>
       </tags>
   </entry>
   <entry>
@@ -1909,8 +1921,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>HK4WIN</tag>
         <tag>快捷键</tag>
+        <tag>HK4WIN</tag>
       </tags>
   </entry>
   <entry>
@@ -2005,8 +2017,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>HK4WIN</tag>
         <tag>快捷键</tag>
+        <tag>HK4WIN</tag>
       </tags>
   </entry>
   <entry>
@@ -2376,8 +2388,8 @@
         <category>小品软件</category>
       </categories>
       <tags>
-        <tag>HK4WIN</tag>
         <tag>快捷键</tag>
+        <tag>HK4WIN</tag>
       </tags>
   </entry>
   <entry>

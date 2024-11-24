@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.songruihua.com/"/>
-  <updated>2023-05-10T05:06:58.967Z</updated>
+  <updated>2024-11-24T16:58:34.739Z</updated>
   <id>https://www.songruihua.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>辞旧迎新</title>
+    <link href="https://www.songruihua.com/archives/newstart.html"/>
+    <id>https://www.songruihua.com/archives/newstart.html</id>
+    <published>2024-11-24T11:00:00.000Z</published>
+    <updated>2024-11-24T16:58:34.739Z</updated>
+    
+    <content type="html"><![CDATA[<p>但行尽力，莫问前程。<br><img src="https://s.songruihua.com/images/shoufei.webp" alt="收费窗口"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;但行尽力，莫问前程。&lt;br&gt;&lt;img src=&quot;https://s.songruihua.com/images/shoufei.webp&quot; alt=&quot;收费窗口&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="定格历史" scheme="https://www.songruihua.com/categories/%E5%AE%9A%E6%A0%BC%E5%8E%86%E5%8F%B2/"/>
+    
+    
+      <category term="工作" scheme="https://www.songruihua.com/tags/%E5%B7%A5%E4%BD%9C/"/>
+    
+      <category term="医院" scheme="https://www.songruihua.com/tags/%E5%8C%BB%E9%99%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows各版本技术支持结束日期</title>
@@ -572,33 +600,6 @@
       <category term="思科" scheme="https://www.songruihua.com/tags/%E6%80%9D%E7%A7%91/"/>
     
       <category term="交换机" scheme="https://www.songruihua.com/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UBNT UniFi AP AC LR无线接入点</title>
-    <link href="https://www.songruihua.com/archives/ubnt-unifi-ap-ac-lr.html"/>
-    <id>https://www.songruihua.com/archives/ubnt-unifi-ap-ac-lr.html</id>
-    <published>2018-12-11T08:54:15.000Z</published>
-    <updated>2018-12-17T09:22:46.248Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/ubnt-unifi-ap-ac-lr.jpg" alt=" UAP-AC-LR"><br>UBNT UniFi AP AC LR远距型无线接入点采用精美的工业设计及制造工艺，支持最新版本的 Wi-Fi 802.11ac 协议，全新中文操作界面，更符合中文用户使用习惯。是布署远距离、高性能无线网络的理想选择。<br><b>革命性天线设计</b><br>革命性的天线设计不仅具有超长距离、对称链路覆盖范围，而且 UniFi AC LR AP 的高天线增益对于远距离客户端链接品质的提升，相比单方向提高发射功率要强数倍。<br><img src="https://s.songruihua.com/images/unifi-ap-ac-lr-features-super-antenna.jpg" alt=" UAP-AC-LR"><br><b>为优化 RF 性能而生</b><br>全新打造的 UniFi 控制器还大幅提升了 RF 性能。<br><img src="https://s.songruihua.com/images/unifi-ap-ac-lr-optimal-rf-performance1.jpg" alt=" UAP-AC-LR"><br><b>云平台，让企业 WiFi 管理更简单</b><br>全新的 UniFi 控制器是一个强大的企业级无线管理引擎，是高密度下高性能、低延迟、长时间稳定运行的理想之选。更难能可贵的是其带机量是基于软件的，所以 UniFi 只需要一个虚拟云控制平台，其网络就可以无限制扩展，随时随地管理布署在多个站点中的 UniFi AP。<br><img src="https://s.songruihua.com/images/unifi-ap-ac-lr-controller-2.jpg" alt=" UAP-AC-LR"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/ubnt-unifi-ap-ac-lr.jpg&quot; alt=&quot; UAP-AC-LR&quot;&gt;&lt;br&gt;UBNT UniFi AP AC LR远距型无线接入点采用精美的工业设计及制造工艺，支持最新版本的
-      
-    
-    </summary>
-    
-      <category term="硬件玩家" scheme="https://www.songruihua.com/categories/%E7%A1%AC%E4%BB%B6%E7%8E%A9%E5%AE%B6/"/>
-    
-    
-      <category term="无线" scheme="https://www.songruihua.com/tags/%E6%97%A0%E7%BA%BF/"/>
-    
-      <category term="WiFi" scheme="https://www.songruihua.com/tags/WiFi/"/>
     
   </entry>
   
