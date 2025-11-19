@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="手机,系统," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="宋瑞华" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="近一个月可谓多事之秋，IT和互联网领域也不平静：阿里云操作系统受到谷歌打压，华为任正非提出要开发自己的操作系统，中兴也宣布今年第四季度将发布操作系统。一时间，微博上有关自主知识产权操作系统的讨论甚嚣尘上。这样的讨论就像水木清华某些版面上的“月经贴”一样，隔段时间就要火一次。但大部分讨论如同盲人摸象，大家基本上只是站在自己的立场，基于个人经验判断孰是孰非。  这篇科普性的文章，将从政治、技术、工程、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何判定“自主”手机操作系统？">
+<meta property="og:url" content="https://www.songruihua.com/archives/determine-independent-mobile-operating-system.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="近一个月可谓多事之秋，IT和互联网领域也不平静：阿里云操作系统受到谷歌打压，华为任正非提出要开发自己的操作系统，中兴也宣布今年第四季度将发布操作系统。一时间，微博上有关自主知识产权操作系统的讨论甚嚣尘上。这样的讨论就像水木清华某些版面上的“月经贴”一样，隔段时间就要火一次。但大部分讨论如同盲人摸象，大家基本上只是站在自己的立场，基于个人经验判断孰是孰非。  这篇科普性的文章，将从政治、技术、工程、">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic.yupoo.com/songruihua/CidpPQw4/J6T4w.jpg">
+<meta property="og:image" content="https://pic.yupoo.com/songruihua/CidpQgKO/medish.jpg">
+<meta property="og:image" content="https://pic.yupoo.com/songruihua/CidpQLPP/medish.jpg">
+<meta property="og:image" content="https://pic.yupoo.com/songruihua/CidpRfr8/vYhNl.jpg">
+<meta property="og:image" content="https://pic.yupoo.com/songruihua/CidpS3Pw/wY9fr.jpg">
+<meta property="og:image" content="https://pic.yupoo.com/songruihua/CidpScGo/t1Yzx.png">
+<meta property="article:published_time" content="2012-09-25T08:36:51.000Z">
+<meta property="article:modified_time" content="2018-10-19T01:30:43.309Z">
+<meta property="article:author" content="宋瑞华">
+<meta property="article:tag" content="手机">
+<meta property="article:tag" content="系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.yupoo.com/songruihua/CidpPQw4/J6T4w.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.songruihua.com/archives/determine-independent-mobile-operating-system.html"/>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics START-->
+
+<!-- Global site tag (gtag.js) - Google Analytics END-->
+
+
+
+  <title>如何判定“自主”手机操作系统？ | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+<a href="/"  rel="start" alt="宋瑞华">
+<div class="custom-logo-site-title">
+      <!--a href="/"  class="brand" rel="start"-->
+        <span class="logo-line-before"><i></i></span>
+        <!--span class="site-title">宋瑞华</span-->
+		<!--span class="site-title"><img src="/images/logo.gif"></span-->
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
+        <span class="logo-line-after"><i></i></span>
+      <!--/a-->
+    </div>
+
+
+</a>
+
+        <h1 class="site-subtitle" itemprop="description"><font face="楷体" color="#555555">曲邑东南升明月</font></h1>
+		<!--h1 class="site-subtitle" itemprop="description"><font face="楷体">曲邑东南升明月</font></h1-->
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站图">
+          <a href="/sitemap.xml" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/determine-independent-mobile-operating-system.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">如何判定“自主”手机操作系统？</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-09-25T16:36:51+08:00">
+                2012-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>近一个月可谓多事之秋，IT和互联网领域也不平静：阿里云操作系统受到谷歌打压，华为任正非提出要开发自己的操作系统，中兴也宣布今年第四季度将发布操作系统。一时间，微博上有关自主知识产权操作系统的讨论甚嚣尘上。这样的讨论就像水木清华某些版面上的“月经贴”一样，隔段时间就要火一次。但大部分讨论如同盲人摸象，大家基本上只是站在自己的立场，基于个人经验判断孰是孰非。 <img src="https://pic.yupoo.com/songruihua/CidpPQw4/J6T4w.jpg" title="U6349P2DT20120921223937"> 这篇科普性的文章，将从政治、技术、工程、法律等几个方面说明“自主”操作系统，并尝试给出一些技术、工程等方面的建议。 本文所指“操作系统”，以及大家近期讨论的操作系统，其实基本上仅限于移动终端领域，就是指能和Android、iOS、Windows Phone等相提并论的操作系统，主要用于智能手机、平板电脑，而不是实时操作系统、操作系统内核或者服务器操作系统——准确讲，应该是指一个针对智能手机和&#x2F;或平板电脑的软件平台以及对应的生态系统。不过，我们当前还是把它称为“操作系统(OS)”吧。  </p>
+<h3 id="一、为什么政府和企业都说要“自主”操作系统？"><a href="#一、为什么政府和企业都说要“自主”操作系统？" class="headerlink" title="一、为什么政府和企业都说要“自主”操作系统？"></a><strong>一、为什么政府和企业都说要“自主”操作系统？</strong></h3><p>对到底要不要“自主”操作系统的问题，不同的人有不同看法。码农，尤其是喜欢Google的码农，通常会说，Android是完全开源的，没有必要重复发明轮子；企业决策者或者政策制定者，则往往认为必须有自主的操作系统。 在谈“自主”操作系统的必要性之前，笔者先谈谈**“自主”操作系统的不必要性**： 在开源软件大行其道的今天，操作系统不再那么神秘，任何有足够财力的企业，依赖现有的开源软件，都可以比较容易地推出一个能够运行的操作系统。出于此观点， 很多人认为有Android这样的开源操作系统，就没有必要再开发一个自己的操作系统了，到底谁拥有开源操作系统的知识产权，是无所谓的事情。 这个说法是有一定道理的。 从法律(指开源软件许可证)和技术上讲，就算谷歌不打算开源新的Android版本，不允许某些厂商使用Android，我们一样可以在已经开源的 Android之上继续发展自己的Android系统——只要遵循已经开源的Android的许可证约束即可，而Android系统主要使用的开源软件许可证有GPL(Linux内核)、LGPL(各种运行时函数库)、Apache(Dalvik虚拟机及Java类库)，其实是非常宽松的。 这个说法的不足之处在于，未考虑到可能的专利(软件相关的专利通常和实现无关，就是说，你重写一段代码，并不表示你可以规避对应的专利)，以及是否有能力自行发展Android的问题。 前者非常要害。谷歌在开发Android，尤其是Dalvik虚拟机以及Java类库的过程中，肯定积累了大量专利，而这些专利是凌驾于软件的著作权和许可证之上的。也就是说，如果你基于现有的Android派生了一个分支，想要将这个Android派生版本运行在自己的手机里并销售，谷歌马上可以拿出专利大棒来限制你。当前，谷歌尚未拿出专利大棒来限制各种派生系统。在阿里云OS和谷歌最近的争论中，谷歌也只是说阿里云OS导致Android不兼容。但一 旦有厂商真的使用了阿里云OS，谷歌马上就会拿出专利大棒，这将毫无疑问。 至于有没有能力来自行发展Android的问题，在中国有大量码农基数的基础上，只要有源代码，就可以在短时间内组织团队自行发展Android。 <img src="https://pic.yupoo.com/songruihua/CidpQgKO/medish.jpg" title="U6349P2DT20120921224514"> 然后，是**“自主”操作系统的必要性**： 强调需要“自主”操作系统的主要有两类人：政府中的政策制定者以及大型企业的决策者。 对政策制定者来讲，面对未来由中美两国主导的国际环境，作为两极世界中的中国，有没有自主的芯片、操作系统，关系到两个层面：一个是国家安全，一个是面子。 在这样的认识下，“核高基”的出现自然而然，其目的是支持国内企业发展核心电子器件、高端通用芯片及基础软件产品。我们暂且不谈核高基项目在实施过程中存在的制度性问题，它表明的国家是在战略上的一种布局，是一种国家意志，涉及到政治领域。 作为企业决策者，没有自主的操作系统，他将在很多方面受制于人。就拿阿里云和谷歌的争议事件来看，宏碁受到了来自谷歌的压力，然后就乖乖投降了。这里边有两个值得思考的地方：(1)既然Android这么 好，为什么宏碁还要和阿里OS合作？后者肯定没有Android成熟啊。(2)为什么谷歌一施压，宏碁就放弃了和阿里OS的合作呢？显然，宏碁有动机选择另一个OS给自己的智能手机，可能的原因无外乎两种：阿里给钱了或者宏碁不希望被谷歌控制；另外，宏碁又那么容易地被谷歌搞定，说明谷歌能带给宏碁的利益远远大于阿里。 另外联想到微软向Android厂商收取专利许可费的事情，像宏碁这样的厂商，肯定也会被微软勒索，也包括中兴、华为等国际化的Android手机厂商，无一例外。对企业决策者来讲，这很难受——给别人做嫁衣啊，有时候还两头受气！所以，小的厂商需要投靠大树来庇护自己(大多数乖乖就范于谷歌或微软)，大的厂商就要考虑是不是开发一个“自主”的操作系统来抗衡了。 这样的思路下，华为、中兴等大的智能手机厂商，开发“自主”操作系统的动机非常强。 像阿里这样的公司，开发OS的目的是要复制谷歌的商业模式，加上阿里OS又没有撇清和Android的关系，受谷歌的打压就在情理之中了。  </p>
+<h3 id="二、“自主”考核政策之殇：生态系统才是活下去的关键"><a href="#二、“自主”考核政策之殇：生态系统才是活下去的关键" class="headerlink" title="二、“自主”考核政策之殇：生态系统才是活下去的关键"></a><strong>二、“自主”考核政策之殇：生态系统才是活下去的关键</strong></h3><p>根据上面的分析，看来我们还真的需要有“自主”的操作系统。但是，“自主”到底是自主什么呢？ 在功能手机和实时嵌入式系统领域，我们不是没有“自主”的操作系统，比如MTK或者展讯的操作系统，以及诸如早期的Hopen、道系统等。在通用操作系统领域，国家也长期支持了诸如麒麟操作系统、红旗Linux、中标Linux、新华Linux等多家本土操作系统厂商。但市场表明，国家支持的这些操作系统都将消亡或者正在消亡。 本人认为，国家支持下进行“自主”操作系统开发的确有合理之处，毕竟开发操作系统是一件比较困难的事情。但是，这里边有一个重要的误区和制度设计上的错误，就是只强调了“自有知识产权”，而没有强调“自己主导”。 在强调“自由知识产权”的情况下，政府对受资助企业的“自主”操作系统进行考核时，大部分情况下考核的是企业有没有获得对应的知识产权，就是软件的著作权和&#x2F;或对应的专利，而并没有考核能否主导一个产业链。受资助的企业，能否类似谷歌控制产业链一样，做到让别人用了你的操作系统，就没法不继续用下去？在这样的思路下，政府需要在更长的周期内，考核受资助企业的市场份额是否有扩大，是否建立了良好的生态系统，让使用者、开发者欲罢不能，而不是简单的著作权证书和专利数量，或者是否达到了一个给定的出货量(因为出货量是可以作假的)。 也就是说，我们应该重新定义“自主”这两个字，从“自有知识产权”向“有效知识产权保护下的自己主导”转移。 为什么这里强调“有效知识产权”呢？这是因为，在开源软件成为趋势的情况下，构建一个自己的操作系统，可以使用很多已有的开源软件，我们没有必要所有代码都自己编写，而且越底层的代码就越没有必要自己重写一遍。这如同一只桃子，好吃的是果肉，而不是果核。像内核、基础库、常用运行时函数库等等，都不必自己重新开发。而且这么做几乎没有任何潜在的法律问题，当然，前提是你要告诉大家你用了哪些开源软件，而且你也尊重了这些开源软件的许可证。这样下来，一个操作系统的软件著作权已经不再重要，重要的是相关的专利、自己独有的创新以及围绕操作系统建立起来的生态系统。 <img src="https://pic.yupoo.com/songruihua/CidpQLPP/medish.jpg" title="U6349P2DT20120917114528">    </p>
+<h3 id="三、如何判定一个操作系统是否“自主”：阿里云算不算？"><a href="#三、如何判定一个操作系统是否“自主”：阿里云算不算？" class="headerlink" title="三、如何判定一个操作系统是否“自主”：阿里云算不算？"></a><strong>三、如何判定一个操作系统是否“自主”：阿里云算不算？</strong></h3><p>那么，“自主”操作系统应该长什么样？要回答这个问题，我们先看看假的“自主”操作系统长什么样。所谓假的“自主”操作系统，就是那些号称“自主”操作系统，但其实：</p>
+<ul>
+<li>只是在已有的开源操作系统之上加了一层皮。比如各种基于Android的第三方ROM，比如MIUI、Flyme等。这种操作系统仅仅在UI&#x2F;UE上做了一些工作，就如同一个人换了一身衣服那样，实质上这个人不会因为换了一身衣服而从张三改叫成李四。</li>
+<li>修改了已有开源操作系统的内部代码，做了一些优化或者去掉了别人的一些东西，添加了一些自己的内容。比如阿里OS就属于这种，或者哪些号称深度定制的Android系统也属此类。这种做法如同整容，的确动了些刀子，甚至改变了性别，但人还是那人，改了名字或性别也还是那人。</li>
+</ul>
+<p>这么类比下来，读者应该就知道了，真的“自主”操作系统，必须要有自己的灵魂，通俗一点讲，不是换衣服或者整容，只有换了脑袋的才能是一个全新的个体。 那么在操作系统当中，什么东西是灵魂？这个问题回答起来蛮难的。我们先看看哪些东西肯定不属于灵魂： 无法形成有效知识产权的软件组件，或者说，满世界有很多(开源的)实现的软件组件。比如内核、基础函数库、网络协议、图形库、浏览器引擎等等。这些东西可以 看成是形成一个智能动物(比如“人”)的骨架或者躯体、甚至心脏，但远远算不上脑袋或者灵魂。这也是为什么笔者主张在“自主”操作系统中要尽量使用现有的成熟开源软件、而且不建议再行发明此类轮子的原因。 要知道哪些东西是灵魂，我们分析下谷歌在和阿里OS争论的过程中主要维护的是什么东西： 谷歌的说法：阿里云OS采用了Android的虚拟机和Framework，但又不兼容Android，破坏了Android的生态系统。这个说法可能还不是谷歌打压阿里OS的最关键原因，但起码说出了他们的担忧：阿里OS是想借Android打造自己的一个生态系统！但除此之外，谷歌对那些只换衣服的Android系统则采取听之任之的态度，和他们一贯以来标榜的“只要兼容，我们欢迎”的态度一致——也就是说，这些系统没有从根本上动摇谷歌的生态系统。 所以，真正的“自主”操作系统的灵魂，就是那个背后的、无形的生态系统，一个看似开放但其实封闭的生态系统。一旦加入这个生态系统，你就很难下来——正所谓“上了贼船下不来”。 这就是我的回答：一个真正“自主”的操作系统，必须建立自己的生态系统，一个开放的，但在某种程度上又封闭的生态系统。 操作系统生态系统？这名词大家说了很多年了，一个生态系统具体应该是什么样子？笔者从如下几个方面解释一下： **技术层面。**操作系统必须通过某种技术将自己和其他的操作系统区隔开来。比如Android采用Java语言，但使用了不同于Sun(现在是Oracle)JDK的 API；iOS采用了ObjectC语言，为应用程序提供的接口和框架甚至有别于苹果自己的Mac OS X；Windows Phone采用了C#语言，在.Net框架下进行开发。为什么这些操作系统不使用C&#x2F;C++这类语言呢，C&#x2F;C++尤其是C可是这些操作系统内核的编程语言啊！？这里有如下几个原因： 操作系统开发者不希望普通的应用程序通过使用比较低级的编程语言来控制系统或设备，毕竟操作系统是给智能手机、平板电脑这种消费类的电子设备使用的；通过采用更加高级的语言来简化编程和开发人员的学习难度；通过对看起来非常复杂的框架的持续演进，达到牵着开发者和厂商鼻子走的效果；便于形成依附于某个操作系统的独有的开发者社区和文化。 **法律层面。**操作系统必须通过创建自己的有效知识产权体系来保护自己。前面已经说过，越底层的软件组件越没有市场价值(码农们可能不喜欢听这话，但现实就是这样的)。通过建立全新的、包裹在底层操作系统之上的框架、编程接口、编程语言等基础设施，操作系统开发商才有可能建立起有别于他人的有效的知识产权保护体系。也就是说，如果连框架、编程语言、编程接口等都抄袭他人(就算是开源的、许可证允许的)，那永远也无法形成一个可以有效保护自己的知识产权体系。 **市场层面。**通过和上下游企业的合作，建立某种联盟或者许可、授权机制，让操作系统的用户(芯片厂商、手机厂商、平板厂商)能够从中获益。比如Android开放联盟，做的就是这个事情。 **开发者社区。**一个好的操作系统之生态系统，要充分照顾开发者的利益，具体有如下几点：要有好的开发工具，便于开发者学习、开发和调试软件；要有好的文档或者教程，帮助开发者迅速掌握相关开发技巧；最重要的，要能够让开发者赚到钱。 看到这里，相信大家都会意识到：这也太难了吧！的确，这非常难，这也是为什么Moblin、MeeGo、Bada、webOS等操作系统相继失败，而到目前，只有iOS、Android、Windows Phone这三种操作系统的原因。 但是，世上无难事只怕有心人。接下来我告诉你如何搭建一个真正的“自主”操作系统。 <img src="https://pic.yupoo.com/songruihua/CidpRfr8/vYhNl.jpg" title="U6349P2DT20120917015722">    </p>
+<h3 id="四、如何开发“自主”操作系统：目的、策略和方法"><a href="#四、如何开发“自主”操作系统：目的、策略和方法" class="headerlink" title="四、如何开发“自主”操作系统：目的、策略和方法"></a><strong>四、如何开发“自主”操作系统：目的、策略和方法</strong></h3><p><strong>目的</strong> 开发“自主”操作系统的主要目的有两种：一种是想再造一个类似Android、iOS的操作系统，并作为其竞争者；一种仅仅是为了在商务谈判和合作中获得一个比较好的筹码。当然，还有一种目的就是骗取政府的财政支持，对这类不良目的，不属本文讨论范围。 我们先猜度一下国内外这几年出现的一些“自主”操作系统，其目的是什么： <strong>Firefox OS</strong>：这是Mozilla公司推出的纯粹基于HTML5&#x2F;CSS3&#x2F;JavaScript等网页前端开发技术推出的操作系统，和HP收购自Palm的webOS有类似的软件架构。HP收购了webOS之后的半年，即宣告放弃webOS，而Mozilla却希望通过类似技术的Firefox OS成为Android的竞争者。一会儿我们分析下为什么Firefox OS要比webOS有更强一些的生命力。 华为提出要开发的“自主”操作系统：作为一个智者，任正非不可能不知道一个真正“自主”的操作系统应该是什么样子的。华为就算再有钱，再有人才，短时间内也是搞不定一个“自主”操作系统的(如前所述，主要是建立对应的生态系统太难了)。这么说来，华为开发“自主”操作系统，其目的其实就是做一个“备胎”，以便在和 Android、Windows Phone等合作时能够有一个可以讨价还价的砝码。也就是说，华为并不是真的要做“自主”的操作系统；或者这么说，支持团队去做，做成Android那样最好，做不成Android那样，如果真有一天打起架来可以凑合用也行。 <strong>阿里云OS</strong>：马云同志的野心很大，他做阿里OS，就是要复制谷歌在移动互联网的商业模式，进而在移动互联网领域推广阿里体系的服务和内容。可惜的是，马云貌似不太懂技术，也没个明白人给他做参谋，结果花了钱还被人捏住了 七寸。最新的消息，阿里云OS独立运行，再投个2亿美金继续搞。马云同志啊，光有钱是不行的，你身边还得有个把技术大牛帮你把关、出谋划策才行啊。 <strong>策略</strong> 好，面对这两种开发“自主”操作系统的目的，应该有什么样的策略呢？其实策略很简单，不管你是真心还是假意，都应该按照本文第三章给出的“自主”操作系统之特征进行开发，除此之外，别无他法。任何期望找捷径的方法，都不可能获得成功。这里所说的找捷径的方法具体有：</p>
+<ul>
+<li>给Android整容。如OMS、阿里OS。</li>
+<li>忽略操作系统中生态系统的重要性，在Linux或其他开源操作系统内核、系统库等基础上包裹一个简单的框架而形成的操作系统。这种操作系统，其复杂度和 Linux发行版相当，离本人定义的真正“自主”操作系统还差十万八千里。读者可能会问，这样的系统做备胎不是还行吗？为什么也得按照真做那样开发呢？你 要知道的是，对手也不是傻子，人家看你的架势，就知道你不是真做——你起码得拉出真做的架势来，人家才能怕你啊！</li>
+</ul>
+<p>顺便谈谈我对基于浏览器技术的web操作系统的看法。 理论上讲，浏览器可以做很多事情，甚至可以替代PC机上的通用操作系统。但是，最新的浏览器技术(HTML5&#x2F;CSS3等)，还存在一些技术上的问题。主要的问题有如下两个：</p>
+<ul>
+<li>浏览器主要采用的JavaScript编程语言，本质上是一种难于管理(源代码保护、无法进行有效的软件架构设计、难于调试等等)的编程语言，同时内存消 耗巨大，性能不佳。最新的说法是，Facebook创始人直言全面采用HTML5的策略是个失误，正在向操作系统的原生应用转移。也就是 说，JavaScript语言难以承载一个良性发展的生态系统。</li>
+<li>因为许多原因(主要是利益和政治因素)，HTML5相关的标准有分裂的迹象，同时进展缓慢。</li>
+</ul>
+<p>HTML5技术作为原生应用的一种补充，可以起到很好的作用，但是，如果要想在浏览器技术上建立一个真正可以和Android等竞争的操作系统，恐怕还需要很长的时间(技术上必须有突破)。要不然，谷歌现在主推的应该是Chrome OS，而不是Android。 现在回答刚才提到的问题：为什么Firefox OS可以比webOS的生命力更长久些？主要的原因是，Firefox OS是开源的，有比较强大的企业在主导其发展，作为一个脱胎于开源基金会的企业(Mozilla公司)，也能获得合作伙伴的一些好感；相反，因为webOS是封闭，HP又没有能力像苹果那样打造一个完全封闭的平台和生态系统，所以最终的命运是被人抛弃了。虽然后来webOS也走上了开源的道路，但大势已去，HP不亲自带头搞，光靠开源社区是搞不成的。 <strong>方法</strong> 假定你是一名“自主”操作系统项目的技术管理者，你第一步要考虑的问题是什么？许多人的回答可能是：先选操作系统内核、基础库什么的。其实错了，第一步要考虑的应该是你打算选择什么编程语言作为原生应用的编程语言。 世界上的编程语言有很多种，有些语言贴近机器，比如汇编语言、C语言，有些语言贴近人，比如Basic、Java，还有些语言用于特定领域，比如网页服务器端使用的PHP，有些适合做不同软件之间的粘合剂，比如Perl、Python。本文第三章已经解释了编程语言以及围绕编程语言形成的运行环境、框架是将 操作系统区隔于其他操作系统的主要技术特征。因此，我们必须慎重选择一种编程语言。而且一旦选定了一种编程语言，“自主”操作系统在开发者看来长什么样， 其实就基本上定了。 选择编程语言要考虑如下因素：这种编程语言是否易于学习和掌握？是否有庞大的开发者在使用它？这种编程语言是否具有高级语言的基本特征，比如，支持面向对象编程？这种编程语言是否是编译执行的？这种编程语言是否利于保护开发者的知识产权？这种编程语言是否有完整的工具链支 持？这种编程语言是否有集成开发环境的支持？这种编程语言是否易于保护整个操作系统不会被恶意代码轻易破坏？如此等等。 <img src="https://pic.yupoo.com/songruihua/CidpS3Pw/wY9fr.jpg" title="U6349P2DT20120921230145"> 其实很多读者看到这里，都会想到Java语言。是的，Java语言或其派生语言如C#是构架“自主”操作系统的最佳编程语言。可惜，已经被Android和Windows Phone给捷足先登了。 如此一来，你可以考虑重新设计一门类似Java的语言，也可以通过其他手段，让你使用Java语言构建的操作系统有别于其他操作系统。比如，构建自己的虚拟机，如Android使用的Dalvik那样(Dalvik和Oracle的JDK标准虚拟机有很大不同，从而让Oracle还挺难告赢谷歌的)；你也可以用Dalvik，但让类库、运行环境和Android不同(这样做的法律风险要大一些)。总之，你需要有自己的创新，全部抄袭是不行的。 确定了编程语言，接下来的工作其实就比较直接了，从上而下设计就是了。主要有：</p>
+<ol>
+<li>定义和实现提供给原生应用程序的基础API和&#x2F;或虚拟机。</li>
+<li>在应用程序基础API、标准C&#x2F;C++函数库和相关组件(通常都是开源软件)的基础上构建操作系统的运行环境和框架。主要涉及系统服务、模块之间的通讯机制，包括图形界面、浏览器引擎、OpenGL ES支持接口等等。</li>
+<li>同时选择操作系统内核，通常也就是Linux，要与众不同，用BSD也行。</li>
+<li>搞定集成开发环境和模拟器，让开发者可以在PC机上为你的操作系统开发应用程序。</li>
+<li>让你的操作系统运行在真实硬件上，为开发者提供应用样例和文档。</li>
+<li>持续迭代，让你的“自主”操作系统不停往前发展。</li>
+</ol>
+<p>上面的第一点和第二点，是“自主”操作系统有别于其他操作系统，且支撑你可以和其他人竞争的关键点。往下的东西都不是构成“自主”操作系统真正竞争力的东西。 这么看来，其实也挺简单的。不是吗？貌似有钱、有个把技术上的明白人就能做到。技术上没问题了，市场、法律等方面的事情，请专业人员帮忙，中国这类人才还是蛮多的，缺的，其实还是技术人员以及懂系统工程和软件开发的管理人员。 <strong>案例</strong> 这里给大家介绍笔者早先和美国一家公司合作，尝试搭建的一个操作系统，其实在当年这些东西的基础上，搭建出来一个有别于Android的开源“自主”操作系统还是非常快的。 这个系统使用了Linux内核和标准的C&#x2F;C++函数库，以及一些和Android体系结构类似的C&#x2F;C++运行库，使用了笔者公司的开源软件 MiniGUI、WebKit浏览器核心引擎等等。基础的东西就这些。之上是开源的KaffeJVM(后来改成了CacaoJVM)，和符合J2SE规范 的类库实现，再往上就是运行环境和框架了。见下图： <img src="https://pic.yupoo.com/songruihua/CidpScGo/t1Yzx.png" title="U6349P2DT20120921222924"> 可惜的是，真正具有核心价值的运行环境和框架，是美国合作方自己开发的，我手里没有源代码。相信读者也能明白，美国合作方掌握的才是精华。 如果要在这套系统基础之上快速开发一个“自主”的操作系统，我们需要：</p>
+<ul>
+<li>重新定义类库，也就是基础API，让我们的系统从灵魂上有别于其他系统。必要的话，优化或替代开源的虚拟机(淘宝最近开源了一个JDK虚拟机，不过是针对J2EE的)。</li>
+<li>全新设计和实现适合于智能手机的运行环境、框架。</li>
+<li>全新设计基本的智能手机应用软件。</li>
+<li>开发模拟器，并集成到Eclipse集成开发环境中。</li>
+<li>还有，这个系统是2006年开发的，我们还需要将底层的内核、基础函数库等更新到比较新的版本。</li>
+</ul>
+<p>要做的工作还是蛮多的，但这个系统在2007年的时候，就已经可以运行在主频在200MHz左右的手机上了。 当 然，这个系统离本人定义的真正“自主”的操作系统还有很大的距离。但是，起码技术上的方向是基本正确的，要知道，这个系统几乎是和Android同时发起 的。后来在2007年，谷歌宣布开源Android后，美国合作方敏锐感觉到了Android将是未来的趋势，就直接转向了Android平台，项目也就终止了。  </p>
+<h3 id="五、给相关人员的建议"><a href="#五、给相关人员的建议" class="headerlink" title="五、给相关人员的建议"></a><strong>五、给相关人员的建议</strong></h3><p><strong>1、给政策制定者：“自主”切忌急功近利</strong> 这里所说“政策制定者”主要指的是“核高基”等政府资助项目的决策人。其实前面已经说过了，这里重申一下： 政府需要在更长的周期内(至少五年)，考核受资助企业的市场份额是否有扩大，是否建立了良好的生态系统，让使用者、开发者欲罢不能，而不是简单的著作权证书和专利数量，或者是否达到了一个给定的出货量(因为出货量是可以作假的)。也就是说，我们应该重新定义“自主”这两个字，从“自有知识产权”向“有效知识 产权保护下的自己主导”转移；在知识产权方面，要强调有效专利数量，而不是著作权；甚至应该要求受资助企业按某种许可证条款开放源代码。 政策制定者甚至可以参照本文第三章给出的“自主”操作系统之定义，将整个“自主”操作系统的研发和推广分为三个部分：</p>
+<ul>
+<li>科研类，两到三年为周期，以研究新的编程语言及其相关设施(如虚拟机及其优化技术)为主。</li>
+<li>工程类，两到三年为周期，围绕指定的编程语言发展外围工具链(编译器、调试器)、开发工具、运行环境、框架等。</li>
+<li>法律类，半年到一年为周期，研究和分析采纳已有编程语言面临的知识产权风险，如何规避等等。</li>
+</ul>
+<p>政策制定者切忌急功近利，要按照客观规律办事，将科研类的课题交给研究机构，将工程类以及市场推广等方面的课题交给企业，将法律类的课题交给大专院校。只有这样，才能首先让方法正确，方法上正确，加上合理的考核制度，才能让钱产生真正的效益。 在花钱方面，在一盘大棋下的统一部署下，初期让多一些的企业或机构参与，一年一验收，逐步淘汰那些不合格的，最后剩下来一、两个企业就好。十亿美金，外加企业自筹部分，我看基本够了。 <strong>2、给大型企业决策者：“自主”大不易</strong> 有意开发“自主”操作系统的大型企业决策者首先要明白，开发“自主”操作系统是一个长期、艰巨的系统工程。甚至，你需要准备一大笔钱来和已有的巨头打官司(微软赔付给Sun几十亿美金之后，才让自己的C#和.Net平台成为“干净”的语言和平台)。 另外，如前所述，不管是真心还是假意，都要拿出十足的架势来真做，而且，对内、对外都要强调这点。要知道，你期望得100分，下属大多数情况下只能给你80分；你期望得1000分，下属也许就可以给你500分。这样才能超出决策者自己的预期，才能收到更好的效果。 <strong>3、给技术负责人：难度不亚于“两弹一星”</strong> 这事儿如果恰好让你负责，那简直是，怎么说呢，是个“扬名立万”的机会啊！你要知道的是，这事儿和制造“两弹一星”差不多。 首先你要掂量掂量，你有没有这个本事。所谓“没有金刚钻，不揽瓷器活”，说的就是这个道理。有兴趣的也别来找我，我做点小项目可以，真要我负责，我没这个本事。 另外一方面，你要是违背知识分子的良知，帮助一些不良人员骗取国家的资助款项，就更不应该了。这可是要被人戳脊梁骨的；有没有钱拿永远是小事，昧了自己的良心可是大事。 <strong>4、工程上的建议</strong> 在具体的研发实施过程当中，开发负责人必须特别注意工程方面的问题： 先做什么、后做什么，或者那些可以并行做。 不同的软件模块，应采取不同的软件开发管理模型。API设计、框架等的开发，适合采用瀑布法模型；应用软件或者小型模块的开发，适合采用敏捷开发模型。但整个系统，应要不停迭代，所以版本控制非常重要。 特别要注意代码的质量控制以及文档的全面、完备、简洁和逻辑性。   本文作者：<a target="_blank" rel="noopener" href="https://weibo.com/weiyongming">魏永明</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%89%8B%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 手机</a>
+          
+            <a href="/tags/%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 系统</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/iran-launch-domestic-internet.html" rel="next" title="伊朗宣布将推出国内互联网">
+                <i class="fa fa-chevron-left"></i> 伊朗宣布将推出国内互联网
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/extreme-super-pc.html" rel="prev" title="史上最顶级的个人电脑">
+                史上最顶级的个人电脑 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <!--p class="site-author-name" itemprop="name">宋瑞华</p-->
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">575</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">588</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:songruihua[a t]hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=273454295&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=988399180" target="_blank" title="FavMusic">
+                      
+                        <i class="fa fa-fw fa-music"></i>FavMusic</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/hk4win/" target="_blank" title="HK4WIN">
+                      
+                        <i class="fa fa-fw fa-h-square"></i>HK4WIN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+		  
+		  
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%94%BF%E5%BA%9C%E5%92%8C%E4%BC%81%E4%B8%9A%E9%83%BD%E8%AF%B4%E8%A6%81%E2%80%9C%E8%87%AA%E4%B8%BB%E2%80%9D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">一、为什么政府和企业都说要“自主”操作系统？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E2%80%9C%E8%87%AA%E4%B8%BB%E2%80%9D%E8%80%83%E6%A0%B8%E6%94%BF%E7%AD%96%E4%B9%8B%E6%AE%87%EF%BC%9A%E7%94%9F%E6%80%81%E7%B3%BB%E7%BB%9F%E6%89%8D%E6%98%AF%E6%B4%BB%E4%B8%8B%E5%8E%BB%E7%9A%84%E5%85%B3%E9%94%AE"><span class="nav-number">2.</span> <span class="nav-text">二、“自主”考核政策之殇：生态系统才是活下去的关键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%A6%82%E4%BD%95%E5%88%A4%E5%AE%9A%E4%B8%80%E4%B8%AA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%98%AF%E5%90%A6%E2%80%9C%E8%87%AA%E4%B8%BB%E2%80%9D%EF%BC%9A%E9%98%BF%E9%87%8C%E4%BA%91%E7%AE%97%E4%B8%8D%E7%AE%97%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">三、如何判定一个操作系统是否“自主”：阿里云算不算？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E2%80%9C%E8%87%AA%E4%B8%BB%E2%80%9D%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%9A%E7%9B%AE%E7%9A%84%E3%80%81%E7%AD%96%E7%95%A5%E5%92%8C%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">四、如何开发“自主”操作系统：目的、策略和方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%BB%99%E7%9B%B8%E5%85%B3%E4%BA%BA%E5%91%98%E7%9A%84%E5%BB%BA%E8%AE%AE"><span class="nav-number">5.</span> <span class="nav-text">五、给相关人员的建议</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2025</span>
+  <!--span class="with-love">
+    <i class="fa fa-user"></i>
+  </span-->
+  <span class="author" itemprop="copyrightHolder">Song Ruihua.</span>
+<!--span class="author" itemprop="copyrightHolder">宋瑞华</span-->
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and hosted with ❤️️ by <a class="theme-link" target="_blank" href="https://github.com/">GitHub</a>. </div>
+
+
+
+  <!--span class="post-meta-divider">|</span-->
+
+
+
+<!--script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"-->
+<!--/script-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

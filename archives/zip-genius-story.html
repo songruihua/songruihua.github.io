@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="压缩," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="宋瑞华" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="ZIP,一个没落天才的故事，Phil Katz不愿意为一个压缩软件付钱，就索性自己写了一个更好的算法，然后无偿公开。2000年4月14日，他被发现死于一家汽车旅馆，年仅37岁，死时手中握着一个空酒瓶。他留下了zip算法，却没有留下一张像样的照片。 久违了的zip在你的脑海里还能占据多少空间?或许，你跟本就把它忘记了。 记得刚上大学的2001年,在电脑报上看到过一篇介绍Philip Katz的文章，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ZIP,一个没落天才的故事">
+<meta property="og:url" content="https://www.songruihua.com/archives/zip-genius-story.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="ZIP,一个没落天才的故事，Phil Katz不愿意为一个压缩软件付钱，就索性自己写了一个更好的算法，然后无偿公开。2000年4月14日，他被发现死于一家汽车旅馆，年仅37岁，死时手中握着一个空酒瓶。他留下了zip算法，却没有留下一张像样的照片。 久违了的zip在你的脑海里还能占据多少空间?或许，你跟本就把它忘记了。 记得刚上大学的2001年,在电脑报上看到过一篇介绍Philip Katz的文章，">
+<meta property="og:locale">
+<meta property="article:published_time" content="2012-05-06T15:14:39.000Z">
+<meta property="article:modified_time" content="2018-11-20T01:13:08.216Z">
+<meta property="article:author" content="宋瑞华">
+<meta property="article:tag" content="压缩">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.songruihua.com/archives/zip-genius-story.html"/>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics START-->
+
+<!-- Global site tag (gtag.js) - Google Analytics END-->
+
+
+
+  <title>ZIP,一个没落天才的故事 | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+<a href="/"  rel="start" alt="宋瑞华">
+<div class="custom-logo-site-title">
+      <!--a href="/"  class="brand" rel="start"-->
+        <span class="logo-line-before"><i></i></span>
+        <!--span class="site-title">宋瑞华</span-->
+		<!--span class="site-title"><img src="/images/logo.gif"></span-->
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
+        <span class="logo-line-after"><i></i></span>
+      <!--/a-->
+    </div>
+
+
+</a>
+
+        <h1 class="site-subtitle" itemprop="description"><font face="楷体" color="#555555">曲邑东南升明月</font></h1>
+		<!--h1 class="site-subtitle" itemprop="description"><font face="楷体">曲邑东南升明月</font></h1-->
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站图">
+          <a href="/sitemap.xml" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/zip-genius-story.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">ZIP,一个没落天才的故事</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-05-06T23:14:39+08:00">
+                2012-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>ZIP,一个没落天才的故事，Phil Katz不愿意为一个压缩软件付钱，就索性自己写了一个更好的算法，然后无偿公开。2000年4月14日，他被发现死于一家汽车旅馆，年仅37岁，死时手中握着一个空酒瓶。他留下了zip算法，却没有留下一张像样的照片。 久违了的zip在你的脑海里还能占据多少空间?或许，你跟本就把它忘记了。 记得刚上大学的2001年,在电脑报上看到过一篇介绍Philip Katz的文章，那时，我才知道，原来zip是曾经是那么的“不可一世”，那么广泛的被使用着。 Winzip的创始人是Philip Katz。用Ultraedit打开任一个zip文件，可以看到文件最前面PK两个字母，这便是zip文件格式的创始人Philip Katz的名字缩写。 在19年前，也就是公元1988年，那时候互联网还刚刚开始有了雏形，而最流行的是一种使用电话线拨号登陆别人在家里搭建的服务平台——交换信息的电 子公告牌(BBS)系统。这种系统有些类似现在的论坛和新闻组，由于站长之间互相转信也成为了一个庞大的信息网络(惠多网)。 老一点的网虫可能都有印象，在没有 Internet的年代，中国大地上也曾有几十个这样的BBS存在，著名的字处理软件WPS的作者求伯君和CCED的作者朱崇君当年都是非常有名的个人站长。 由于电话线的接入速度慢的可怜，通过BBS传输较大文件实在是叫人痛苦的一件事。于是，使用文件压缩技术减小文件的体积并将多个文件压缩到一个封包中 就成为了BBS用户的一项必须掌握的技巧。当时的美国BBS上，比较流行的是一种叫做ARC的压缩技术，由于它是一家商业公司开发的压缩技术，使用这种软 件进行工作是需要付费的。那时候的菲利普·卡兹是一个沉迷于BBS 上的毛头小伙，由于经常混迹于BBS上，对于ARC的收费非常不满的他自己开发了一个程序叫PKARC，这个程序与ARC完全兼容，可以压缩和解压缩 ARC文件。这样一来，大批的ARC用户自然转而使用菲利普·卡兹的免费软件。ARC的制作公司一怒之下将菲利普·卡兹告上了法庭，法庭自然判决菲利普· 卡兹禁止继续开发和传播PKARC。这种判决并没有磨灭菲利普·卡兹的斗志，而是激起了他要与ARC斗争到底的决心。在虚拟的世界中，自由、平等永远是真 正的程序员永久的追求。 他放弃了PKARC的开发，发誓要写出一款比ARC更好的压缩软件来打败ARC。这一场官司造就了一名编程天才的横空出世，也造就了一个后来在互联网 时代的文件标准。几周以后，后来统治整个BBS世界乃至Internet世界的ZIP在菲利普·卡兹手中发出了第一声响亮的啼哭! 不名则已，一鸣惊人，这种名为PKZIP的程序可以将一个或多个文件压缩到一个后缀为“.zip”的文件中，无论从压缩比、压缩速度方面都超过了商业 软件 ARC。卡兹将PKZIP作为自由软件免费发放，使其如同草原上的星星之火般在全美的各大BBS上蔓延开来，用户以几何级数的增长，各大BBS的站长自发 将原来使用ARC格式压缩的文件转换成ZIP格式，卡兹用他天才的头脑和顽强的毅力堂堂正正的击败了ARC，ARC的制作公司在PKZIP的强大攻势下很 快就消声匿迹了。用自由软件打败商业公司的传奇故事很快传遍了整个BBS世界，疾恶如仇而又身手不凡的菲利普·卡兹如同数字世界的大侠般仗剑江湖，劫富济 贫，以一人之力擎起了压缩软件的大旗。 此后卡兹一直继续着对 PKZIP的开发和维护工作，PKZIP建立和统治了DOS时代的压缩标准。直到Windows的诞生，使用卡兹创造的压缩算法的软件Winzip的出现更使ZIP格式成为Internet的传输标准，ZIP压缩格式也成为压缩文档的事实标准。 PKZIP及其“克隆”作品Winzip成为Internet历史上最有名的共享软件之一，ZIP压缩格式也成为压缩文档的事实标准，建立起一个统治 Internet的“ZIP王朝”。菲利普·卡兹为世界贡献了一个伟大的共享软件，而他自己却几乎没有从中获得任何好处!因为从一开始，ZIP就是为了反 抗收费的PKARC“而生”的。 但是，不良的生活习惯，长期巨大的精神压力，导致了潦倒无助的他在2000年的4月14号，死在了美国威斯康星州密尔沃基的一家汽车旅馆里，死时，手里还紧握着一个烈性酒的酒瓶。 Philip Katz从未在ZIP身上得到半点好处，坚持信念的结果往往是潦倒的生活，糟糕的个人生活和长期编写软件的巨大压力使卡兹染上了酗酒的恶习，最终断送了他 那年轻的生命。他为世界贡献了一个伟大的免费软件，更为重要的是他缔造了一种大众化的压缩格式，然而却过早地离开了这个世界。 就在Philip Katz去世的前后，ZIP的最大对手：WINRAR，正在悄然崛起。当时Winzip早已稳坐压缩界头把交椅，但随着2.7版本的出现，Wrar却日益 壮大，两者斗争得异常激烈(注：与Winzip一样，其实早在DOS时代，就存在RAR的DOS版本，只是RAR在DOS时代敌不过只能用命令行的 ARJ，到了Windows时代又招架不住WinZip的进攻，皆因RAR压缩率低和速度慢，并且RAR压缩格式以前一直缺少其它软件的支持，导致 WinRAR都未能广泛流行)。 就当时两者的性能而言，Winzip压缩只支持ZIP格式，解压缩支持ZIP、CAB，还有TAR、GZip、UUencode、XXencode、 BinHex、MIME等几种Internet常用格式(可以看出WinZip的重心之所在)，ARJ、LHA和ARC则需要相应的外挂程序。但 WinZip跟Windows资源管理器结合得很紧密，最常用的压缩和解压缩操作已集成到鼠标右键菜单中，点按右键即可轻松完成压缩解压缩。并且增加了不 少人性化的功能如E-mail功能，分卷压缩，密码加密等;那Winrar又凭什么与其争锋呢?答案是格式支持与功能!WinRAR压缩格式支持自家的 RAR和ZIP(即可“兼容”ZIP)，解压缩支持RAR、ZIP、CAB、ACE、ARJ、LHA、TAR、GZip、UUE，基本上常用的都有了。 WinRAR在界面上类似WinZip在功能上基本是WinZip有的它都有，甚至有好多比WinZip还更好更强大。如有特色的”Repair archive”功能甚至可以修复损坏的zip文件;”Convert archive to SFX”功能把RAR和ZIP文件转换成自解压文件，同WinZip不同的是，在压缩时就可以直接存为自解压文件…取对手之精华，并改进之，这就是 Winrar敢于与压缩界龙头叫板的原因。 或许到了这里，你会问：为什么zip不去支持rar呢?这样竞争不就“公平”了吗?但我告诉你的是：zip格式是开放的，任何压缩软件都可以免费使 用，RAR是RARLab的专利算法，其它软件要想提供对Rar格式支持必须交纳费用以获得授权，如果winzip想要支持zip，就必须向rarlab 付费，这根本就是拿自己的血汗去喂饱对手。我们须明白：winzip和winrar都是共享软件，中国人用惯了盗版的winrar，以为rar才是压缩格 式的王道，如果自以为全天下的压缩软件都应该支持rar格式，那么只能说这是一种极其荒谬的认知。 虽然ZIP仍然是压缩文件的标准格式，但随着WinRAR的功能越来越强大，并且对ZIP的兼容性和ISO镜像文件的支持，固步自封的WinZip已 经逐渐开始被网民们所遗忘。面临被打倒，昔日的强者做出了最后的反击–Winzip9.0。2004年发布的Winzip9.0是Winzip公司在 02年后两年内第一次发布的Winzip软件更新，可见这次Winzip反击的决心。本版本的Winzip带来了很多新的功能特性，如：加密标准提高，支 持符合AES技术的128位和256位的高级加密标准;支持64位扩展技术;内置了先进的“真空”压缩算法(Enhanced Deflate)等。这一切都是针对WinRAR 3.30，誓求夺回压缩界的王座。 可惜就像乔丹的最后出场一样，也许真的是老了，我们再难看到英雄昔日的光彩。 WinZip 9.0对压缩格式的支持并没有什么增加，支持原有的18种压缩格式，但仍然不支持ISO这一非常流行的镜像文件格式，并且最大的问题是不兼容RAR，这就令许多用户敬而远之了;相对而言，WinRAR 3.30目前的压缩格式虽然只有15种，但由于兼容ZIP和支持ISO，仅仅这两条就使不少WinZip的老用户心动神移了。 随着绝唱反击的失败，于2005年7月，WinZip被Vector Capital收购。 也许在天之灵的Philip Katz并没有想到有这一天，作为下载量达到1亿4000万次，成就压缩标准zip的Winzip计算公司好象没有考虑过用其技术来赚钱的事(实际上很少 有人会在WinZip试用期过后支付29美元购买正版授权，因此WinZip至今都没有获得太多利润)。它为大家提供一款如此经典的压缩软件，曾经，它是 何等辉煌，但如今却威风难再。或者正如歌词所说:”想回到过去，试着让故事继续，至少不再让你离我而去…” 来源:citydog</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%8E%8B%E7%BC%A9/" rel="tag"><i class="fa fa-tag"></i> 压缩</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/china-phone-no-the-google.html" rel="next" title="工信部新政：手机出厂不得带有Google标识和应用">
+                <i class="fa fa-chevron-left"></i> 工信部新政：手机出厂不得带有Google标识和应用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/61-bros.html" rel="prev" title="为了61个阶级兄弟">
+                为了61个阶级兄弟 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <!--p class="site-author-name" itemprop="name">宋瑞华</p-->
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">575</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">588</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:songruihua[a t]hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=273454295&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=988399180" target="_blank" title="FavMusic">
+                      
+                        <i class="fa fa-fw fa-music"></i>FavMusic</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/hk4win/" target="_blank" title="HK4WIN">
+                      
+                        <i class="fa fa-fw fa-h-square"></i>HK4WIN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+		  
+		  
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2025</span>
+  <!--span class="with-love">
+    <i class="fa fa-user"></i>
+  </span-->
+  <span class="author" itemprop="copyrightHolder">Song Ruihua.</span>
+<!--span class="author" itemprop="copyrightHolder">宋瑞华</span-->
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and hosted with ❤️️ by <a class="theme-link" target="_blank" href="https://github.com/">GitHub</a>. </div>
+
+
+
+  <!--span class="post-meta-divider">|</span-->
+
+
+
+<!--script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"-->
+<!--/script-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

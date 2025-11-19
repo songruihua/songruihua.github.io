@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="学习,计算机," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="宋瑞华" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="随着Linux应用的扩展许多朋友开始接触Linux，根据学习Windwos的经验往往有一些茫然的感觉：不知从何处开始学起。这里介绍学习Linux的一些建议。   一、从基础开始：常常有些朋友在Linux论坛问一些问题，不过，其中大多数的问题都是很基础的。例如：为什么我使用一个命令的时候，系统告诉我找不到该目录，我要如何限 制使用者的权限等问题，这些问题其实都不是很难的，只要了解了 Linux的基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统学习Linux11点建议">
+<meta property="og:url" content="https://www.songruihua.com/archives/linux11.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="随着Linux应用的扩展许多朋友开始接触Linux，根据学习Windwos的经验往往有一些茫然的感觉：不知从何处开始学起。这里介绍学习Linux的一些建议。   一、从基础开始：常常有些朋友在Linux论坛问一些问题，不过，其中大多数的问题都是很基础的。例如：为什么我使用一个命令的时候，系统告诉我找不到该目录，我要如何限 制使用者的权限等问题，这些问题其实都不是很难的，只要了解了 Linux的基础">
+<meta property="og:locale">
+<meta property="article:published_time" content="2007-04-07T07:44:57.000Z">
+<meta property="article:modified_time" content="2018-10-19T01:30:59.207Z">
+<meta property="article:author" content="宋瑞华">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="计算机">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.songruihua.com/archives/linux11.html"/>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics START-->
+
+<!-- Global site tag (gtag.js) - Google Analytics END-->
+
+
+
+  <title>系统学习Linux11点建议 | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+<a href="/"  rel="start" alt="宋瑞华">
+<div class="custom-logo-site-title">
+      <!--a href="/"  class="brand" rel="start"-->
+        <span class="logo-line-before"><i></i></span>
+        <!--span class="site-title">宋瑞华</span-->
+		<!--span class="site-title"><img src="/images/logo.gif"></span-->
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
+        <span class="logo-line-after"><i></i></span>
+      <!--/a-->
+    </div>
+
+
+</a>
+
+        <h1 class="site-subtitle" itemprop="description"><font face="楷体" color="#555555">曲邑东南升明月</font></h1>
+		<!--h1 class="site-subtitle" itemprop="description"><font face="楷体">曲邑东南升明月</font></h1-->
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站图">
+          <a href="/sitemap.xml" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/linux11.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">系统学习Linux11点建议</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2007-04-07T15:44:57+08:00">
+                2007-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>随着Linux应用的扩展许多朋友开始接触Linux，根据学习Windwos的经验往往有一些茫然的感觉：不知从何处开始学起。这里介绍学习Linux的一些建议。  </p>
+<p>一、从基础开始：<br>常常有些朋友在Linux论坛问一些问题，不过，其中大多数的问题都是很基础的。例如：为什么我使用一个命令的时候，系统告诉我找不到该目录，我要如何限 制使用者的权限等问题，这些问题其实都不是很难的，只要了解了 Linux的基础之后，应该就可以很轻易的解决掉这方面的问题。而有些朋友们常常一接触Linux 就是希望构架网站，根本没有想到要先了解一下Linux的基础。这是相当困难的。<br>二、Linux命令是必须学习<br>虽然Linux桌面应用发展很快，但是命令在Linux中依然有很强的生命力。Linux是一个命令行组成的操作系统,精髓在命令行，无论图形界面发展到 什么水平这个原理是不会变的，Linux命令有许多强大的功能：从简单的磁盘操作、文件存取、到进行复杂的多媒体图象和流媒体文件的制作。举一个例子: Linux的常用命令find,察看man文档,初学者一定会觉得太复杂而不原意用,但是你一旦学会就爱不释手.它的功能实在太强了,在配合exec参数 或者通过管道重定向到xargs命令和grep命令,可以完成非常复杂的操作,如果同样的操作用图形界面的工具来完成,恐怕要多花十几陪的时间.<br>不同版本的Linux命令数量不一样，这里笔者把它们中比较重要的和使用频率最多的命令，按照它们在系统中的作用分成几个部分介绍给大家，通过这些基础命令的学习我们可以进一步理解Linux系统：<br>安装和登录命令：login、 shutdown、 halt、 reboot 、mount、umount 、chsh<br>文件处理命令：file、 mkdir、 grep、dd、 find、 mv 、ls 、diff、 cat、 ln<br>系统管理相关命令： df、 top、 free、 quota 、at、 lp、 adduser、 groupadd kill、 crontab、 tar、 unzip、 gunzip 、last<br>网络操作命令：ifconfig、 ip 、ping 、 netstat 、telnet、 ftp、 route、 rlogin rcp 、finger 、mail 、nslookup<br>系统安全相关命令： passwd 、su、 umask 、chgrp、 chmod、chown、chattr、sudo、 pswho</p>
+<p>三、选择一本好的工具书<br>工具书对于学习者而言是相当重要的。一本错误观念的工具书却会让新手整个误入歧途。目前国内关于Linux的书籍有很多不过精品的不多，笔者强烈建议阅读影印本的“O’Reilly原版Linux图书<a target="_blank" rel="noopener" href="https://www.oreilly.com.cn/">https://www.oreilly.com.cn/</a> ”，而且出版社还提供了一个非常好的路线图：<a target="_blank" rel="noopener" href="https://www.oreilly.com.cn/guide/guide_linux.php">https://www.oreilly.com.cn/guide/guide_linux.php</a> 见图－1。</p>
+<p>四、选择一个适合你的Linux发行版本</p>
+<p>目前全球有超过1百多个Linux发行版本，在国内也能找到十几个常见版本。如何选择请根据你的需求和能力， Redhat Linux 和Debian Linux是网络管理员的理想选择。对于英语不是很好的读者红旗Linux、中标Linux这些中文版本比较适合。现在一些Linux网站有一些 Linux版本的免费下载，这里要说的是并不适合Linux初学者。</p>
+<p>五、 养成在命令行下工作：<br>一定要养成在命令行下工作的习惯，要知道X－window只是运行在命令行模式下的一个应用程序。在命令行下学习虽然一开始进度较慢，但是熟悉后，您未来 的学习之路将是以指数增加的方式增长的。从网管员来说，命令行实际上就是规则，它总是有效的，同时也是灵活的。即使是通过一条缓慢的调制解调器线路，它也 能操纵几千公里以外地远程系统。</p>
+<p>六、 选择一个适合你的Linux社区；<br>随着Linux应用的扩展，出现了不少Linux社区。其中有一些非常优秀的社区：<a target="_blank" rel="noopener" href="https://www.linuxforum.net/">www.linuxforum.net</a>（国内最高水平GNU站点）、<a target="_blank" rel="noopener" href="https://www.chinaunix.net/">https://www.chinaunix.net/</a> （中国最大的Unix技术社区），但是这几个论坛往往是Linux高手的舞台，如果在探讨高级技巧的论坛张贴非常初级的问题经常会没有结果。推荐适于初学者的Linux社区：<br>Linux伊甸园 <a target="_blank" rel="noopener" href="https://www.linuxeden.com/">https://www.linuxeden.com/</a> ， 中国Linux公社 <a target="_blank" rel="noopener" href="https://www.linuxfans.org/nuke/index.php">https://www.linuxfans.org/nuke/index.php</a> 。</p>
+<p>七、勤于实践：<br>要增加自己Linux 的技能，只有通过实践来实现了。所以，赶快找一部计算机，赶快安装一个 Linux发行版本，然后进入精彩的Linux世界。相信对于你自己的 Linux能力必然大有斩获。此外，人脑不像计算机的硬盘一样，除非硬盘坏掉了或者是资料被你抹掉了，否则储存的资料将永远而且立刻的记忆在硬盘中。在人 类记忆的曲线中，你必须要不断的重复练习才会将一件事情记得比较熟。同样的，学习 Linux也一样，如果你无法经常学习的话，学了后面的，前面的忘了。你对Linux命令熟悉后你可以开始搭建一个小的Linux网络，这是最好的实践方 法。<br>Linux是网络的代名词，Linux网络服务功能非常强大，不论是邮件服务器、Web服务器、DNS服务器等都非常完善。当然你不需搭建所有服务，可以 慢慢来。需要说明的是这个Linux网络对于初学者有两三台计算机即可，其中一台计算机最好安装Windows系统。自己多动手，不要非要等着别人帮你解 决问题。</p>
+<p>七、 如何得到联机帮助<br>和私有操作系统不同，各个Linux的发行版本的技术支持时间都较短，这对于Linux初学者是往往不够的。其实当你安装了一个完整的Linux系统后其中已经包含了一个强大的帮助，只是可能你还没有发现和使用它们的技巧。<br>1. 主流Linux发行版都自带非常详细的文档（包括手册页和FAQ），从系统安装到系统安全,针对不同层次的人的详尽文档，仔细阅读文档后40%问题都可在此解决。<br>2. 查阅经典工具书和Howto，特别是Howto是全球数以万计的Linux、Unix的经验总结非常有参考价值通常40％的问题同样可以解决。</p>
+<p>八、在Linux论坛获取帮助<br>如果上面的措施没有解决问题，此时你就需要Linux社区的帮助了。Linux的使用者一般都是专业人士，他们有着很好的电脑背景且愿意协助他人，<br>Linux高手更具有鼓励新手的文化精神。如何在Linux社区获得帮助，需要说明的是你要有周全的思考，准备好你的问题，不要草率的发问，否则只会得到 到草率的回答或者根本得不到任何答案。越表现出在寻求帮助前为解决问题付出的努力，你越能得到实质性的帮助。最好先搜寻一下论坛是否有您需要的文章。这样 可以获得事半功倍的效果。<br>下面笔者在论坛看到的一个好问题：“安装红旗4.0后，系统紫光输入法自带的双拼方案和我的习惯不一样，如何自定义双拼方案解决?谢谢？”这个问题很简 练，笔者五分钟后就给出了解决方法：“首先备份原文件到其他目录，然后删掉&#x2F;usr&#x2F;local&#x2F;unispim&#x2F;unispimsp.ksc，编辑 &#x2F;usr&#x2F;local&#x2F;unispim&#x2F;unispimsp.ini，最后重启动计算机，生成新的unispimsp.ksc”另外得到回复后如果问题解 决，向帮助过你的人发个说明，让他们知道问题是怎样解决的，这种补充有助于他人在邮件列表&#x2F;新闻组&#x2F;论坛中搜索对你有过帮助的完整解决方案，这可能对他们 也很有用。</p>
+<p>下面看看一个让人无法回答的问题：“救命各位高手，向你们请教一些问题：如何在Linux下配制HTTP、FTP、Samba、DNS、DHCP、Sendmail服务器，谢谢” 这样的问题我想即使Linux高手也很难快速准确精练的回答你。</p>
+<p>你需要提供精确有效的信息。这并不是要求你简单的把成吨的出错代码或者数据完全转储摘录到你的提问中。如果你有庞大 而复杂的测试条件，尽量把它剪裁得越小越好。可能你会遇到这种情况，对于一个问题会出现不同内容回答，这时你需要通过实践来验证。另外把这个问题放在其他 Linux社区请求帮助也是一种选择。如果得不到答案，请不要以为我们觉得无法帮助你。有时只是看到你问题的人不知道答案罢了。这时换一个社区是不错的选 择。</p>
+<p>另外发问的时候一定要注意到某些礼节。因为Linux社区是一个松散的组织、也不承担回复每个帖子的义务。它不是技术支持。</p>
+<p>9．用Unix思维学习Linux<br>Linux是参照Unix思想设计的，理解掌握Linux必须按照Unix思维来进行。思想性的转变比暂时性的技术提高更有用,因为他能帮助你加快学习速度。</p>
+<p>10．学习专业英文<br>如果你想深入学习Linux,看不懂因为文档实在是太难了。写的最好的,最全面的文档都是英语写的,最先发布的技术信息也都是用英语写的。即便是非英语国 家的人发布技术文档,也都首先翻译成英语在国际学术杂志和网络上发表。安装一个新的软件时先看README,再看INSTALL然后看FAQ,最后才动手 安装,这样遇到问题就知道为什么。如果说明文档不看,结果出了问题再去论坛来找答案反而浪费时间。</p>
+<p>11．最后是Linux学习的路线图：</p>
+<p>1． 掌握至少50个以上的常用命令。<br>2． 熟悉Gnome&#x2F;KDE等X-windows桌面环境操作 。<br>3． 掌握.tgz、.rpm等软件包的常用安装方法<br>4． 学习添加外设，安装设备驱动程序（比如网卡）<br>5． 熟悉Grub&#x2F;Lilo引导器及简单的修复操作 。<br>6． 熟悉Linux文件系统 和目录结构。<br>7． 掌握vi,gcc,gdb等常用编辑器，编译器，调试器 。<br>8． 理解shell别名、管道、I&#x2F;O重定向、输入和输出以及shell脚本编程。<br>9． 学习Linux环境下的组网。</p>
+<p>作者：newkid<br>来源：<a target="_blank" rel="noopener" href="https://www.chinamu.org/blog/?p=144">https://www.chinamu.org/blog/?p=144</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 学习</a>
+          
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 计算机</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/linuxwindows.html" rel="next" title="Linux不是Windows">
+                <i class="fa fa-chevron-left"></i> Linux不是Windows
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/ie7commozilla.html" rel="prev" title="ie7.com域名已被Mozilla公司抢注">
+                ie7.com域名已被Mozilla公司抢注 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <!--p class="site-author-name" itemprop="name">宋瑞华</p-->
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">575</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">588</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:songruihua[a t]hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=273454295&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=988399180" target="_blank" title="FavMusic">
+                      
+                        <i class="fa fa-fw fa-music"></i>FavMusic</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/hk4win/" target="_blank" title="HK4WIN">
+                      
+                        <i class="fa fa-fw fa-h-square"></i>HK4WIN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+		  
+		  
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2025</span>
+  <!--span class="with-love">
+    <i class="fa fa-user"></i>
+  </span-->
+  <span class="author" itemprop="copyrightHolder">Song Ruihua.</span>
+<!--span class="author" itemprop="copyrightHolder">宋瑞华</span-->
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and hosted with ❤️️ by <a class="theme-link" target="_blank" href="https://github.com/">GitHub</a>. </div>
+
+
+
+  <!--span class="post-meta-divider">|</span-->
+
+
+
+<!--script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"-->
+<!--/script-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

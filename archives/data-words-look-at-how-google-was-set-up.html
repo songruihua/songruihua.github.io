@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="谷歌,央视," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="宋瑞华" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="以下文字转载自JavaEye，但文章的最初出处为新浪博客，不知何因，原文已被删除。 近日，央视爆出谷歌搜索出现大量黄色词条的信息。一个引起舆论强烈反响的例子是，在谷歌搜索“儿子”竟然也能搜索到黄色词条。那么，事情是怎么发生的呢？ 下面我们来看谷歌是如何被陷害的：众所周知，谷歌关键词提醒是计算机自动摘取最近最流行的关键词来生成的。于是某些人利用这一点，大量在谷歌上搜索黄色词汇，陷害了谷歌。  在谷歌">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用数据说话，看Google 怎样被陷害(转载)">
+<meta property="og:url" content="https://www.songruihua.com/archives/data-words-look-at-how-google-was-set-up.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="以下文字转载自JavaEye，但文章的最初出处为新浪博客，不知何因，原文已被删除。 近日，央视爆出谷歌搜索出现大量黄色词条的信息。一个引起舆论强烈反响的例子是，在谷歌搜索“儿子”竟然也能搜索到黄色词条。那么，事情是怎么发生的呢？ 下面我们来看谷歌是如何被陷害的：众所周知，谷歌关键词提醒是计算机自动摘取最近最流行的关键词来生成的。于是某些人利用这一点，大量在谷歌上搜索黄色词汇，陷害了谷歌。  在谷歌">
+<meta property="og:locale">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118589/111ef238-e8bc-3ab8-82da-99a7ffc3ad75.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118595/05e7779e-435c-3e06-a656-b6cd9f8def92.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118603/0b17a4d1-562d-3e56-9a5d-c0e71f8e28e0.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118611/8ff98be4-9697-3cac-8138-72710560560e.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118615/37319e71-7e5a-336c-a464-3ac11ac1a695.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118617/3a6d2ed9-6265-3c51-8e80-3f27d2e69dd5.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118619/1f37c310-58f9-3519-886f-e0c5b7da8ff5.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118621/6f887d0e-e00d-395e-85fd-9d3a18a521ba.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118626/6244cb0d-0162-3c75-9667-790e6fc8684e.jpg">
+<meta property="og:image" content="https://www.javaeye.com/upload/attachment/118628/6a92844e-1912-3d9a-b39b-ccb2937e5384.jpg">
+<meta property="article:published_time" content="2009-06-26T14:44:47.000Z">
+<meta property="article:modified_time" content="2018-10-19T01:30:43.106Z">
+<meta property="article:author" content="宋瑞华">
+<meta property="article:tag" content="央视">
+<meta property="article:tag" content="谷歌">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.javaeye.com/upload/attachment/118589/111ef238-e8bc-3ab8-82da-99a7ffc3ad75.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.songruihua.com/archives/data-words-look-at-how-google-was-set-up.html"/>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics START-->
+
+<!-- Global site tag (gtag.js) - Google Analytics END-->
+
+
+
+  <title>用数据说话，看Google 怎样被陷害(转载) | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+<a href="/"  rel="start" alt="宋瑞华">
+<div class="custom-logo-site-title">
+      <!--a href="/"  class="brand" rel="start"-->
+        <span class="logo-line-before"><i></i></span>
+        <!--span class="site-title">宋瑞华</span-->
+		<!--span class="site-title"><img src="/images/logo.gif"></span-->
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
+        <span class="logo-line-after"><i></i></span>
+      <!--/a-->
+    </div>
+
+
+</a>
+
+        <h1 class="site-subtitle" itemprop="description"><font face="楷体" color="#555555">曲邑东南升明月</font></h1>
+		<!--h1 class="site-subtitle" itemprop="description"><font face="楷体">曲邑东南升明月</font></h1-->
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站图">
+          <a href="/sitemap.xml" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/data-words-look-at-how-google-was-set-up.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">用数据说话，看Google 怎样被陷害(转载)</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2009-06-26T22:44:47+08:00">
+                2009-06-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
+                    <span itemprop="name">网络爬虫</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>以下文字转载自JavaEye，但文章的最初出处为<a target="_blank" rel="noopener" href="https://blog.sina.com.cn/s/blog_60676a3f0100e0xk.html">新浪博客</a>，不知何因，原文已被删除。</p>
+<p>近日，央视爆出谷歌搜索出现大量黄色词条的信息。一个引起舆论强烈反响的例子是，在谷歌搜索“儿子”竟然也能搜索到黄色词条。那么，事情是怎么发生的呢？ 下面我们来看谷歌是如何被陷害的：众所周知，谷歌关键词提醒是计算机自动摘取最近最流行的关键词来生成的。于是某些人利用这一点，大量在谷歌上搜索黄色词汇，陷害了谷歌。  在谷歌搜索趋势图，以及一些第三方的统计数据中，可以看到： 在央视曝光谷歌之前7天： 1.有人故意在谷歌大量搜索黄色词汇，使单日黄色词汇搜索量同比猛增 5950% ，单月  搜索总量与上月相比增幅达数千倍 2.这些搜索量100%来自北京 3.这些搜索量几乎呈线性急剧上升，理论上这些瞬时搜索量应该服从正态分布并是突发性  的，换句话说，这是有人故意为之。 <img src="https://www.javaeye.com/upload/attachment/118589/111ef238-e8bc-3ab8-82da-99a7ffc3ad75.jpg"> 以下再附上几张类似图表，请注意峰值全部在6月17日，即CCTV节目（6月18日）播出的前一天。 （全年统计） <img src="https://www.javaeye.com/upload/attachment/118595/05e7779e-435c-3e06-a656-b6cd9f8def92.jpg"> （本月统计） <img src="https://www.javaeye.com/upload/attachment/118603/0b17a4d1-562d-3e56-9a5d-c0e71f8e28e0.jpg"> <img src="https://www.javaeye.com/upload/attachment/118611/8ff98be4-9697-3cac-8138-72710560560e.jpg"> <img src="https://www.javaeye.com/upload/attachment/118615/37319e71-7e5a-336c-a464-3ac11ac1a695.jpg"> <img src="https://www.javaeye.com/upload/attachment/118617/3a6d2ed9-6265-3c51-8e80-3f27d2e69dd5.jpg"> <img src="https://www.javaeye.com/upload/attachment/118619/1f37c310-58f9-3519-886f-e0c5b7da8ff5.jpg"> <img src="https://www.javaeye.com/upload/attachment/118621/6f887d0e-e00d-395e-85fd-9d3a18a521ba.jpg"> 为做对比，说明搜索引擎的统计应该是什么样子，我来附上一张对关键词“天气预报”的搜索统计图表，从图中我们可以看到，全年搜索量应该大致呈均匀分布，考虑到搜索引擎的普及使用，会有一个逐渐升高的趋势，但绝不可能出现在某个月份呈直线上升的情况。 <img src="https://www.javaeye.com/upload/attachment/118626/6244cb0d-0162-3c75-9667-790e6fc8684e.jpg"> 那么，还有一种可能，是不是北京的人们在6月份，由于夏天到来，荷尔蒙分泌过多，导致对“儿子母亲不正当关系”这样的黄色词汇搜索过多呢？我们且来看这张对关键词“日本女优”的搜索统计图表， <img src="https://www.javaeye.com/upload/attachment/118628/6a92844e-1912-3d9a-b39b-ccb2937e5384.jpg"> 可以看到，对关键词“日本女优”的搜索量全年大致呈均 匀分布，甚至在近期有下降的趋势。那么，这种近期全民荷尔蒙分泌过多的情况也应该被排除了。并不是说对所有黄色信息都有大量的搜索需求。搜索数量呈急剧上 升的关键词，只局限在媒体大书特书的几个词汇之中，特别要注意的是其急剧上升阶段和峰值都在媒体报道之前，显然，这不是自然的结果，那么，答案是什么呢？ 是谁让谷歌如此低俗？ ——————————————-无敌分割线——————————————  我郑重声明：   所 有的答复的内容（包括但不限于汉字，拼音，外文字母，字词，句子，图片，图像，录音，以及任何组合上述各种等）是复制和粘贴，来从互联网上，我不明白其全 部或部分的含义（包括但不限于，复制和粘贴的内容识别，阅读，理解，分析，记忆等） ，因此，我不和内容上述承担任何责任（包括但不限于刑事和民事责任）和其他潜在的责任和义务（包括但不限于已经存在的国家，正在逐步形成，形成的将是未来 的法律责任和规章） ，请不要追逐省（包括但不限于省级国家一级市政乡镇村一级行政机关，企业，机构，司法，立法等的任何组织，单位，组织和机构，任何单位和个人组织） 。详细的调查有直接联系原作者所有，请在同一时间，所有被邀请观看了24小时的观察，自觉主动忘记，我不能忘记那些谁不将任何未来的问题和后果。谢谢您！  我鄭重聲明： 回答所有的內容（包括但不限於漢字，拼音，外文 字母，字詞，句子，圖片，圖像，錄音，以及任何結合上述情況，等等）是複製並粘貼到Internet ，我不明白它的全部或部分的含義（包括但不限於，複製和粘貼的內容識別，閱讀，理解，分析，記憶等） ，所以我不承擔任何責任的內容上述（包括但不限於刑事和民事責任）和其他潛在的責任和義務（包括但不限於國家已經存在，正在逐步形成，並形成未來的法律責 任和規章） ，請不要大通省（包括但不限於省市級鄉鎮在國家一級在村一級行政機關，企業，機構，司法，立法等的任何組織，單位，組織和機構，任何單位和個人組織） 。詳細的調查直接關係到所有原作者所有，請在同一時間，所有被邀請觀看了24小時的觀察，自覺主動忘記，我不能忘記那些誰不將任何未來的問題和後果。謝謝 您！  I solemnly declare: The replies of all content (including but not limited to Chinese characters, Pinyin, foreign letters, words, sentences, pictures, images, sound recordings, as well as any combination of the aforementioned variety, etc.) is to copy and paste, Comes from the Internet, I do not understand all or part of its meaning (including but not limited to, copy and paste the contents of the identification, reading, understanding, analysis, memory, etc.), Therefore, I do not and the content of the above bear any liability (including but not limited to criminal and civil liability) and other potential liabilities and obligations (including but not limited to the countries already exists, is taking shape, the formation of the future will be the responsibility of the laws and regulations) , Please do not chase provinces (including but not limited to the provincial level state-level municipal township of village-level administrative organs, enterprises, institutions, judiciary, legislature, etc. any organization, units, organizations and the agencies, units and any individual organization). To detailed investigation of a direct link to original author, please, At the same time, all are invited to watch this with 24 hours of watching and consciously take the initiative to forget that I can not forget those who do not will be any future problems and consequences. Thank you!  Ich erkläre feierlich: Beantworten Sie alle Inhalte (einschließlich, aber nicht beschränkt auf chinesische Zeichen, Pinyin, ausländische Buchstaben, Wörter, Sätze, Bilder, Bilder, Tonaufnahmen, sowie eine beliebige Kombination der oben genannten, etc.) ist das Kopieren und Einfügen, um das Internet, Ich verstehe nicht, seine ganz oder teilweise im Sinne von (einschließlich, aber nicht beschränkt auf, kopieren und fügen Sie den Inhalt der Identifizierung, Lesen, Verstehen, Analyse-, Speicher, etc.), so dass ich keine Verantwortung für den Inhalt der die oben (einschließlich, aber nicht beschränkt auf straf-und zivilrechtlichen Haftung) und anderen potenziellen Verbindlichkeiten und Verpflichtungen (einschließlich, aber nicht beschränkt auf Länder, die bereits vorhanden ist, nimmt allmählich Gestalt an, und die Zukunft der gesetzlichen Zuständigkeiten und Regelungen), wenden Sie sich bitte nicht Chase Provinzen (einschließlich, aber nicht beschränkt auf die Provinz kommunalen Gemeinde auf nationaler Ebene, auf Ebene der Gemeinde Verwaltung, Unternehmen, Institutionen, Justiz-, Rechts-, usw. jeder Organisation, Einheiten, Organisationen und Institutionen, und keine oder einzelnen Organisationen). Detaillierte Untersuchung steht in direktem Zusammenhang mit allen Original-Autor, wenden Sie sich bitte auf der gleichen Zeit, alle waren eingeladen, um den 24-Stunden-Beobachtung, und bewusst die Initiative ergreifen, zu vergessen, dass ich kann nicht vergessen, diejenigen, die nicht werden alle künftigen Probleme und Folgen . Danke!    Je déclare solennellement:  Réponse tout le contenu (y compris mais non limité à des caractères chinois, pinyin, des lettres, des mots, des phrases, images, textes, images, enregistrements sonores, ainsi que toute combinaison de ces éléments, etc) est le copier et de coller à l’Internet, Je ne comprends pas la totalité ou une partie de la signification de (y compris mais non limité à, de copier et de coller le contenu de l’identification, la lecture, de compréhension, d’analyse, de mémoire, etc), je n’ai donc pas assumer la responsabilité pour le contenu de ci-dessus (y compris mais non limité à la responsabilité pénale et civile) et d’autres passifs éventuels et obligations (y compris mais non limité aux pays qui existe déjà, est progressivement en train de prendre forme, et la forme de l’avenir de la responsabilité juridique et les règlements), s’il vous plaît ne pas chase provinces (y compris mais non limité à des municipalités de canton de la province, au niveau national au niveau du village, les organes administratifs, entreprises, institutions, judiciaires, législatives, etc toute organisation, les unités, les organisations et institutions, et pas d’unité ou de différents organismes). Enquête est directement liée à l’ensemble l’auteur original, s’il vous plaît, dans le même temps, tous ont été invités à regarder les 24-heures d’observation, et consciemment, prendre l’initiative d’oublier que je ne peux pas oublier ceux qui ne sera pas tout les problèmes à venir et les conséquences . Merci!    Я торжественно обязуюсь: Ответ все содержимое (включая, но не ограничиваясь ими китайских иероглифов, Pinyin, иностранные буквы, слова, предложения, фотографии, изображения, аудиозаписи, а также любое сочетание указанных выше, и т.д.) на копирование и вставка в Интернет, Я не понимаю его полностью или частично по смыслу (включая, но не ограничиваясь, скопируйте и вставьте содержимое выявлению, чтения, понимания, анализа, памяти и т.д.), так что я не несет никакой ответственности за содержание в выше (включая, но не ограничиваясь уголовной и гражданской ответственности) и других потенциальных обязательств и обязательств (в том числе, но не ограничивается странами, которые уже существуют, постепенно обретает форму, и форма будущего юридических обязанностей и правил), пожалуйста, не Чейз провинций (включая, но не ограничиваясь ими провинциальных муниципальных городок на национальном уровне, на уровне деревень, административные органы, предприятия, учреждения, судебные, законодательные и т.д. какой-либо организации, подразделений, организаций и учреждений, и ни одна единица или отдельных организаций). Подробное расследование непосредственно связана со всеми оригинальный автор, пожалуйста, в то же время, все были приглашены, чтобы посмотреть на 24-часовое наблюдение, и сознательно взять на себя инициативу по забывать о том, что я не могу забыть тех, кто не будет каких-либо проблем в будущем, и последствия . Спасибо!    وإنني أعلن رسميا : الإجابة على جميع المحتويات (بما فيها على سبيل المثال لا الحصر الحروف الأبجدية الصينية ، ونظام الكتابة الصينية والأجنبية الرسائل ، الكلمات ، الجمل ، والصور ، والصور ، والتسجيلات الصوتية ، فضلا عن أي مزيج من هذه البدائل ، وما إلى ذلك) هو نسخ ولصق على الإنترنت ، لا افهم عن كل أو جزء من معنى (على سبيل المثال لا الحصر ، ونسخ ولصق وتحديد مضامين والقراءة والفهم ، والتحليل ، والذاكرة ، الخ) ، كي لا تتحمل أي مسؤولية عن مضمون أعلاه (على سبيل المثال لا الحصر المسؤولية الجنائية والمدنية) وغيرها من الالتزامات والمسؤوليات المحتملة (على سبيل المثال لا الحصر البلدان الموجودة بالفعل ، آخذة في التشكل تدريجيا ، وتشكيل مستقبل المسؤوليات القانونية والأنظمة) ، الرجاء عدم مطاردة المحافظات (على سبيل المثال لا الحصر المقاطعة بلدية البلدة على الصعيد الوطني على مستوى القرى والهيئات الإدارية والمؤسسات والسلطات القضائية والتشريعية ، وما إلى أي منظمة ، والوحدات ، والمنظمات والمؤسسات ، وليس وحدة او فرد والمنظمات). تحقيق مفصل ارتباطا مباشرا جميع المؤلف الأصلي ، الرجاء في الوقت نفسه ، وجهت الدعوة لجميع لمشاهدة المراقبة لمدة 24 ساعة ، عن وعي ، وأخذ زمام المبادرة لننسى أن الأول لا يمكن أن ننسى أولئك الذين لا سيكون أي مشاكل في المستقبل وعواقبه . شكرا لك!    मैं गंभीरता से घोषित: उत्तर सभी सामग्री (सहित, लेकिन चीनी अक्षरों, पिन्यिन, विदेशी अक्षर, शब्द, वाक्य, तस्वीरें, छवियाँ, ध्वनि रिकॉर्डिंग, साथ ही साथ के किसी भी संयोजन को सीमित नहीं उपर्युक्त, आदि) को कॉपी और पेस्ट करने के लिए इंटरनेट का है, मैं अपने सभी या भाग के अर्थ का (लेकिन सहित प्रतिलिपि, और पहचान, पढ़ने, समझने, विश्लेषण, स्मृति, आदि की सामग्री चिपकाएँ सीमित नहीं), तो मैं सामग्री के लिए कोई जिम्मेदारी मान नहीं समझ में नहीं आता है उपरोक्त (लेकिन सहित आपराधिक और नागरिक दायित्व तक सीमित नहीं) और अन्य संभावित देनदारियों और दायित्वों (लेकिन सहित कि पहले से ही मौजूद है देशों तक सीमित नहीं है, धीरे धीरे आकार ले रहा है, और कानूनी जिम्मेदारियों और विनियमों के भविष्य फार्म), कृपया नहीं पीछा प्रांतों (लेकिन सहित प्रांतीय नगरपालिका नगरी के लिए ग्राम स्तर प्रशासनिक निकायों, उपक्रमों, संस्थाओं, न्यायिक, विधायी में राष्ट्रीय स्तर पर सीमित नहीं, आदि किसी भी संगठन, इकाइयों, संगठनों और संस्थाओं, और कोई इकाई या व्यक्ति संगठनों). विस्तृत जांच सीधे सभी मूल लेखक को, एक ही समय में, कृपया, सभी को 24 घंटे का अवलोकन देखने के लिए, और आमंत्रित किए गए थे बूझकर है कि मैं किसी भी भविष्य की समस्याओं और परिणाम होगा जो नहीं है नहीं भूल सकता भूल करने के लिए पहल जुड़ा है . धन्यवाद!   전 엄숙하게 선언합니다 : 답 모든 콘텐츠 (하지만 포함한 한자, 병음, 외국 문자, 단어, 문장, 사진, 이미지, 사운드 레코딩뿐만 아니라, 임의의 조합으로 국한되지 위의 등)를 복사하여 인터넷에 붙여넣기, 나는 그것의 전부 또는 일부의 의미 (포함하되 사본과 신분증, 읽기, 이해, 분석, 메모리, 등등의 내용을 붙여 넣습니다 국한되지 않음), 그래서 그 콘텐츠에 대해 어떠한 책임도지지 않습니다 이해가 안 돼요 위의 (형사 및 민사 책임을 포함하되 이에 국한되지 않음) 및 기타 잠재 채무와 의무 (이미 존재하는 국가에 국한되지 않음을 포함하되, 점진적으로 복용 모양 및 법적 책임과 규제의 미래 양식), 제발하지 마 체이스 지방 (하지만 마을을 포함하여 지방 자치 마을 수준의 행정 기관, 기업, 기관, 사법, 입법에서 국가 수준에서 제한되지 않는 등 어떤 조직, 단위, 단체와 기관, 그리고 단위 또는 개별 단체). 자세한 조사를 모두 원래의 작성자에게 직접, 같은 시간에 제발, 모두 24 - 시간 관측보고, 그리고 의식적으로 초청됐다가 미래의 문제와 결과가있을 것입니다 어떤 사람들은 어떻게 잊을 수 없어 잊지 주도권 연결되어있습니다 . 감사합니다!   私は厳かに宣言する： 答えは、すべてのコンテンツ（中国語の文字を含 むが、ピンイン、外国文字、単語、文章、写真、画像、音声録音などの任意の組み合わせに限定されない上、など）にコピーして、インターネットへの貼り付け は、私は、その全部または一部の意味の（ただし、コピーなど、身分証明書を、読み、理解、分析、メモリなどの内容を貼り付けて限定されない）ので、私のコ ンテンツ内容に一切の責任を理解していないと仮定しない上記の（ただし、刑事、民事責任などに限定されない）とその他の潜在的な負債と義務（ただし、既に 存在するなど、国に限定されない、徐々に形をしており、法律上の責任と規制の未来形） 、しない追いかける地方（ただし、市町村などの地方の町に、村レベルの行政機関、企業、機関、司法、立法では、国家レベルでの限定されない、などの任意の 組織単位、組織や機関、あるいは個々の組織の単位） 。詳細な調査を元の投稿者に直接、同じ時間にしてください、すべての24時間の観察を見て、招待された意識は、私は将来的な問題とされる結果はありません 忘れられない人を忘れることは率先してリンクされています。ありがとうございました！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%B0%B7%E6%AD%8C/" rel="tag"><i class="fa fa-tag"></i> 谷歌</a>
+          
+            <a href="/tags/%E5%A4%AE%E8%A7%86/" rel="tag"><i class="fa fa-tag"></i> 央视</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/lets-download.html" rel="next" title="开通下载">
+                <i class="fa fa-chevron-left"></i> 开通下载
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/democratic-peoples-republic-of-korea-the-preamble-to-the-constitution.html" rel="prev" title="朝鲜民主主义人民共和国宪法序言">
+                朝鲜民主主义人民共和国宪法序言 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <!--p class="site-author-name" itemprop="name">宋瑞华</p-->
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">575</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">588</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:songruihua[a t]hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=273454295&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=988399180" target="_blank" title="FavMusic">
+                      
+                        <i class="fa fa-fw fa-music"></i>FavMusic</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/hk4win/" target="_blank" title="HK4WIN">
+                      
+                        <i class="fa fa-fw fa-h-square"></i>HK4WIN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+		  
+		  
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2025</span>
+  <!--span class="with-love">
+    <i class="fa fa-user"></i>
+  </span-->
+  <span class="author" itemprop="copyrightHolder">Song Ruihua.</span>
+<!--span class="author" itemprop="copyrightHolder">宋瑞华</span-->
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and hosted with ❤️️ by <a class="theme-link" target="_blank" href="https://github.com/">GitHub</a>. </div>
+
+
+
+  <!--span class="post-meta-divider">|</span-->
+
+
+
+<!--script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"-->
+<!--/script-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

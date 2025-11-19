@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="文件,TrueCrypt,加密," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="宋瑞华" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="0.概述   　　每个人的电脑上总有些不想让别人看到的文件，例如商业机密、犯罪证据、间谍情报、冠西摄影作品、日本小电影、个人日记等等，有很大一部分人用层层的文件夹加上隐藏文件的方法藏东西，并自以为别人不会找到，稍懂点电脑的人可能会更改扩展名，或者使用一些加密文件夹的软件，我也曾经这么做过，发现不少问题：　　1.这些加密方式多不是对文件本身进行数据加密处理，只是在操作系统层面进行隐藏，仅仅在电脑显示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件加密软件TrueCrypt简要教程">
+<meta property="og:url" content="https://www.songruihua.com/archives/truecrypt.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="0.概述   　　每个人的电脑上总有些不想让别人看到的文件，例如商业机密、犯罪证据、间谍情报、冠西摄影作品、日本小电影、个人日记等等，有很大一部分人用层层的文件夹加上隐藏文件的方法藏东西，并自以为别人不会找到，稍懂点电脑的人可能会更改扩展名，或者使用一些加密文件夹的软件，我也曾经这么做过，发现不少问题：　　1.这些加密方式多不是对文件本身进行数据加密处理，只是在操作系统层面进行隐藏，仅仅在电脑显示">
+<meta property="og:locale">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-1.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-2.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-3.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-4.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-5.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-6.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-7.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-8.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-9.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-10.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-11.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-12.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-13.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-14.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-15.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-16.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-17.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-18.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-19.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-20.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-21.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-22.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-23.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-24.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-25.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-25.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-26.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-27.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-29.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-30.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-31.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-32.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-33.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-34.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-35.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-36.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-37.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-38.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-39.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-40.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-41.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-42.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-43.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-44.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-45.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-46.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-47.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-48.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-49.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-50.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-51.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-52.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-53.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-54.jpg">
+<meta property="og:image" content="https://s.songruihua.com/images/truecrypt-55.jpg">
+<meta property="article:published_time" content="2011-11-13T12:30:46.000Z">
+<meta property="article:modified_time" content="2018-11-21T01:21:47.384Z">
+<meta property="article:author" content="宋瑞华">
+<meta property="article:tag" content="TrueCrypt">
+<meta property="article:tag" content="加密">
+<meta property="article:tag" content="文件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s.songruihua.com/images/truecrypt-1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.songruihua.com/archives/truecrypt.html"/>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics START-->
+
+<!-- Global site tag (gtag.js) - Google Analytics END-->
+
+
+
+  <title>文件加密软件TrueCrypt简要教程 | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+<a href="/"  rel="start" alt="宋瑞华">
+<div class="custom-logo-site-title">
+      <!--a href="/"  class="brand" rel="start"-->
+        <span class="logo-line-before"><i></i></span>
+        <!--span class="site-title">宋瑞华</span-->
+		<!--span class="site-title"><img src="/images/logo.gif"></span-->
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
+        <span class="logo-line-after"><i></i></span>
+      <!--/a-->
+    </div>
+
+
+</a>
+
+        <h1 class="site-subtitle" itemprop="description"><font face="楷体" color="#555555">曲邑东南升明月</font></h1>
+		<!--h1 class="site-subtitle" itemprop="description"><font face="楷体">曲邑东南升明月</font></h1-->
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站图">
+          <a href="/sitemap.xml" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/truecrypt.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">文件加密软件TrueCrypt简要教程</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-11-13T20:30:46+08:00">
+                2011-11-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>0.概述</strong>  </p>
+<p>　　每个人的电脑上总有些不想让别人看到的文件，例如商业机密、犯罪证据、间谍情报、冠西摄影作品、日本小电影、个人日记等等，有很大一部分人用层层的文件夹加上隐藏文件的方法藏东西，并自以为别人不会找到，稍懂点电脑的人可能会更改扩展名，或者使用一些加密文件夹的软件，我也曾经这么做过，发现不少问题：<br>　　1.这些加密方式多不是对文件本身进行数据加密处理，只是在操作系统层面进行隐藏，仅仅在电脑显示器上看不到这些文件，并非真正的加密；<br>　　2.数据安全难以保障，有些软件加密文件后，如果卸载了这个软件重新安装，被加密文件就难以解密；<br>　　3.依赖当前操作系统，也就是只能在本机上解密，转移到其他电脑就难以解密。<br>　　这些缺陷导致被加密文件可能被非授权使用或对所有者不可用，造成损失。鉴于此，使用专业的加密软件进行文件加密是很有必要的，软件市场上有多家公司出售专业的加密软件，而且售价不菲，这对政府和商业机构来说或许物有所值，但对普通个人用户来说完全没有必要，免费的加密软件就足以保证个人数据安全。在此介绍一款知名的开源免费的文件加密软件——TrueCrypt。<br>　　TrueCrypt的特点：<br>　　1. 真正的加密，绝非仅仅“隐藏”。TrueCrypt提供三种加密算法：AES、Serpent、Twofish。可以单独使用其中的一种加密算法，也可以两种或三种加密算法叠加使用，越是复杂的算法越难以被破解（比如，单独使用一种算法，破解需要100万年，叠加使用多种算法，破解则需要150万年），但加密步骤越复杂，加密过程耗时越长，而破解难度的提高并没有什么实际意义。三种算法中默认使用的AES算法是美国联邦政府认证的加密算法，加密规则也是公开的，所有具备数学和密码学知识的人都可以尝试破解，但至今无人宣称已成功破解，但是AES算法掌握在美国联邦政府手中，到底有没有破解方法或许只有少数的几个美国要人知道。综上，除非涉及国家机密，单独使用AES算法加密是足够安全的。<br>　　2. 由于TrueCrypt的加密原理是采用AES等加密算法进行加密，跟操作系统关系不大，所以被加密文件具有良好的可移植性，即使TrueCrypt被卸载后重新安装，或将被加密文件移植到其他电脑上，也可以保证密钥持有者能安全地解密文件。<br>　　3. 针对高强度安全要求，TrueCrypt设计了“隐藏加密卷”的功能。就是说，如果密钥持有者人身安全受到威胁，不得不交出密钥，也可以选择交出一个假的密钥，使用假密钥对文件进行解密后看到的并不是真正的文件，而是事先放在那里的“貌似很机密”的文件。<br>　　4. TrueCrypt的缺点主要是：只能保证被加密文件不被非法获取，不能保证不被恶意破坏。就是说别人虽然不可能看到这些文件，但却可以彻底删除它们，所以使用TrueCrypt需要做好备份工作。<br>　　TrueCrypt支持对文件（夹）、分区、硬盘加密，但对分区和硬盘加密有较大风险，除非特别需要不推荐使用，一般我们需要的仅仅是加密文件（夹），下面用一句话介绍下TrueCrypt的工作原理：首先使用TrueCrypt创建一个加密卷，只有使用正确的密钥才能打开此加密卷，加密卷可用于储存文件。<br>　　名词解释<br>　　加密卷：在Windows系统的资源管理器中，加密卷就是一个普通的文件（可以像普通文件那样被复制、分发），并且其扩展名可以是任意的，甚至可以为空，例如01.jpg、02.avi、03.dat、04.doc、05等等，这会让人觉得加密卷是图片、视频、文档，能骗过不少人。使用TrueCrypt加载加密卷，就可以让加密卷在“我的电脑”或“计算机”中以一个分区的形式被“打开”，姑且称其为“虚拟盘”，我们平时常说的C盘、D盘、E盘都是真正在硬盘上被划分出来的分区，但这个“虚拟盘”并不是真正存在的，只是TrueCrypt虚拟出来的，但虚拟盘也会占用一个盘符（例如F盘）并可以向里面拷入文件。宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a></p>
+<p>下载TrueCrypt：<a target="_blank" rel="noopener" href="https://www.truecrypt.org/downloads">https://www.truecrypt.org/downloads</a> 下载语言包（中文）：<a target="_blank" rel="noopener" href="https://www.truecrypt.org/localizations">https://www.truecrypt.org/localizations</a> 首先安装TrueCrypt，然后将语言文件Language.zh-cn.xml解压缩到TrueCrypt的安装文件夹（默认C:\Program Files\TrueCrypt），然后在菜单栏中选择：Settings&gt;Language&gt;简体中文&gt;OK</p>
+<p><strong>1.创建一个文件型加密卷</strong>宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a><br>　　加密卷有两种类型，标准加密卷和隐藏加密卷。标准加密卷只有一个密钥，而隐藏加密卷有两个密钥，一个真密钥一个假密钥，密钥持有者使用真密钥加载加密卷可以看到真正被加密的文件，如果有人用暴力等手段威胁密钥持有者，密钥持有者可以说出假密钥，威胁者使用假密钥加载加密卷看到的是伪装的加密文件，而密钥持有者从技术角度完全可以否认真密码的存在。</p>
+<p>1.1创建标准加密卷<br><img src="https://s.songruihua.com/images/truecrypt-1.jpg"><br>点击“创建加密卷”按钮</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-2.jpg"><br>选择“创建文件型加密卷”，点下一步</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-3.jpg"><br>选择“标准加密卷”，点下一步</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-4.jpg"><br>点击“选择文件”按钮，在对话框中指定加密卷的路径、文件名和扩展名，示例为D:\000\Secret_01.dat</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-5.jpg"><br>点下一步</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-6.jpg"><br>如无特殊需要，算法保持默认即可，点下一步</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-7.jpg"><br>指定加密卷的大小，加密卷越大，可存储的文件越多，示例为10G，点下一步</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-8.jpg"><br>指定密钥。密钥可以是密码、密钥文件，二者也可同时使用，上图为仅使用密码的情况</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-9.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-10.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-11.jpg"><br>　　以上3图为同时使用密码和密钥文件D:\000\key.txt的情况，如果使用了密钥文件，请一定注意保存该文件，因为加载加密卷的时候必须提供此文件才能解密，如果丢失此文件那么加密卷将永远不可能被加载，所以推荐随机使用网络上大量存在的图片，或者是某个简单的txt文本文档，这样万一密钥文件丢失还可以比较容易地再次取得。密钥文件可以是一个或多个，如果使用了多个文件，加载加密卷时必须提供所有的文件。通常，采用多个密钥，并将副本分发给不同的人，然后销毁原密钥，可以实现许多影视作品中描述的某些情形，即只有收集齐所有密钥文件后才能解密加密卷，个人日常使用不推荐使用密钥文件，采用仅密码的方式更为方便，而且足够安全。</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-12.jpg"><br>密钥设置完成后，点下一步</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-13.jpg"><br>如果密码过于简单，会有提示，但如果过于复杂又容易忘记，请自行斟酌</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-14.jpg"><br>加密卷的文件类型可以是FAT或NTFS，前者更高效，但不能存储大于4G的单个文件，如果没有大于4G的文件需要加密推荐保持默认</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-15.jpg"><br>最后，格式化创建的加密卷，注意，这里的“格式化”并不会删除任何硬盘上的文件，应该理解为“生成加密卷”更为合适宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a></p>
+<p><img src="https://s.songruihua.com/images/truecrypt-16.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-17.jpg"><br>点击“退出”按钮，退出加密卷创建向导；点击“下一步”按钮，继续创建另一个加密卷</p>
+<p>1.2创建隐藏加密卷<br>　　在介绍怎样创建隐藏加密卷之前，先简单地介绍一下隐藏加密卷的基本原理：如果把标准加密卷比喻成保险柜，那么隐藏加密卷就是在一个大保险柜里放一个小保险柜，如果有人用真密钥打开保险柜，那么看到的是小保险柜里的文件，这是真正要保护的文件，而如果有人用假密钥打开保险柜，看到的会是大保险柜里面，小保险柜外面的文件，这些文件看起来貌似很机密，但其实是迷惑人的冒牌货，并且此时小保险柜是完全看不到的，但有一个问题，如果此时有人又往大保险柜里放了些文件，并且把小保险柜外面的空间用完了，那么小保险柜所占的空间就会被侵占，因为此时小保险柜是完全“隐形”的，这意味着小保险柜会遭到破坏，以后即使用真密码打开保险柜也无法打开小保险柜了，但无论怎样小保险柜里的文件绝对不会被非法获取。</p>
+<p>　　在TrueCrypt中，大保险柜叫做“外层加密卷”，小保险柜叫做“隐藏加密卷”，显然，外层加密卷的大小一定要大于隐藏加密卷，在下面的示例中，取外层加密卷10M，隐藏加密卷8M，余下的2M用于放迷惑别人的虚假文件，如果这2M被用完，那么隐藏加密卷的8M空间就会被侵占，隐藏加密卷即被破坏，不过TrueCrypt提供了一种安全模式，在此模式下，如果虚假文件超过2M则会提示用户，避免隐藏加密卷遭破坏。</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-18.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-19.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-20.jpg"><br>示例为D:\000\Secret_02.dat</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-21.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-22.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-23.jpg"><br>外层加密卷的密码就是上面说的“假密码”，示例为 false_password</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-24.jpg"><br>点击“打开外层加密卷”按钮</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-25.jpg"><br>这里就是小保险柜外面的那2M空间，在这里放一个迷惑别人的txt文件</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-25.jpg"><br>接下来，创建小保险柜——隐藏加密卷宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a></p>
+<p><img src="https://s.songruihua.com/images/truecrypt-26.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-27.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-29.jpg"><br>隐藏加密卷的密码就是上面说的“真密码”，示例为 true_password<br><img src="https://s.songruihua.com/images/truecrypt-30.jpg"></p>
+<p><strong>2.加载加密卷</strong><br>　　加密卷被创建以后，就好像制造了一个保险柜，创建时的密钥就是保险柜钥匙。打开保险柜的过程在TrueCrypt中叫做“加载”，保险柜打开后，可以在资源管理器中进行文件（夹）的复制、粘贴、剪切、删除、重命名等操作，操作完成后记得关闭保险柜，关闭保险柜的过程在TrueCrypt中叫做“卸载”，在默认情况下，一个加密卷被加载后，如果10分钟内没有进行任何操作会被自动卸载，以保障数据安全。</p>
+<p>2.1加载标准加密卷宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a><br><img src="https://s.songruihua.com/images/truecrypt-31.jpg"><br>为加密卷选择一个盘符，例如V:，点“选择文件”按钮</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-32.jpg"><br>定位到Secret_01.dat加密卷</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-33.jpg"><br>点“加载”按钮</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-34.jpg"><br>输入密码</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-35.jpg"><br>加载成功，类型一列显示“常规”，表示不是隐藏加密卷</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-36.jpg"><br>在资源管理器中出现V:盘，大小为10G</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-37.jpg"><br>打开V盘，往里面放一些真正需要加密的文件</p>
+<p>2.2加载隐藏加密卷</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-38.jpg"><br>为加密卷选择一个盘符，例如X:，定位到Secret_02.dat加密卷，点“加载”按钮</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-39.jpg"><br>输入“真密码”：true_password</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-40.jpg"><br>加载成功，类型一列显示“隐藏”，表示是隐藏加密卷</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-41.jpg"><br>在资源管理器中出现X:盘，大小为8M</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-42.jpg"><br>打开X盘，往里面放一些真正需要加密的文件</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-43.jpg"><br>如果刚才输入“假密码”：false_password</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-44.jpg"><br>那么加密卷的大小为10M，类型跟标准加密卷一样为“常规”，显然，我们无法区分哪个是标准加密卷哪个是隐藏加密卷，因为二者看起来完全一样，这意味着密钥持有者可以否认隐藏加密卷的存在，从而保障被加密文件的安全宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a></p>
+<p><img src="https://s.songruihua.com/images/truecrypt-45.jpg"><br>这时X盘里出现的是那个迷惑别人的txt文件，而不是真正要保护的文件</p>
+<p><strong>3.卸载加密卷</strong><br><img src="https://s.songruihua.com/images/truecrypt-46.jpg"><br>　　选择已打开的加密卷，点击“卸载”按钮可卸载该加密卷；点击“全部卸载”按钮可卸载所有已打开的加密卷</p>
+<p><strong>4.把TrueCrypt放进U盘</strong><br>　　并不是每台电脑都安装了TrueCrypt，如果经常需要在他人电脑上使用TrueCrypt，那么重新安装TrueCrypt不但麻烦而且还可能招来他人的不满，针对此种情况TrueCrypt提供了“便携磁盘安装”工具，即把TrueCrypt放进U盘、移动硬盘等可移动设备中，直接双击即可使用。</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-47.jpg"><br>插入U盘后，点击菜单：工具&gt;便携磁盘安装</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-48.jpg"><br>选择U盘盘符，示例为G:</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-49.jpg"><br>双击G:\TrueCrypt文件夹中的TrueCrypt.exe即可</p>
+<p><strong>5.备份加密卷头信息宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a></strong><br>　　加密卷在资源管理器中就是一个普通文件，在硬盘上此文件的头部保存有加密卷的密钥，如果因为硬盘故障导致加密卷头部信息缺失，或者更改过密码后忘记了新密码但仍记得旧密码，碰到这些情况就可以恢复加密卷头信息，恢复后的密钥与备份时的密钥完全一样。</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-50.jpg"><br>首先，选择文件，定位到加密卷</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-51.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-52.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-53.jpg"><br><img src="https://s.songruihua.com/images/truecrypt-54.jpg"><br>　　将加密卷Secret_01.dat的头部信息备份存储在文件Secret_01.bak中，然后将此bak文件发到电子信箱中，这样可以保障备份文件的安全。注意，别人即使获取了此bak文件，依然无法破解加密卷，因为此bak文件只是用来修复、恢复受损的头部信息，并不能从此bak文件中获取密钥的明文。</p>
+<p><img src="https://s.songruihua.com/images/truecrypt-55.jpg"></p>
+<p><strong>6.结语</strong>宋瑞华 <a href="http://www.songruihua.com/">www.songruihua.com</a><br>　　TrueCrypt是一款安全、高效、小巧、易用的加密软件，是优秀的免费个人数据安全解决方案，学会灵活使用此工具可以显著提高个人信息的安全等级。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%96%87%E4%BB%B6/" rel="tag"><i class="fa fa-tag"></i> 文件</a>
+          
+            <a href="/tags/TrueCrypt/" rel="tag"><i class="fa fa-tag"></i> TrueCrypt</a>
+          
+            <a href="/tags/%E5%8A%A0%E5%AF%86/" rel="tag"><i class="fa fa-tag"></i> 加密</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/microsoft-will-no-longer-be-provided-to-mozilla-firefox-celebration-cake.html" rel="next" title="微软将不再向Mozilla提供Firefox庆祝蛋糕">
+                <i class="fa fa-chevron-left"></i> 微软将不再向Mozilla提供Firefox庆祝蛋糕
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/reading-notes-matlab-01.html" rel="prev" title="读书笔记：MATLAB（01）">
+                读书笔记：MATLAB（01） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <!--p class="site-author-name" itemprop="name">宋瑞华</p-->
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">575</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">588</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:songruihua[a t]hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=273454295&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=988399180" target="_blank" title="FavMusic">
+                      
+                        <i class="fa fa-fw fa-music"></i>FavMusic</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/hk4win/" target="_blank" title="HK4WIN">
+                      
+                        <i class="fa fa-fw fa-h-square"></i>HK4WIN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+		  
+		  
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2025</span>
+  <!--span class="with-love">
+    <i class="fa fa-user"></i>
+  </span-->
+  <span class="author" itemprop="copyrightHolder">Song Ruihua.</span>
+<!--span class="author" itemprop="copyrightHolder">宋瑞华</span-->
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and hosted with ❤️️ by <a class="theme-link" target="_blank" href="https://github.com/">GitHub</a>. </div>
+
+
+
+  <!--span class="post-meta-divider">|</span-->
+
+
+
+<!--script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"-->
+<!--/script-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

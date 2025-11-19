@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="计算机," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="宋瑞华" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="以下文章中，我将用一个词Linux来囊括GNU&#x2F;Linux操作系统和各种FOSS（译注：自由和开源软件，Free &#x2F; Open Source Software）项目，这样读起来会顺畅些。  !&#x3D; 如果你像我一样不时逛逛Linux论坛，那你定会和我一样因看到大量如下这样的帖子而恼怒： “嗨！我用了几天Linux，总体还行。但某某功能并不能像Windows那样工作，真是糟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux不是Windows">
+<meta property="og:url" content="https://www.songruihua.com/archives/linuxwindows.html">
+<meta property="og:site_name" content="宋瑞华">
+<meta property="og:description" content="以下文章中，我将用一个词Linux来囊括GNU&#x2F;Linux操作系统和各种FOSS（译注：自由和开源软件，Free &#x2F; Open Source Software）项目，这样读起来会顺畅些。  !&#x3D; 如果你像我一样不时逛逛Linux论坛，那你定会和我一样因看到大量如下这样的帖子而恼怒： “嗨！我用了几天Linux，总体还行。但某某功能并不能像Windows那样工作，真是糟">
+<meta property="og:locale">
+<meta property="og:image" content="https://linux.oneandoneis2.org/tux.png">
+<meta property="og:image" content="https://linux.oneandoneis2.org/windows.png">
+<meta property="og:image" content="https://wiki.ubuntu.org.cn/Linux%E4%B8%8D%E6%98%AFWindows?action=AttachFile&do=get&target=pebkac.gif">
+<meta property="article:published_time" content="2007-04-06T08:45:10.000Z">
+<meta property="article:modified_time" content="2018-10-19T01:30:59.252Z">
+<meta property="article:author" content="宋瑞华">
+<meta property="article:tag" content="计算机">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linux.oneandoneis2.org/tux.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.songruihua.com/archives/linuxwindows.html"/>
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics START-->
+
+<!-- Global site tag (gtag.js) - Google Analytics END-->
+
+
+
+  <title>Linux不是Windows | 宋瑞华</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+<a href="/"  rel="start" alt="宋瑞华">
+<div class="custom-logo-site-title">
+      <!--a href="/"  class="brand" rel="start"-->
+        <span class="logo-line-before"><i></i></span>
+        <!--span class="site-title">宋瑞华</span-->
+		<!--span class="site-title"><img src="/images/logo.gif"></span-->
+		<!--span class="site-title"><img src="https://s.songruihua.com/images/static/header_compare.png"></span-->
+		
+        <span class="logo-line-after"><i></i></span>
+      <!--/a-->
+    </div>
+
+
+</a>
+
+        <h1 class="site-subtitle" itemprop="description"><font face="楷体" color="#555555">曲邑东南升明月</font></h1>
+		<!--h1 class="site-subtitle" itemprop="description"><font face="楷体">曲邑东南升明月</font></h1-->
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-链接">
+          <a href="/links/" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-站图">
+          <a href="/sitemap.xml" rel="section">
+		  
+		  <!--111222-->
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站图
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/linuxwindows.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Linux不是Windows</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2007-04-06T16:45:10+08:00">
+                2007-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>以下文章中，我将用一个词Linux来囊括GNU&#x2F;Linux操作系统和各种FOSS（译注：自由和开源软件，Free &#x2F; Open Source Software）项目，这样读起来会顺畅些。</strong></p>
+<h1 id=""><a href="#" class="headerlink" title=" !&#x3D; "></a><img src="https://linux.oneandoneis2.org/tux.png" alt="Linux"> !&#x3D; <img src="https://linux.oneandoneis2.org/windows.png" alt="Windows"></h1><p>如果你像我一样不时逛逛Linux论坛，那你定会和我一样因看到大量如下这样的帖子而恼怒：</p>
+<p>“嗨！我用了几天Linux，总体还行。但某某功能并不能像Windows那样工作，真是糟糕。为什么开发人员不能完全重写一下，好让它更像Windows呢？真要这么做的话，我相信会有更多Linux用户！”</p>
+<p>你 也许尝试过回应这些问题，结果那个Linux新手却和你吵得面红耳赤，他根据自己几年来在另外一个操作系统上的和在Linux上区区几小时的经验，得出结 论：他的想法是无比睿智的；而你不同意他的观点只是因为你是个“老派的Linux用户”，并且认为GUI是万恶之源，应该强迫所有人都去用CLI （译注：命令行界面，Command Line Interface）。</p>
+<p>本文旨在向这样的新手解释为什么他们的观点会引发争论而不是受到欢迎。</p>
+<p>首先就是这个最冠冕堂皇的论断：”如果Linux能这样，那就会有更多的人从Windows转过来！”</p>
+<p>好吧，让我先来解释一下理解Linux所需的基本常识：Linux社区不会试图去为一般的Windows用户提供一个替代的操作系统。Linux的目标不是“每台机器都装Linux”。</p>
+<p>千真万确，真的不是。的确，它们都是操作系统，的确，它们都能做相同的事情，但是这让Linux成为一种选择，而不是替代品。这看上去也许算不上什么区别，但实际上却是最最重要的一点。</p>
+<p>Linux&lt; &#x3D;&gt;Windows就如同摩托车&lt;&#x3D;&gt;小汽车：都是车，能通过公路把你从甲地送到乙地，但它们有不同的形状、不同的尺寸、不同的操作装 置，其基本工作方式也不同。它们是不可以随意互换的。它们有不同的用途、不同的长处和短处，你要挑选一种适合自己的，而不要指望一种可以完全替代另一种。</p>
+<p>一个开车的人遇到塞车时，看到摩托车自如在车堆中来回穿梭，他也许会羡慕摩托车所具备的这种能力。如果这个司机接着又说：“我对汽车了如指掌，所以我也一定同样了解摩托车！”，那么他就错了。</p>
+<ul>
+<li>如果那个司机买了一辆摩托，然后发现很难适应用手旋转握把来控制加速，而不是脚踏板，他可能会抱怨摩托也应该装油门踏板。</li>
+<li>如果那个司机有一个老婆两个孩子，他也许觉得摩托车只能载一个乘客是个缺点。他会建议重新设计摩托车，使其可以两两肩并肩的坐四个人。</li>
+<li>如果那个司机想骑摩托车，却发现无法控制平衡，总是摔倒，他也许会建议让摩托车也安上四个轮子。</li>
+<li>如果这个司机发现转弯时自己身体总会倾斜，那他会建议在摩托上装稳定器使其可以在转弯时总保持正直。</li>
+<li>如果这个司机怕摩托车被偷，他也许会抱怨摩托没有门，让小偷容易得手。</li>
+<li>如果这个司机觉得头盔碍事，他也许会建议在手把上装一个安全气囊以替代烦人的头盔。</li>
+</ul>
+<p>这些情况下他都错了，因为他想用摩托车替代汽车，他想让摩托做所有汽车能做的，他以为摩托的工作方式与汽车相同，比汽车缺少的功能只要嫁接上就行了。</p>
+<p>同样，一些好心的Linux新手也建议把Linux变成他们所熟悉的样子，结果也因为相同的原因徒劳无获。也许Linux和Windows都可以完成相同的任务，此外汽车和摩托也是。这并不意味这你可以直接从一个换到另外一个，也不意味着它们的特性可以相互替换。</p>
+<p>太 多的人以为从Windows转移到Linux就如同宝马换奔驰一样，认为其控制方式应该相同，他们的经验可以直接派上用场，而两者之间所有的差别也仅仅是 表层的。他们想：“在公路上行驶时，我需要汽车，在使用电脑时，我需要操作系统。汽车的工作方式都相同，因此操作系统的工作方式也应该都相同。”但这并不 准确，“在公路上行驶时，我需要车，在使用电脑时，我需要操作系统。我知道如何开汽车，但我不懂摩托车。我知道如何使用Windows，但我不懂 Linux。” - - - 这才是准确的。</p>
+<p>Windows 用户必须意识到他只是一个有经验的Windows用户，而不是有经验的电脑用户，就像汽车司机仅仅是汽车司机，而不是各类车辆的司机。Windows用户 必须意识到当自己在尝试Linux时，他又成了一个新手，就像汽车司机去尝试开摩托那样。 Windows用户必须要愿意去学习完成相同任务所需的不同手段，就像汽车司机必须要去适应替代方向盘的手把和他从没戴过的头盔。并且他们要做好心理准 备：这些“不同”并不意味着“劣等”。</p>
+<p>这 个简单的事实给有基础的Windows用户造成了更大的麻烦。他们使用Linux时带着根深蒂固的Windows操作习惯和一种态度：“谢谢，我知道怎么 用电脑！”问题是，他们并不明白，自己只是知道怎么用Windows。当面对另一种操作系统时，这些高级用户可能会遇到最糟的问题：他们有太多的经验需要 遗忘掉。</p>
+<p>当 一个新手说“我不知道”，接着就开始在论坛上探索、提问时，一个Windows高级用户可能会说：“我知道怎么做，我就这么、这么、这么做，然后……居然 不行！愚蠢的系统！”接着他们又说：“如果我这么有知识的都搞不定，那新手就更不别想了，Linux离桌面应用还有十万八千里呢！”他们恐怕没有意识到自 己的知识帮了倒忙，使他们比那些经验少的用户遇到更多的问题。他们错误的以为Linux是一种可以和Windows做相同事情的软件，而事实上是它是一种 不同于Windows的软件，做的事也不同。不是Linux做与Windows相同的任务做得不好，而是它很好的完成了一个替代的任务。</p>
+<p>Linux是一种可供选择的操作系统，而不是Windows的替代品。它也永远不会取代Windows，因为它们有完全不相容的目标。微软的目标是让他们的软件装到更多的电脑中，赚更多钞票。而Linux不是这样，它是免费的，它的着眼点不同。</p>
+<p>要理解这一点就要先理解FOSS。并不奇怪很多Linux新手现在还不能很好的理解它，他们是新手嘛，他们还是习惯于从私有软件的角度思考。所以让我解释一下：</p>
+<p>典 型的FOSS软件的作者往往因为对现存软件的不满，于是想到自己来写一个。而他又是个大好人，他把软件源码公之于众之后对大家说：“你们自己折腾吧！”。 他可以这样做，因为复制软件没有任何成本，所以把软件贡献给世界也不会比自己留着用多花一分钱。他不会因为把软件送人而感到痛苦。</p>
+<p>然而，很重要的一点需要记住的是：他也不会因为送出软件而获利。不论是一人用还是一亿人用，对开发者来说毫无区别。哦，当然，他一定乐意看到自己的产品广受欢迎：用户数是个自我吹嘘的好题材，还能创造记录。但这不会为他带来任何金钱：因为这是FOSS。</p>
+<p>如 果这个软件有所成功，别人就会对此感兴趣，也愿意帮助改善它。这是FOSS最大的优势：每一个用户都可能是潜在的开发者，每一个人都能参与使软件工作得更 好，功能更多，bug更少。如果一个软件能吸引到一大帮开发者那将是非常好的事情。但这仅是对软件本身而言的，它会使软件变得更好，而开发者不会因此致 富，只会让他们为此投入更多的时间。</p>
+<p>FOSS与如Windows一类的私有软件截然相反：FOSS完全关注于软件本身，而不在意最终用户的数量。软件运行很好，但用户寥寥，这从商业软件的标准来看是失败的，但从FOSS的标准来看却是成功的。</p>
+<p>FOSS 关注于编写高质量的软件，真正能做事的软件。如果你想使用它，那你就需要投入时间来学习如何使用。FOSS软件是免费供你使用的，为编写它许多人不去计较 个人利益，投入了大量的时间。因此，在你抱怨它不能像Windows中对应软件一样工作之前，至少也应该投入一点时间，算是对软件作者贡献的一种尊重吧。</p>
+<p>“哈哈，现在我逮到你的破绽了，”一个新手自鸣得意的说：“有些Linux项目的目的就是替代Windows，而不仅是提供一种选择。”</p>
+<p>不难看出这种想法从何而来。例如，KDE和Gnome提供了一种不同于Linux传统的窗口管理器和CLI的桌面环境，它们更加类似于Windows。Linspire更一种要把Linux做的完全和Windows一样的Linux发行版。</p>
+<p>然而，这些论据更能支持我的观点，而不是那个新手的。</p>
+<p>为什么？因为这些都是标准的FOSS项目，都是以把软件做得更好为目的的。唯一的区别就是，在这些项目中品质的定义是“如何让Windows用户使用起来更方便？”</p>
+<p>你 一旦考虑了这个因素，你就不得不同意这些项目的目标都是改进软件本身，它们都是100%的典型Linux软件。这些项目由那些更加无私的开发人员编写：他 们这样做不是为满足自己的需要，因为他们已经太熟悉Linux了。相反，他们是为了使其他人从Windows过渡到Linux更加容易。</p>
+<p>这 些开发人员知道有一些Windows用户希望转投Linux阵营，于是他们花力气建造一个能让Windows用户感到舒服、熟悉的Linux环境。他们无 意去替代Windows，尽管最终的结果给人留下了这样的印象，但他们的最终目的是不一样的：不是制造一个Windows替代品，而是帮助Windows 用户过渡到Linux上。</p>
+<p>社区里反对这些项目的声音并不罕见。有些人的理由也是合理的（“KDE太吃资源，还是用Fluxbox好”），有些人则抱着一种不够理性的“像Windows样的软件都不好”的态度。事实上这不是反微软或反Windows的态度，而是蛮不讲理的憎恨自己不了解的东西。</p>
+<p>典 型的Linux用户是一个电脑爱好者：他用电脑是因为电脑好玩，编程好玩，hacking（译者：这个词非常难译，没有一个简单的词能够代替，这里主要是 指修改软件使之满足自己需求）也好玩。而Linux是hacking爱好者的最爱，他可以把Linux分解到最基本的部分，然后再根据自己的需要重新组装 起来。</p>
+<p>然而，新来的Linux用户很大部分不是电脑爱好者，也不是hacker（译者：修改软件使之满足自己所需的人）。他们只要求电脑能工作，就像Windows那样工作。他们没兴趣去花时间设置Linux，他们希望拿来就能用。</p>
+<p>这很好，但在典型的Linux用户看来，这就如同有人想要一辆已经组装好并用胶水粘牢的乐高玩具汽车。这对他们来说实在无法想象：“怎么会有人要这个？”</p>
+<p>这的确难以理解。如果你想要一辆做好的汽车模型，那去买一辆玩具车。如果你想要一辆可以自己组装的车，那就买乐高。怎么会有人想要一辆只能当玩具车玩的乐高车呢？乐高的乐趣就在于自己组装啊！</p>
+<p>典型的Linux用户也会如此回答那帮问“为什么它就是不能工作呢？”的人：“如果你仅想让电脑工作，用Windows好了，如果你想自己能动手修改，那就用Linux。如果你对开源软件的这些好处毫无兴趣，那你干什么还要转去用Linux呢？”</p>
+<p>答 案通常是他们根本就不是真心想去用Linux，他们仅仅是想远离Windows：他们希望远离病毒，远离恶意软件，他们希望免除收费软件的限制，不被 E.U.L.A.所束缚。他们不是在尝试投入Linux的怀抱，他们只想摆脱Windows。而Linux只是最广为人知的一种选择罢了。</p>
+<p>稍后再进一步论述. . .</p>
+<p>你可能想：“好吧，这样可以解释为什么开发者不去尽力让他们的软件更像Windows，但是Linux软件也可以在不违反FOSS的原则的前提下拥有有像Windows那样友好的GUI呀。”</p>
+<p>有一些理由可以说明为什么不是这样。</p>
+<p>首先： 你真的认为写软件的人会故意去弄个很烂的用户界面？</p>
+<p>当一个人投入大量个人时间去编写软件时，他总会努力使软件的用户界面（UI）尽可能的好。UI对软件来说太重要了：如果某个功能不能通过UI来访问，那它就根本毫无意义。你也许不知道，但UI成为现在这样不是没有道理的，其原因是那就是软件创造者能做出的最好的UI了。</p>
+<p>如果你仍坚持类似Windows的UI使软件更好，请不要忘了这样一个事实：这些软件的作者并不同意你的意见。他们对这些软件的理解肯定比你要深刻得多，也许他们错了，但可能性很小。</p>
+<p>第 二： 现在已经有很多漂亮、容易被Windows用户接受的GUI前端。我想不出有什么功能不能通过GUI来控制，不管是多么高级的。你可以编译内核（make xconfig）、设置防火墙（fwbuilder）、硬盘分区（qtparted）……这些都可以由美观、交互、符合直觉且用户友好的程序完成。</p>
+<p>但是Linux的发布周期与Windows不同，不可能从一开始就有一个精良的GUI界面。GUI只会增加软件的复杂度，而不会给功能带来什么改进。开发者的本意可不是弄个花哨却什么也做不了的GUI，他们创作的是自己需要的软件。</p>
+<p>一个软件最先能做的便是在命令行（CLI）方式下使用，它可能包含各式各样的调用选项和长长的配置文件。因为这是实现软件功能所需要的最基本的东西，其它的都可以慢慢完善，即使日后有了漂亮的GUI，但我们仍应当看到：通常它还是完全可以用CLI和配置文件来控制的。</p>
+<ul>
+<li>这是因为CLI有很多优势：CLI通用；每个Linux系统都有CLI；所有程序都能从CLI执行；远程访问CLI也特别方便。而GUI则不然：有些Linux机器没装X11窗口系统；有些软件不能通过GUI菜单访问；通常远程使用GUI工具也不容易。</li>
+</ul>
+<p>最后，可能会有不同GUI前端能做相同事情，别人无法知道你到底装了哪一种。</p>
+<p>所以请记住，当你问“我该怎么弄……？”的时候，大部分情况下别人都会告诉你怎么通过CLI解决。这并不意味着问题只能从CLI解决，而是恰恰反映了在软件发展过程中CLI相对于GUI的重要性。</p>
+<ul>
+<li>Windows 是完全以GUI为中心的，它是一种基于GUI的操作系统，其CLI是烂得可以（但很快就要改善了）。几乎没有什么Windows软件是没有GUI的。这也 使人们认为GUI是一个软件必不可少的重要元素。但对于Linux来说，软件一旦能工作就可以发布了，只有等它足够稳定、没什么bug、功能也很丰富时才 有必要增加GUI。<ul>
+<li>请 试着把一个没有很好GUI界面的软件理解为内部测试版，而不是一个已经完成的产品。FOSS还远远没有“完成”，它还在不断的改进中。只要时机成熟，它完 全可以变得用户友好。但在大部分情况下，使它工作的更好要比使它看上去感觉更好重要得多。你应该高兴今天就有机会能用上未来软件的功能，而那些只喜欢漂亮 GUI的人就享受不到了。FOSS并没有到达它旅途的终点，它才刚刚上路呢。</li>
+</ul>
+</li>
+</ul>
+<p>最后你还需要记住的是：软件的GUI部分经常是分开提供的，甚至有可能是完全不同的开发人员独立开发出来的。所以如果想要GUI，那一点也不奇怪你必须分开安装，而不是一次性装好。</p>
+<p>诚然，为了获得Windows式的GUI，分开安装确实增加了额外的步骤，但这不影响这样一个事实：你现在就可以通过“像Windows一样”的GUI做几乎所有事情。请不要忘记GUI通常只是最后一步，Linux绝不会只图外表而不重内涵的。</p>
+<p>第三： Linux是特别设计给知识丰富的老手使用的，而不是无知的新手。有两个原因：</p>
+<ul>
+<li>无知乃与生俱来，但它很短暂，知识才是永恒的。也许要几天、几周、几个月才能让你从“Linux新手”成为“中等的Linux用户”。但你一旦达到这个水平，你就可以一直用下去了。<ul>
+<li>为 了使软件对新手来说比较易用而放进一大堆代码就如同给所有自行车焊上永久的平衡轮。也许这会让起步变得比较容易，但之后呢？我相信你现在肯定不会想买一辆 带平衡轮的车。不是因为你是一个反对用户友好的怪人，而是平衡轮对你来说毫无用处了，除了新手谁都用不上，放在那里反而碍事。</li>
+</ul>
+</li>
+<li>不 管软件多好，用户要能用得好才行。就算有世界上最安全的门，如果你不关窗、不锁门或者忘拔钥匙，小偷一样畅通无阻；就算有世界上最好的引擎，如果你加错了 燃料，一样跑不了。Linux把所有的能力都交到了用户手里，这也包括破坏它的能力，当然没人想这样。想要保持Linux正常的运作，多学点让自己知道自 己在做什么是唯一的办法。如果用户可以很容易的操作那些他根本不了解的功能，那么他也很有可能会造成破坏。</li>
+</ul>
+<p>第四： 从上面的文字中，你觉得FOSS有可能通过吸引典型的Windows用户而获得任何好处吗？</p>
+<p>不急，你可以重新看一遍，我等着。</p>
+<p>Linux和FOSS的指导原则是“做好的软件”，并非“做Windows的替代品”。一群典型的Windows用户对Linux的唯一贡献就是抱怨。他们抱怨什么？“它工作得不像是在Windows上那样。”</p>
+<p>不，它不像。如果Linux工作得就和Windows一样，那就太烂了，它将会是一个没人要的劣质品。人们如此热烈的喜爱Linux正是因为它不像Windows，它不会替你做每件事，它不会假设你永远是个无知的新手，它不会所有把内部的工作都隐藏起来。</p>
+<p>Windows 是载着你四处跑的司机；Linux则给了你钥匙并让你坐上驾驶座。如果你不会开车，那是你的问题、你自己的错。只要你肯问，很多人都会帮助你。如果你提建 议类似于装备定速巡航系统，你定是有所领悟：汽车还是自己控制在自己手上，只不过可以省不少力气。但是如果你尝试去劝说别人Linux真的真的需要一个司 机，那你真该忏悔一下。</p>
+<p>“但这将使Linux更加主流啊！”，新手嚷道。</p>
+<p>也 许是这样。但是Linux成为主流，开发者们又能从中得到什么好处呢？Linux是免费的，就算Linux获得了更大的用户群，Linux的创造者们不会 因此多赚钱，Linux论坛上的人们也不会因此获利。Linux的目标不是“获得更大用户群”──那是私有软件的目标。</p>
+<p>Linux的目标是创造真正好用的操作系统。开发者们一直都在忙于增加功能、减少bug和改进现有的代码，他们可没闲功夫去举着广告牌宣传他们的东西有多好。你不难发现在他们眼中什么才是最重要的。</p>
+<p>有 意思的是这样的模式使Linux的用户群不断增长，Linux开始很渺小，后来却非常巨大。什么原因使Linux得到如此广泛的认同？原因是它一直专注于 质量。用户被Linux的自由和质量所吸引，而这只有FOSS能够提供。Linux能够发展壮大正是因为它并不在乎自己有多大。开发者们仅仅关注如何使它 工作得更好，于是他们吸引了那些想要一个能工作得更好的操作系统的用户。</p>
+<p>如 果突然把这一切都抛弃，相反让Linux去关注如何替代Windows，那就等于抹杀了Linux赖以成功的要素。有些公司已经看到了Linux成长潜 力，希望从中掘出宝藏。但GPL成为了他们的障碍，他们无法把Linux卖出Microsoft的价。“Linux如果还坚持开源的话那肯定长不了，”他 们说，“因为没人能这样赚钱的。”</p>
+<p>他 们没有意识到把Linux变为私有软件是杀鸡取卵的短视行为。正因为Linux是FOSS，也没有人想用它去替代Windows，Linux才能发展到今 天的规模。Linux繁荣的原因恰恰在于它在与Windows的竞争中选择了一条Microsoft永远无法对抗的阵线：开放和质量。</p>
+<p>对 于大多数Windows来说，Linux只是一个劣质的Windows摹仿品，它看上去功能不够丰富、集成度差还特别复杂。对于这些用户来说，Linux 是个很差的操作系统。的确是这样：Linux没有满足他们的需求。他们需要的是一个简单易用的操作系统，不用任何学习就能上手。</p>
+<p>Windows是设计给非技术人员使用的，他们普遍感到Linux很难用。尽管情况不是这样，但这种误解还是可以理解的。</p>
+<p>事实上Linux很容易使用，真的非常非常易用。那为什么他们都不这么看呢？因为“易用”一词含义被严重的扭曲了，“易用”现在被理解为“在没有预先学习的情况下用起来也很容易”。但那真的不是“易用”的含义，而是“易懂”。其区别就如同：</p>
+<ul>
+<li>一个保险箱，上面有一张纸条写道：“如需开此保险箱，请先把播盘播到32，然后到64，然后到18，然后到9，最后拧动钥匙，同时向上提起把手即可。”</li>
+</ul>
+<p>和</p>
+<ul>
+<li>一辆小汽车，只要按动摇控器上的“开锁”按钮就能打开车门。</li>
+</ul>
+<p>开车锁相比要容易得多，对吧？只要靠近汽车，一个按钮就能搞定，不像保险箱还得精确的来回转动播盘。然而，对于两种锁都不会开的人来说开保险箱锁要比开车锁容易：保险箱上写有清楚的打开方法，而开车门的按钮甚至都没有装在车上。</p>
+<p>会者不难。Linux也是这样，它很易用，但是学起来辛苦，只有当你愿意投入时间去学习Linux时你才能发现它为什么简单。不可避免，你越是把任务分解为简单的步骤，完成这个任务所需的步骤就越多。</p>
+<p>让我随便举一个简单的例子：把文本中的五行（段）从中间移到尾部。</p>
+<p>如果用微软的Word、写字板、记事本等等“用户友好”的Windows文本编辑器，最快的办法是： - Ctrl-Shift-Down - Ctrl-Shift-Down - Ctrl-Shift-Down - Ctrl-Shift-Down - Ctrl-Shift-Down - Ctrl-X - Ctrl-End - Ctrl-V</p>
+<p>(这里假设你使用键盘操作。不然，你需要好几步鼠标托拽操作和可靠的自动滚屏。)</p>
+<p>在vi里只需如此： - d5d - Shift-g - p</p>
+<p>论“用户友好”性，vi可谓要多差有多差，但它完成同一操作所需的击键次数却比微软的软件少。为什么？因为Vi注重于功能，而微软更注重“用户友好”。微软把所有事情都分解为简单步骤，所以完成同样的任务要花多得多的步骤。</p>
+<p>这使得不论是什么样的文本编辑任务，一旦你学会使用，相比之下vi都更加高效、易用。如果你不知道“d5d”的意思是“将五行文本放入缓冲，然后将其从文档中删除”，那么可能你用起vi来就会感到很痛苦。但如果你已经知道了，那用它起来就是随心所欲了。</p>
+<p>所以当一个新手看到有经验的vi用户可以如此快速、方便的做事时，他自然会很容易得出结论：编辑文本，vi要比Word强。然后他自己去尝试，运行vi，看到的是满屏的~s，打字，什么反应也没有。</p>
+<p>后来他弄明白了文字录入和命令模式，接着就想用vi做事。然而对vi过于有限的知识依旧使他步履维艰，在他能真正掌握vi之前还有太多的东西要去学习。然后他开始抱怨：“vi如果能像Word那样易用就好了。”</p>
+<p>但实际的问题是：“我不知道怎么用vi，学起来太麻烦了。”这是他自己的问题，他在指责自己的问题而不是软件的。有成千上万的人乐于使用vi，他们从没抱怨过：它太难用了，必须改！</p>
+<p>请 相信我，如果他能写出一个软件既像Word那样“用户友好”又像vi那样功能强大，那他一定能赢得无数掌声。事实上，他应该还能赢得诺贝尔极度智慧奖，因 为目前还根本没有其它人能做到这一点。但他如果仅仅是诉苦vi太难用，那只会遭到嘲笑，因为vi没问题，问题在他自己。</p>
+<p><img src="https://wiki.ubuntu.org.cn/Linux%E4%B8%8D%E6%98%AFWindows?action=AttachFile&do=get&target=pebkac.gif" title="attachment:pebkac.gif"> 转至 UserFriendly.org 版权所有 © 2004 J.D. “Illiad” Frazer. （译者： 图1，左：你有没有给Niffle先生打电话，关于他的连接问题？右：有。 图2，左：那分析结果是？右：经典PEBKAC问题。 图3，左：PEBKAC？右：键盘和椅子之间存在的问题。）</p>
+<p>这就像买了达芬奇的画笔然后抱怨自己还是不会画画。画家的技巧才是成就名作的关键，画笔本身创作不了蒙娜丽莎，它只是一个依赖使用者技巧的工具。而这种技巧必须通过练习才能获得。</p>
+<p>vi正是如此，很多Linux软件也一样。一些新手总是抱怨这些文本编辑器、包管理器或者命令行本身太复杂、太不够直观。</p>
+<p>在你坚持Linux某些东西必须修改之前，请问自己这样一个问题：“那些老手们是不是也有同样的意见呢？”</p>
+<p>如果答案是“不”，那问题在你自己这一边。如果其他人都能很好的使用，你为什么就不行呢？你有没有花时间去学呢？或者你是否打心底里就没有想去尝试呢？</p>
+<p>“用户友好”和“底层的功能性”常常是矛盾的。那些小按钮和下拉菜单确实能使软件变得易于使用，但对有经验的用户来说它们却可能是麻烦。这就如同拿着地图和指南针从A走到B，与看着路标走的区别一样：谁都会跟者路标走，但这会比知道如何直接过去的人多走一倍的距离。</p>
+<p>（译者：蓝色线条：“简单”路径；红色线条：直接路径）</p>
+<p>如 果我想在Excel中粘贴公式的值，我只能通过菜单选择：编辑-&gt;选择性粘贴-&gt;粘贴数值。我不想在这些“友好”的菜单、子菜单和对话框中选 来选去，我就想直接完成。老实说，如果重设快捷键，再记录一些宏，我完全可以通过键盘来指挥Excel和Word做绝大部分的事。</p>
+<p>但这就不是用户友好了，对不对？它还是需要用户投入大量时间来研究这个软件。Linux要求你花时间学习如何使用现成的功能，而“用户友好”的软件却要你花时间自己创造功能。</p>
+<p>如果你喜欢这样，没问题，你就这样做好了。只是你应当看到：问题出在你自己的知识水平上，而不是软件本身。一旦知道如何使用，所有的Linux软件都超级好用。但如果你不知道，那它就显得很难使，这并不是软件的错。</p>
+<p>现 在也许你开始觉得Linux有点态度问题。它不想要用户，它不想让自己的用户感到方便……它只是给那些自命不凡的l33t h4xx0r5用的！（译者：l33t h4xx0r5又可写作leet haxxors，指不受电脑系统权限所约束、对自己的电脑技巧极有自信的人，通常指黑客）</p>
+<p>这完全脱离事实。Linux当然想要用户，它当然不想让事情变得困难。正相反：按照Linux的定义，难用的软件就是垃圾软件。</p>
+<p>但是你要知道，它的定义可能和你的不同，也和“传统”的私有软件的定义不同。</p>
+<p>Linux想要那些真正需要Linux的用户。这不仅是说需要一个名头，而是所有的东西：自由、开源的软件；自己修补软件的能力；坐上驾驶座的感觉，一切尽在掌握。</p>
+<p>这才是Linux，这才是Linux关注的。人们因为讨厌病毒、讨厌蓝屏、讨厌间谍软件而转去用Linux也是可以理解的。但这些人并不需要Linux，他们只想要一个没有那么多毛病的Windows。他们不要Linux，那Linux凭什么一定要他们呢？</p>
+<p>但如果他们因为病毒和间谍软件而去尝试Linux，然后慢慢接受了Linux的理念并开始被Linux自身的特点所吸引，继而想要使用它，此时Linux也想要他们。</p>
+<p>在你决定转而使用Linux之前，问问自己“我为什么要转？”</p>
+<p>如果答案是“我想要一个能赋予用户所有权力操作系统，我明白它要求用户必须学习使用。”：那就选择Linux。也许你要付出很多时间和努力才能达到自己想要的高度，但最终你能得到一台完全按照自己的想法工作的电脑。</p>
+<p>但是. . .</p>
+<p>如 果答案是“我想要个没那些毛病的Windows”：那么安装一套干净的Windows XP SP2；设好防火墙；装好杀毒软件；永远不要用IE浏览网页；经常更新；每次装完软件都重启；还要多了解安全方面的知识。我自己从Windows 3.1用到95、98、NT和XP，从来没有中过病毒和间谍软件，也没被黑过。Windows可以很安全、很稳定，但是只有你花力气维护它才行。</p>
+<p>如果答案是“我想要个没毛病的Windows替代品”：那买一台苹果Mac。我听说OS X的Tiger版很棒，苹果机器的外观也很漂亮。也许你为此要花钱买一台新的机器，但你能获得自己想要的东西。</p>
+<p>这两种情况下，都不要去尝试使用Linux。你会对Linux的软件和社区感到失望的。Linux不是Windows。  </p>
+<p><em>原文出处：<a target="_blank" rel="noopener" href="https://linux.oneandoneis2.org/LNW.htm">https://linux.oneandoneis2.org/LNW.htm</a></em></p>
+<p><em>原文作者：oneandoneis2</em></p>
+<p><em>授权许可：创作共用协议</em></p>
+<p><em>翻译人员：laborer</em></p>
+<p><em>校对人员：<a target="_blank" rel="noopener" href="https://wiki.ubuntu.org.cn/Leal">Leal</a></em></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="tag"><i class="fa fa-tag"></i> 计算机</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/linux.html" rel="next" title="什么是Linux">
+                <i class="fa fa-chevron-left"></i> 什么是Linux
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/linux11.html" rel="prev" title="系统学习Linux11点建议">
+                系统学习Linux11点建议 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <!--p class="site-author-name" itemprop="name">宋瑞华</p-->
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">575</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">588</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:songruihua[a t]hotmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=273454295&site=qq&menu=yes" target="_blank" title="QQ">
+                      
+                        <i class="fa fa-fw fa-qq"></i>QQ</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=988399180" target="_blank" title="FavMusic">
+                      
+                        <i class="fa fa-fw fa-music"></i>FavMusic</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="/hk4win/" target="_blank" title="HK4WIN">
+                      
+                        <i class="fa fa-fw fa-h-square"></i>HK4WIN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+		  
+		  
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text"> !&#x3D; </span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright"> <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND</a> 2005&mdash;<span itemprop="copyrightYear">2025</span>
+  <!--span class="with-love">
+    <i class="fa fa-user"></i>
+  </span-->
+  <span class="author" itemprop="copyrightHolder">Song Ruihua.</span>
+<!--span class="author" itemprop="copyrightHolder">宋瑞华</span-->
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> and hosted with ❤️️ by <a class="theme-link" target="_blank" href="https://github.com/">GitHub</a>. </div>
+
+
+
+  <!--span class="post-meta-divider">|</span-->
+
+
+
+<!--script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"-->
+<!--/script-->
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
