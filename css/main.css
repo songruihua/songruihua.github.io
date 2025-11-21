@@ -1346,7 +1346,9 @@ pre .javascript .function {
 .posts-expand .post-body .img-no-border {
   box-sizing: border-box;
   margin: auto;
-  padding: 3px;
+  padding: 0 0px 0px 0px;
+  float: center;
+  margin: 0 0px 0px 0px; /* 在图片的右侧和底部添加一些外边距 */
   border: 0px solid #ddd;
 }
 .posts-expand .post-body .fancybox img {
@@ -1853,7 +1855,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff141f;
+  background: #ffe482;
 }
 .links-of-blogroll {
   font-size: 13px;
