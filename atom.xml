@@ -6,7 +6,7 @@
   <link href="https://www.songruihua.com/atom.xml" rel="self"/>
   
   <link href="https://www.songruihua.com/"/>
-  <updated>2025-11-19T09:18:25.266Z</updated>
+  <updated>2025-11-24T08:04:36.837Z</updated>
   <id>https://www.songruihua.com/</id>
   
   <author>
@@ -17,23 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>再见，Linux！</title>
+    <link href="https://www.songruihua.com/archives/not-linux.html"/>
+    <id>https://www.songruihua.com/archives/not-linux.html</id>
+    <published>2025-11-24T08:30:00.000Z</published>
+    <updated>2025-11-24T08:04:36.837Z</updated>
+    
+    <content type="html"><![CDATA[<p>　　家中有一台低配NUC小型电脑，2019年买的，赛扬双核处理器，配置低得不能再低了，一直拿来给儿子看视频用，去年开始总是卡卡的，系统从win10 2121降低到了win 10 2019版，只能说勉强可用，还是卡，索性试着安装Linux玩玩。<br>　　最早接触Linux还是06、07年的时候在网上申请了Ubuntu的安装光盘，从欧洲某国寄出的，就在光驱里体验了几把Live模式就束之高阁了，从没有实体机安装过，这次是真想体验一把，毕竟快20年了，对于一个操作系统来说已经足够久了。<br>　　网上深入学习了一下，原来Linux分很多种：Linux有一个内核，内核像人的大脑，众多发行版就是给这个内核大脑匹配上了不同的骨架，有的发行版适合个人桌面，有的适合服务器，有的适合黑客，而骨架之外还有一层皮肤，这个皮肤也有很多种，而各种应用软件就是这层皮肤之上的各种衣服。内核分新旧内核，骨架分多种安装包管理方式，皮肤分Gnome和kde很多种，这么排列组合下来确实会出现百花齐放的现象，说难听点就是各自为战、碎片化严重。<br>　　从包管理方式来区分，有debian系和redhat系两种，debian系的安装包扩展名为.deb，典型代表就是Ubuntu，它是以debian为基础构建的，也就是它在debian骨架之上又加了几根骨头，还有以Ubuntu为基础构建的其他发行版，类似爷爷爸爸和孙子的关系。redhat系列与之类似，redhat是爷爷，后面衍生出一众儿子孙子重孙子，这个系列的安装包扩展名为.rpm。<br>　　从现实实际情况看，debian系主要用于个人桌面，redhat系主要用于服务器，而在桌面市场windows已经事实上垄断了市场，debian系只有个位数的份额，而服务器市场则反过来了，redhat系占了服务器市场的多半市场，按照经济规律，服务器应用如果只能在deb和rpm中二选一发布，会发布rpm版本，个人软件按照经济规律应该就没有linux版本，但得益于ubuntu的独树一帜的普及，很多软件也推出了linux的deb安装包，至于针对个人使用的rpm则不是所有公司都提供的，例如腾讯会议就不提供rpm包。<br>　　经过几天的研究，我得出一个结论：历史已经给了Linux足够多的时间，市场已经给出了答案，个人桌面市场属于Windows，服务器市场属于Linux，任何试图违背这一规律的努力都是白费。所以，如果想学习Linux谋个工作，那么就学redhat系的系统，目前最推荐的就是Rocky Linux 9，如果想出于爱好或者装逼的需要想用debian系的或者非要把redhat系当桌面用，那纯纯是找罪受，我是一个计算机爱好者，都需要花几天时间才能在linux上安装输入法、chrome浏览器，不敢想如果让一般人拿linux当日常用会是什么场景，那真的就是纯纯一个浏览器+WPS的工具而已，其他的什么都别想干。<br>　　我是拿debian13系统练手的，给NUC安装上了chrome和输入法，能打开浏览器看视频就打住了，根本没有心力去折腾其他的玩法，从此告别Linux。不过有一说一，debian13相对于Windows10来说真是够轻量化，NUC已经不怎么卡了，发热和噪声也控制得很好，Linux除了制霸服务器市场外，真正能给普通人带来福利的也许就只有拯救老旧电脑了吧。<br><img src="https://s.songruihua.com/images/not-linux.webp" alt="debian 13"><img src="https://s.songruihua.com/images/not-linux2.webp" alt="debian 13"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;　　家中有一台低配NUC小型电脑，2019年买的，赛扬双核处理器，配置低得不能再低了，一直拿来给儿子看视频用，去年开始总是卡卡的，系统从win10 2121降低到了win 10 2019版，只能说勉强可用，还是卡，索性试着安装Linux玩玩。&lt;br&gt;　　最早接触Linux还</summary>
+      
+    
+    
+    
+    <category term="小品软件" scheme="https://www.songruihua.com/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="Linux" scheme="https://www.songruihua.com/tags/Linux/"/>
+    
+    <category term="debian" scheme="https://www.songruihua.com/tags/debian/"/>
+    
+    <category term="Rocky" scheme="https://www.songruihua.com/tags/Rocky/"/>
+    
+  </entry>
+  
+  <entry>
     <title>新头像</title>
     <link href="https://www.songruihua.com/archives/debian-s-logo.html"/>
     <id>https://www.songruihua.com/archives/debian-s-logo.html</id>
     <published>2025-11-19T09:30:00.000Z</published>
-    <updated>2025-11-19T09:18:25.266Z</updated>
+    <updated>2025-11-24T08:04:06.862Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/static/debian-logo-2S3.png" alt="长沙毛"><br><img src="https://s.songruihua.com/images/static/debian-logo-2S3.jpg" alt="韶山毛"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/static/debian-logo-2S3.png" alt="debian logo"><img src="https://s.songruihua.com/images/static/debian-logo-2S3.jpg" alt="debian logo"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/static/debian-logo-2S3.png&quot; alt=&quot;长沙毛&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://s.songruihua.com/images/static/debi</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/static/debian-logo-2S3.png&quot; alt=&quot;debian logo&quot;&gt;&lt;img src=&quot;https://s.songruihua.com/images/static/</summary>
       
     
     
     
-    <category term="往事如梦" scheme="https://www.songruihua.com/categories/%E5%BE%80%E4%BA%8B%E5%A6%82%E6%A2%A6/"/>
+    <category term="扯淡龙门" scheme="https://www.songruihua.com/categories/%E6%89%AF%E6%B7%A1%E9%BE%99%E9%97%A8/"/>
     
     
     <category term="Linux" scheme="https://www.songruihua.com/tags/Linux/"/>
@@ -529,35 +557,6 @@
     <category term="歌曲" scheme="https://www.songruihua.com/tags/%E6%AD%8C%E6%9B%B2/"/>
     
     <category term="电视剧" scheme="https://www.songruihua.com/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>北湖半日游</title>
-    <link href="https://www.songruihua.com/archives/beihu-park.html"/>
-    <id>https://www.songruihua.com/archives/beihu-park.html</id>
-    <published>2019-03-24T09:34:15.000Z</published>
-    <updated>2024-04-11T01:27:54.068Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://s.songruihua.com/images/beihu-park.jpg" alt=" Desk Congtai Park"></p><center>虽然穿着开裆裤,但桌子走路的姿态还是很帅的</center>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://s.songruihua.com/images/beihu-park.jpg&quot; alt=&quot; Desk Congtai Park&quot;&gt;&lt;/p&gt;
-&lt;center&gt;虽然穿着开裆裤,但桌子走路的姿态还是很帅的&lt;/center&gt;</summary>
-      
-    
-    
-    
-    <category term="往事如梦" scheme="https://www.songruihua.com/categories/%E5%BE%80%E4%BA%8B%E5%A6%82%E6%A2%A6/"/>
-    
-    
-    <category term="桌子" scheme="https://www.songruihua.com/tags/%E6%A1%8C%E5%AD%90/"/>
-    
-    <category term="亲子" scheme="https://www.songruihua.com/tags/%E4%BA%B2%E5%AD%90/"/>
-    
-    <category term="北湖公园" scheme="https://www.songruihua.com/tags/%E5%8C%97%E6%B9%96%E5%85%AC%E5%9B%AD/"/>
     
   </entry>
   
