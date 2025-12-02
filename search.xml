@@ -5814,7 +5814,7 @@
       <link href="/archives/hk4win-delfd-2.html"/>
       <url>/archives/hk4win-delfd-2.html</url>
       
-        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#100;&#x65;&#108;&#x66;&#100;&#64;&#x73;&#x6f;&#110;&#103;&#x72;&#x75;&#x69;&#104;&#117;&#x61;&#46;&#x63;&#111;&#x6d;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
+        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#100;&#x65;&#x6c;&#x66;&#x64;&#64;&#115;&#111;&#x6e;&#x67;&#114;&#117;&#105;&#104;&#117;&#x61;&#x2e;&#x63;&#x6f;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
       
       
       <categories>
@@ -5839,7 +5839,7 @@
       <link href="/archives/hk4win-delfd.html"/>
       <url>/archives/hk4win-delfd.html</url>
       
-        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#x64;&#x65;&#x6c;&#x66;&#100;&#64;&#115;&#111;&#x6e;&#103;&#114;&#x75;&#105;&#x68;&#x75;&#97;&#x2e;&#x63;&#111;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
+        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#x64;&#101;&#x6c;&#102;&#x64;&#64;&#x73;&#111;&#110;&#x67;&#x72;&#117;&#x69;&#104;&#117;&#x61;&#x2e;&#99;&#111;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
       
       
       <categories>
@@ -7736,9 +7736,9 @@
             
             <tag> 中国 </tag>
             
-            <tag> 食品 </tag>
-            
             <tag> 安全 </tag>
+            
+            <tag> 食品 </tag>
             
             <tag> 三聚氰胺 </tag>
             
@@ -8756,6 +8756,8 @@
       
         <tags>
             
+            <tag> 银行 </tag>
+            
             <tag> 不公 </tag>
             
             <tag> 判刑 </tag>
@@ -8763,8 +8765,6 @@
             <tag> 无期 </tag>
             
             <tag> 贪污 </tag>
-            
-            <tag> 银行 </tag>
             
         </tags>
       
@@ -9198,8 +9198,6 @@
             
             <tag> 支付宝 </tag>
             
-            <tag> 银行 </tag>
-            
             <tag> 淘宝 </tag>
             
             <tag> taobao </tag>
@@ -9243,6 +9241,8 @@
             <tag> 网上支付 </tag>
             
             <tag> 网银 </tag>
+            
+            <tag> 银行 </tag>
             
         </tags>
       
@@ -11134,9 +11134,9 @@
             
             <tag> 安全 </tag>
             
-            <tag> 计算机 </tag>
-            
             <tag> 病毒 </tag>
+            
+            <tag> 计算机 </tag>
             
         </tags>
       
@@ -11323,9 +11323,9 @@
       
         <tags>
             
-            <tag> 计算机 </tag>
-            
             <tag> 病毒 </tag>
+            
+            <tag> 计算机 </tag>
             
         </tags>
       
@@ -11512,9 +11512,9 @@
       
         <tags>
             
-            <tag> 计算机 </tag>
-            
             <tag> 病毒 </tag>
+            
+            <tag> 计算机 </tag>
             
         </tags>
       
@@ -11593,9 +11593,9 @@
       
         <tags>
             
-            <tag> 计算机 </tag>
-            
             <tag> 病毒 </tag>
+            
+            <tag> 计算机 </tag>
             
         </tags>
       
@@ -11620,11 +11620,11 @@
       
         <tags>
             
-            <tag> 计算机 </tag>
-            
             <tag> QQ </tag>
             
             <tag> 病毒 </tag>
+            
+            <tag> 计算机 </tag>
             
         </tags>
       
@@ -12263,7 +12263,7 @@
       <link href="/archives/vbaidu.html"/>
       <url>/archives/vbaidu.html</url>
       
-        <content type="html"><![CDATA[<p>Public Sub Baidu_Search()</p><p>  <strong>Keywords</strong>&#x3D;Text1.Text<br>  send <strong>Keywords</strong> to <strong>Baidu_Computer</strong><br>  wait for <strong>Result_Page</strong><br>  scan <strong>Result_Page</strong> AND visit <strong>All_Links</strong><br>  get all words in **All_Links<br>**  send (<strong>All_Words</strong>) AND (<strong>All_Links</strong>) to <strong>Result_Page_X</strong></p><p>  if “李彦宏” is concluded in <strong>Result_Page_X</strong> then<br>      send a email to <a href="mailto:&#x6c;&#x69;&#121;&#97;&#x6e;&#x68;&#x6f;&#x6e;&#103;&#64;&#98;&#97;&#x69;&#x64;&#117;&#x2e;&#x63;&#111;&#109;">liyanhong@baidu.com</a> AND subject&#x3D;”老板他们是这么骂你的” AND body&#x3D;”<strong>Result_Page</strong>“<br>  endif<br> <br>  if any word in <strong>Result_Page_X</strong> is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link and show “抱歉，没有找到与“”<strong>Keywords</strong>“” 相关的网页。”<br>  else<br>     show <strong>Result_Page</strong><br>  endif</p><p>  if any word in linked webpages is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link AND show error AND send the website to **Badsite_Tank<br>**     delete all data on <strong>Badsite_Tank</strong> in <strong>Baidu_Computer</strong> to make no one can find these sites via Baidu<br>  endif</p><p>End Sub</p><p><strong>Badwords_Tank</strong>&#x3D;(李彦宏是傻2B，流氓百度，etc)<br><strong>Badsite_Tank</strong>&#x3D;(<a href="https://aska1.blogbus.com/">https://aska1.blogbus.com/</a>，<a href="https://songruihua.blogbus.com/">https://songruihua.blogbus.com/</a> ,etc)</p>]]></content>
+        <content type="html"><![CDATA[<p>Public Sub Baidu_Search()</p><p>  <strong>Keywords</strong>&#x3D;Text1.Text<br>  send <strong>Keywords</strong> to <strong>Baidu_Computer</strong><br>  wait for <strong>Result_Page</strong><br>  scan <strong>Result_Page</strong> AND visit <strong>All_Links</strong><br>  get all words in **All_Links<br>**  send (<strong>All_Words</strong>) AND (<strong>All_Links</strong>) to <strong>Result_Page_X</strong></p><p>  if “李彦宏” is concluded in <strong>Result_Page_X</strong> then<br>      send a email to <a href="mailto:&#108;&#105;&#x79;&#x61;&#x6e;&#104;&#111;&#110;&#103;&#x40;&#x62;&#97;&#105;&#x64;&#x75;&#46;&#x63;&#111;&#x6d;">liyanhong@baidu.com</a> AND subject&#x3D;”老板他们是这么骂你的” AND body&#x3D;”<strong>Result_Page</strong>“<br>  endif<br> <br>  if any word in <strong>Result_Page_X</strong> is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link and show “抱歉，没有找到与“”<strong>Keywords</strong>“” 相关的网页。”<br>  else<br>     show <strong>Result_Page</strong><br>  endif</p><p>  if any word in linked webpages is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link AND show error AND send the website to **Badsite_Tank<br>**     delete all data on <strong>Badsite_Tank</strong> in <strong>Baidu_Computer</strong> to make no one can find these sites via Baidu<br>  endif</p><p>End Sub</p><p><strong>Badwords_Tank</strong>&#x3D;(李彦宏是傻2B，流氓百度，etc)<br><strong>Badsite_Tank</strong>&#x3D;(<a href="https://aska1.blogbus.com/">https://aska1.blogbus.com/</a>，<a href="https://songruihua.blogbus.com/">https://songruihua.blogbus.com/</a> ,etc)</p>]]></content>
       
       
       <categories>
@@ -15040,9 +15040,9 @@
             
             <tag> 手机 </tag>
             
-            <tag> 批判 </tag>
-            
             <tag> 军事 </tag>
+            
+            <tag> 批判 </tag>
             
         </tags>
       
@@ -15417,7 +15417,7 @@
       <link href="/archives/627747.html"/>
       <url>/archives/627747.html</url>
       
-        <content type="html"><![CDATA[<p>　　昨天我在某超市买了一盒饼干，却发现有些上当。 这盒饼干是由福建达利集团（FUJIAN DALI GROUP）济南达利食品有限公司制造的名为”低糖芝麻酥”的饼干，饼干盒的正面印有演员许晴的相片，条形码是”6 911988 006721”，规格（我用普通塑料直尺测量得出）约是26cmX11.5cmX20cm(长X宽X高),生产日期是”20051031C1”。  </p><p>　　从图中不难看出里面的问题：实际装的饼干只有盒高的一半（约10cm）。 啊哈！多么”聪明”的包装啊，又是多么愚蠢的包装啊！以前我一直喜欢”英达利蛋黄饼”，价格便宜，包装朴素不搞花架子，里面有约3&#x2F;4的空间被饼干添满（100%满是不可能的），昨天打算换一下口味吧，还吃了亏。我不知道出现这种包装的饼干是达利福建总部的还是济南分公司的责任，或者就是总部给各分公司授意要如此包装。但是不管怎样，在达利集团或其济南分公司对”半盒饼干”作出合理解释（公开或私下都可以）之前，我发誓不会再购买任何印有”福建达利集团”字样的商品。  </p><p>　　我不是在乎那几个钱，我是气不过，哪怕达利集团把饼干的价格提高一倍但把盒子装满，任由消费者选择也行，搞这种把戏欺骗消费者，终究不是企业生存和发展的长久之道，靠花几个钱请许晴，赵薇等人作广告只能暂时使企业”扬名”，企业不能做一锤子买卖啊！  </p><p>　 另外我还发现饼干盒上的饼干图片上的芝麻比实际的饼干要多，而包装上有没有象方便面上的”图片仅供参考，请以实物为准”的字样，这是不是也是欺骗消费者的行为？ 附：如果您也曾购买福建达利集团的产品并遇到了同样的情况，欢迎您和我联系（ruihuas##hotmail.com），我在此给出福建达利集团的联系方法，如果您愿意您可以和福建达利集团直接联系，在这篇日志发表之后我会和福建达利集团联系的。  </p><p>电话：0595-87325577<br>网址：<a href="https://www.dali-group.com/">https://www.dali-group.com/</a><br>电子邮箱： <a href="mailto:&#x64;&#x61;&#x6c;&#x69;&#x66;&#111;&#x6f;&#x64;&#x40;&#112;&#x75;&#98;&#50;&#x2e;&#x71;&#x7a;&#46;&#102;&#106;&#x2e;&#x63;&#x6e;">dalifood@pub2.qz.fj.cn</a></p>]]></content>
+        <content type="html"><![CDATA[<p>　　昨天我在某超市买了一盒饼干，却发现有些上当。 这盒饼干是由福建达利集团（FUJIAN DALI GROUP）济南达利食品有限公司制造的名为”低糖芝麻酥”的饼干，饼干盒的正面印有演员许晴的相片，条形码是”6 911988 006721”，规格（我用普通塑料直尺测量得出）约是26cmX11.5cmX20cm(长X宽X高),生产日期是”20051031C1”。  </p><p>　　从图中不难看出里面的问题：实际装的饼干只有盒高的一半（约10cm）。 啊哈！多么”聪明”的包装啊，又是多么愚蠢的包装啊！以前我一直喜欢”英达利蛋黄饼”，价格便宜，包装朴素不搞花架子，里面有约3&#x2F;4的空间被饼干添满（100%满是不可能的），昨天打算换一下口味吧，还吃了亏。我不知道出现这种包装的饼干是达利福建总部的还是济南分公司的责任，或者就是总部给各分公司授意要如此包装。但是不管怎样，在达利集团或其济南分公司对”半盒饼干”作出合理解释（公开或私下都可以）之前，我发誓不会再购买任何印有”福建达利集团”字样的商品。  </p><p>　　我不是在乎那几个钱，我是气不过，哪怕达利集团把饼干的价格提高一倍但把盒子装满，任由消费者选择也行，搞这种把戏欺骗消费者，终究不是企业生存和发展的长久之道，靠花几个钱请许晴，赵薇等人作广告只能暂时使企业”扬名”，企业不能做一锤子买卖啊！  </p><p>　 另外我还发现饼干盒上的饼干图片上的芝麻比实际的饼干要多，而包装上有没有象方便面上的”图片仅供参考，请以实物为准”的字样，这是不是也是欺骗消费者的行为？ 附：如果您也曾购买福建达利集团的产品并遇到了同样的情况，欢迎您和我联系（ruihuas##hotmail.com），我在此给出福建达利集团的联系方法，如果您愿意您可以和福建达利集团直接联系，在这篇日志发表之后我会和福建达利集团联系的。  </p><p>电话：0595-87325577<br>网址：<a href="https://www.dali-group.com/">https://www.dali-group.com/</a><br>电子邮箱： <a href="mailto:&#100;&#x61;&#108;&#x69;&#102;&#x6f;&#111;&#x64;&#x40;&#112;&#117;&#98;&#x32;&#46;&#x71;&#x7a;&#46;&#102;&#x6a;&#46;&#99;&#x6e;">dalifood@pub2.qz.fj.cn</a></p>]]></content>
       
       
       <categories>
