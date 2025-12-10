@@ -143,7 +143,7 @@
       <link href="/archives/windows-lifecycle-end-of-life-date.html"/>
       <url>/archives/windows-lifecycle-end-of-life-date.html</url>
       
-        <content type="html"><![CDATA[<p>| 版本 | 发布日期 | 主要支持结束日期 | 外延支持结束日期 |<br>| — | — | — | — | — |<br>| Win10 22H2 (E) | 18 Oct 2022 | 14 Oct 2025 | 14 Oct 2025 |<br>| Win10 22H2 (W) | 18 Oct 2022 | 14 Oct 2025 | 14 Oct 2025 |<br>| Win11 22H2 (E) | 20 Sep 2022 | 14 Oct 2025 | 14 Oct 2025 |<br>| Win11 22H2 (W) | 20 Sep 2022 | 08 Oct 2024 | 08 Oct 2024 |<br>| Win10 21H2 IoT (L) | 16 Nov 2021 | 12 Jan 2027 | 13 Jan 2032 |<br>| Win10 21H2 (L) | 16 Nov 2021 | 12 Jan 2027 | 12 Jan 2027 |<br>| Win10 21H2 (E) | 16 Nov 2021 | 11 Jun 2024 | 11 Jun 2024 |<br>| Win10 21H2 (W) | 16 Nov 2021 | 13 Jun 2023 | 13 Jun 2023 |<br>| Win11 21H2 (E) | 04 Oct 2021 | 08 Oct 2024 | 08 Oct 2024 |<br>| Win11 21H2 (W) | 04 Oct 2021 | 10 Oct 2023 | 10 Oct 2023 |<br>| Win10 21H1 (E)(W) | 18 May 2021 | 13 Dec 2022 | 13 Dec 2022 |<br>| Win10 20H2 (E) | 20 Oct 2020 | 09 May 2023 | 09 May 2023 |<br>| Win10 20H2 (W) | 20 Oct 2020 | 10 May 2022 | 10 May 2022 |<br>| Win10 2004 (E)(W) |  11  (27 May 2020 | 14 Dec 2021 | 14 Dec 2021 |<br>| Win10 1909 (E) | 12 Nov 2019 | 10 May 2022 |10 May 2022 |<br>| Win10 1909 (W) | 12 Nov 2019 | 11 May 2021 | 11 May 2021 |<br>| Win10 1903 (E)(W) | 29 Aug 2019 | 08 Dec 2020 | 08 Dec 2020 |<br>| Win10 1809 (L) | 13 Nov 2018 | 09 Jan 2024 | 09 Jan 2029 |<br>| Win10 1809 (E) | 13 Nov 2018 | 11 May 2021 | 11 May 2021 |<br>| Win10 1809 (W) | 13 Nov 2018 | 10 Nov 2020 | 10 Nov 2020 |<br>| Win10 1803 (E) | 30 Apr 2018 | 11 May 2020 | 11 May 2021 |<br>| Win10 1803 (W) | 30 Apr 2018 | 12 Nov 2019 | 11 May 2020 |<br>| Win10 1709 (E) | 17 Oct 2017 | 13 Oct 2020 | 13 Sep 2020 |<br>| Win10 1709 (W) | 17 Oct 2017 | 09 Apr 2019 | 09 Apr 2019 |<br>| Win10 1703 (E) | 11 Apr 2017 | 08 Oct 2019 | 08 Oct 2019 |<br>| Win10 1703 (W) | 11 Apr 2017 | 09 Oct 2018 | 09 Oct 2018 |<br>| Win10 1607 (L) | 02 Aug 2016 | 12 Oct 2021 |  (13 Oct 2026 |<br>| Win10 1607 (E) | 02 Aug 2016 | 09 Apr 2019 | 09 Apr 2019 |<br>| Win10 1607 (W) | 02 Aug 2016 | 10 Apr 2018 | 10 Apr 2018 |<br>| Win10 1511 (E)(W) | 10 Nov 2015 | 10 Oct 2017 | 10 Oct 2017 |<br>| Win10 1507 (L) | 29 Jul 2015 | 13 Oct 2020 | 14 Oct 2025 |<br>| Win10 1507 (E)(W) | 29 Jul 2015 | 09 May 2017 | 09 May 2017 |<br>| Windows 8.1 | 13 Nov 2013 | 09 Jan 2018 | 10 Jan 2023 |<br>| Windows 8 | 30 Oct 2012 | 12 Jan 2016 | 12 Jan 2016 |<br>| Windows 7 SP1 | 22 Feb 2011 | 13 Jan 2015 | 14 Jan 2020 |<br>| Windows Vista SP2 | 29 Apr 2009 | 10 Apr 2012 | 11 Apr 2017 |<br>| Windows XP SP3 | 21 Apr 2008 | 14 Apr 2009 | 08 Apr 2014 |</p><table><thead><tr><th>符号</th><th>说明</th></tr></thead><tbody><tr><td>E</td><td>Enterprise, Education  IoT Enterprise editions</td></tr><tr><td>W</td><td>Home, Pro, Pro Education  Pro for Workstations editions</td></tr><tr><td>L</td><td>Long-Term Servicing Channel</td></tr></tbody></table>]]></content>
+        <content type="html"><![CDATA[<table><thead><tr><th>版本</th><th>发布日期</th><th>主要支持结束日期</th><th>外延支持结束日期</th></tr></thead><tbody><tr><td>Win11 25H2 (W)</td><td>Sep 30, 2025</td><td>Oct 12, 2027</td><td>Oct 12, 2027</td></tr><tr><td>Win11 25H2 (E)</td><td>Sep 30, 202</td><td>Oct 10, 2028</td><td>Oct 10, 2028</td></tr><tr><td>Win11 24H2 (E)</td><td>Oct 1, 2024</td><td>Oct 12, 2027</td><td>Oct 12, 2027</td></tr><tr><td>Win11 24H2 (W)</td><td>Oct 1, 2024</td><td>Oct 13, 2026</td><td>Oct 13, 2026</td></tr><tr><td>Win11 24H2 (L)</td><td>Oct 1, 2024</td><td>Oct 9, 2029</td><td>Oct 9, 2029</td></tr><tr><td>Win11 24H2 IoT (L)</td><td>Oct 1, 2024</td><td>Oct 9, 2029</td><td>Oct 10, 2034</td></tr><tr><td>Win11 23H2 (W)</td><td>Oct 31, 2023</td><td>Nov 11, 2025</td><td>Nov 11, 2025</td></tr><tr><td>Win11 23H2 (E)</td><td>Oct 31, 2023</td><td>Nov 10, 2026</td><td>Nov 10, 2026</td></tr><tr><td>Win10 22H2 (E)</td><td>18 Oct 2022</td><td>14 Oct 2025</td><td>14 Oct 2025</td></tr><tr><td>Win10 22H2 (W)</td><td>18 Oct 2022</td><td>14 Oct 2025</td><td>14 Oct 2025</td></tr><tr><td>Win11 22H2 (E)</td><td>20 Sep 2022</td><td>14 Oct 2025</td><td>14 Oct 2025</td></tr><tr><td>Win11 22H2 (W)</td><td>20 Sep 2022</td><td>08 Oct 2024</td><td>08 Oct 2024</td></tr><tr><td>Win10 21H2 IoT (L)</td><td>16 Nov 2021</td><td>12 Jan 2027</td><td>13 Jan 2032</td></tr><tr><td>Win10 21H2 (L)</td><td>16 Nov 2021</td><td>12 Jan 2027</td><td>12 Jan 2027</td></tr><tr><td>Win10 21H2 (E)</td><td>16 Nov 2021</td><td>11 Jun 2024</td><td>11 Jun 2024</td></tr><tr><td>Win10 21H2 (W)</td><td>16 Nov 2021</td><td>13 Jun 2023</td><td>13 Jun 2023</td></tr><tr><td>Win11 21H2 (E)</td><td>04 Oct 2021</td><td>08 Oct 2024</td><td>08 Oct 2024</td></tr><tr><td>Win11 21H2 (W)</td><td>04 Oct 2021</td><td>10 Oct 2023</td><td>10 Oct 2023</td></tr><tr><td>Win10 21H1 (E)(W)</td><td>18 May 2021</td><td>13 Dec 2022</td><td>13 Dec 2022</td></tr><tr><td>Win10 20H2 (E)</td><td>20 Oct 2020</td><td>09 May 2023</td><td>09 May 2023</td></tr><tr><td>Win10 20H2 (W)</td><td>20 Oct 2020</td><td>10 May 2022</td><td>10 May 2022</td></tr><tr><td>Win10 2004 (E)(W)</td><td>11  (27 May 2020</td><td>14 Dec 2021</td><td>14 Dec 2021</td></tr><tr><td>Win10 1909 (E)</td><td>12 Nov 2019</td><td>10 May 2022</td><td>10 May 2022</td></tr><tr><td>Win10 1909 (W)</td><td>12 Nov 2019</td><td>11 May 2021</td><td>11 May 2021</td></tr><tr><td>Win10 1903 (E)(W)</td><td>29 Aug 2019</td><td>08 Dec 2020</td><td>08 Dec 2020</td></tr><tr><td>Win10 1809 (L)</td><td>13 Nov 2018</td><td>09 Jan 2024</td><td>09 Jan 2029</td></tr><tr><td>Win10 1809 (E)</td><td>13 Nov 2018</td><td>11 May 2021</td><td>11 May 2021</td></tr><tr><td>Win10 1809 (W)</td><td>13 Nov 2018</td><td>10 Nov 2020</td><td>10 Nov 2020</td></tr><tr><td>Win10 1803 (E)</td><td>30 Apr 2018</td><td>11 May 2020</td><td>11 May 2021</td></tr><tr><td>Win10 1803 (W)</td><td>30 Apr 2018</td><td>12 Nov 2019</td><td>11 May 2020</td></tr><tr><td>Win10 1709 (E)</td><td>17 Oct 2017</td><td>13 Oct 2020</td><td>13 Sep 2020</td></tr><tr><td>Win10 1709 (W)</td><td>17 Oct 2017</td><td>09 Apr 2019</td><td>09 Apr 2019</td></tr><tr><td>Win10 1703 (E)</td><td>11 Apr 2017</td><td>08 Oct 2019</td><td>08 Oct 2019</td></tr><tr><td>Win10 1703 (W)</td><td>11 Apr 2017</td><td>09 Oct 2018</td><td>09 Oct 2018</td></tr><tr><td>Win10 1607 (L)</td><td>02 Aug 2016</td><td>12 Oct 2021</td><td>(13 Oct 2026</td></tr><tr><td>Win10 1607 (E)</td><td>02 Aug 2016</td><td>09 Apr 2019</td><td>09 Apr 2019</td></tr><tr><td>Win10 1607 (W)</td><td>02 Aug 2016</td><td>10 Apr 2018</td><td>10 Apr 2018</td></tr><tr><td>Win10 1511 (E)(W)</td><td>10 Nov 2015</td><td>10 Oct 2017</td><td>10 Oct 2017</td></tr><tr><td>Win10 1507 (L)</td><td>29 Jul 2015</td><td>13 Oct 2020</td><td>14 Oct 2025</td></tr><tr><td>Win10 1507 (E)(W)</td><td>29 Jul 2015</td><td>09 May 2017</td><td>09 May 2017</td></tr><tr><td>Windows 8.1</td><td>13 Nov 2013</td><td>09 Jan 2018</td><td>10 Jan 2023</td></tr><tr><td>Windows 8</td><td>30 Oct 2012</td><td>12 Jan 2016</td><td>12 Jan 2016</td></tr><tr><td>Windows 7 SP1</td><td>22 Feb 2011</td><td>13 Jan 2015</td><td>14 Jan 2020</td></tr><tr><td>Windows Vista SP2</td><td>29 Apr 2009</td><td>10 Apr 2012</td><td>11 Apr 2017</td></tr><tr><td>Windows XP SP3</td><td>21 Apr 2008</td><td>14 Apr 2009</td><td>08 Apr 2014</td></tr></tbody></table><table><thead><tr><th>符号</th><th>说明</th></tr></thead><tbody><tr><td>E</td><td>Enterprise, Education  IoT Enterprise editions</td></tr><tr><td>W</td><td>Home, Pro, Pro Education  Pro for Workstations editions</td></tr><tr><td>L</td><td>Long-Term Servicing Channel</td></tr></tbody></table>]]></content>
       
       
       <categories>
@@ -2441,9 +2441,9 @@
       
         <tags>
             
-            <tag> 4G </tag>
-            
             <tag> 手机 </tag>
+            
+            <tag> 4G </tag>
             
         </tags>
       
@@ -3666,9 +3666,9 @@
       
         <tags>
             
-            <tag> HK4WIN </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> HK4WIN </tag>
             
         </tags>
       
@@ -3828,9 +3828,9 @@
       
         <tags>
             
-            <tag> HK4WIN </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> HK4WIN </tag>
             
         </tags>
       
@@ -4144,9 +4144,9 @@
       
         <tags>
             
-            <tag> HK4WIN </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> HK4WIN </tag>
             
         </tags>
       
@@ -4437,9 +4437,9 @@
       
         <tags>
             
-            <tag> HK4WIN </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> HK4WIN </tag>
             
         </tags>
       
@@ -4653,9 +4653,9 @@
       
         <tags>
             
-            <tag> HK4WIN </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> HK4WIN </tag>
             
         </tags>
       
@@ -5079,9 +5079,9 @@
       
         <tags>
             
-            <tag> 呻吟 </tag>
-            
             <tag> 研究生 </tag>
+            
+            <tag> 呻吟 </tag>
             
         </tags>
       
@@ -5491,9 +5491,9 @@
       
         <tags>
             
-            <tag> HK4WIN </tag>
-            
             <tag> 快捷键 </tag>
+            
+            <tag> HK4WIN </tag>
             
         </tags>
       
@@ -5814,7 +5814,7 @@
       <link href="/archives/hk4win-delfd-2.html"/>
       <url>/archives/hk4win-delfd-2.html</url>
       
-        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#100;&#x65;&#x6c;&#x66;&#x64;&#64;&#115;&#111;&#x6e;&#x67;&#114;&#117;&#105;&#104;&#117;&#x61;&#x2e;&#x63;&#x6f;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
+        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#100;&#101;&#108;&#102;&#x64;&#x40;&#115;&#x6f;&#110;&#103;&#114;&#x75;&#105;&#104;&#x75;&#97;&#46;&#99;&#111;&#x6d;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
       
       
       <categories>
@@ -5839,7 +5839,7 @@
       <link href="/archives/hk4win-delfd.html"/>
       <url>/archives/hk4win-delfd.html</url>
       
-        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#x64;&#101;&#x6c;&#102;&#x64;&#64;&#x73;&#111;&#110;&#x67;&#x72;&#117;&#x69;&#104;&#117;&#x61;&#x2e;&#99;&#111;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
+        <content type="html"><![CDATA[<p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>现公布原代码：</p><blockquote><p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#100;&#x65;&#x6c;&#x66;&#100;&#64;&#115;&#x6f;&#x6e;&#103;&#x72;&#117;&#105;&#104;&#117;&#x61;&#46;&#99;&#111;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p><p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p><p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p><p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p><p>Gosub, DelDev ;执行删除操作（见下）  </p><p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p><p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p><p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p><p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p></blockquote><p>Technorati : 软件<br>Del.icio.us : <a href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>]]></content>
       
       
       <categories>
@@ -7736,9 +7736,9 @@
             
             <tag> 中国 </tag>
             
-            <tag> 安全 </tag>
-            
             <tag> 食品 </tag>
+            
+            <tag> 安全 </tag>
             
             <tag> 三聚氰胺 </tag>
             
@@ -8756,8 +8756,6 @@
       
         <tags>
             
-            <tag> 银行 </tag>
-            
             <tag> 不公 </tag>
             
             <tag> 判刑 </tag>
@@ -8765,6 +8763,8 @@
             <tag> 无期 </tag>
             
             <tag> 贪污 </tag>
+            
+            <tag> 银行 </tag>
             
         </tags>
       
@@ -9198,6 +9198,8 @@
             
             <tag> 支付宝 </tag>
             
+            <tag> 银行 </tag>
+            
             <tag> 淘宝 </tag>
             
             <tag> taobao </tag>
@@ -9241,8 +9243,6 @@
             <tag> 网上支付 </tag>
             
             <tag> 网银 </tag>
-            
-            <tag> 银行 </tag>
             
         </tags>
       
@@ -11134,9 +11134,9 @@
             
             <tag> 安全 </tag>
             
-            <tag> 病毒 </tag>
-            
             <tag> 计算机 </tag>
+            
+            <tag> 病毒 </tag>
             
         </tags>
       
@@ -11211,9 +11211,9 @@
             
             <tag> 网络上有只小虫 </tag>
             
-            <tag> 百度 </tag>
-            
             <tag> 流氓 </tag>
+            
+            <tag> 百度 </tag>
             
         </tags>
       
@@ -11240,9 +11240,9 @@
             
             <tag> 网络上有只小虫 </tag>
             
-            <tag> 百度 </tag>
-            
             <tag> 流氓 </tag>
+            
+            <tag> 百度 </tag>
             
         </tags>
       
@@ -11323,9 +11323,9 @@
       
         <tags>
             
-            <tag> 病毒 </tag>
-            
             <tag> 计算机 </tag>
+            
+            <tag> 病毒 </tag>
             
         </tags>
       
@@ -11512,9 +11512,9 @@
       
         <tags>
             
-            <tag> 病毒 </tag>
-            
             <tag> 计算机 </tag>
+            
+            <tag> 病毒 </tag>
             
         </tags>
       
@@ -11593,9 +11593,9 @@
       
         <tags>
             
-            <tag> 病毒 </tag>
-            
             <tag> 计算机 </tag>
+            
+            <tag> 病毒 </tag>
             
         </tags>
       
@@ -11620,11 +11620,11 @@
       
         <tags>
             
+            <tag> 计算机 </tag>
+            
             <tag> QQ </tag>
             
             <tag> 病毒 </tag>
-            
-            <tag> 计算机 </tag>
             
         </tags>
       
@@ -12263,7 +12263,7 @@
       <link href="/archives/vbaidu.html"/>
       <url>/archives/vbaidu.html</url>
       
-        <content type="html"><![CDATA[<p>Public Sub Baidu_Search()</p><p>  <strong>Keywords</strong>&#x3D;Text1.Text<br>  send <strong>Keywords</strong> to <strong>Baidu_Computer</strong><br>  wait for <strong>Result_Page</strong><br>  scan <strong>Result_Page</strong> AND visit <strong>All_Links</strong><br>  get all words in **All_Links<br>**  send (<strong>All_Words</strong>) AND (<strong>All_Links</strong>) to <strong>Result_Page_X</strong></p><p>  if “李彦宏” is concluded in <strong>Result_Page_X</strong> then<br>      send a email to <a href="mailto:&#108;&#105;&#x79;&#x61;&#x6e;&#104;&#111;&#110;&#103;&#x40;&#x62;&#97;&#105;&#x64;&#x75;&#46;&#x63;&#111;&#x6d;">liyanhong@baidu.com</a> AND subject&#x3D;”老板他们是这么骂你的” AND body&#x3D;”<strong>Result_Page</strong>“<br>  endif<br> <br>  if any word in <strong>Result_Page_X</strong> is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link and show “抱歉，没有找到与“”<strong>Keywords</strong>“” 相关的网页。”<br>  else<br>     show <strong>Result_Page</strong><br>  endif</p><p>  if any word in linked webpages is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link AND show error AND send the website to **Badsite_Tank<br>**     delete all data on <strong>Badsite_Tank</strong> in <strong>Baidu_Computer</strong> to make no one can find these sites via Baidu<br>  endif</p><p>End Sub</p><p><strong>Badwords_Tank</strong>&#x3D;(李彦宏是傻2B，流氓百度，etc)<br><strong>Badsite_Tank</strong>&#x3D;(<a href="https://aska1.blogbus.com/">https://aska1.blogbus.com/</a>，<a href="https://songruihua.blogbus.com/">https://songruihua.blogbus.com/</a> ,etc)</p>]]></content>
+        <content type="html"><![CDATA[<p>Public Sub Baidu_Search()</p><p>  <strong>Keywords</strong>&#x3D;Text1.Text<br>  send <strong>Keywords</strong> to <strong>Baidu_Computer</strong><br>  wait for <strong>Result_Page</strong><br>  scan <strong>Result_Page</strong> AND visit <strong>All_Links</strong><br>  get all words in **All_Links<br>**  send (<strong>All_Words</strong>) AND (<strong>All_Links</strong>) to <strong>Result_Page_X</strong></p><p>  if “李彦宏” is concluded in <strong>Result_Page_X</strong> then<br>      send a email to <a href="mailto:&#x6c;&#105;&#x79;&#97;&#x6e;&#104;&#111;&#110;&#x67;&#64;&#98;&#x61;&#105;&#100;&#117;&#x2e;&#99;&#111;&#x6d;">liyanhong@baidu.com</a> AND subject&#x3D;”老板他们是这么骂你的” AND body&#x3D;”<strong>Result_Page</strong>“<br>  endif<br> <br>  if any word in <strong>Result_Page_X</strong> is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link and show “抱歉，没有找到与“”<strong>Keywords</strong>“” 相关的网页。”<br>  else<br>     show <strong>Result_Page</strong><br>  endif</p><p>  if any word in linked webpages is concluded in <strong>Badwords_Tank</strong> then<br>     cut the link AND show error AND send the website to **Badsite_Tank<br>**     delete all data on <strong>Badsite_Tank</strong> in <strong>Baidu_Computer</strong> to make no one can find these sites via Baidu<br>  endif</p><p>End Sub</p><p><strong>Badwords_Tank</strong>&#x3D;(李彦宏是傻2B，流氓百度，etc)<br><strong>Badsite_Tank</strong>&#x3D;(<a href="https://aska1.blogbus.com/">https://aska1.blogbus.com/</a>，<a href="https://songruihua.blogbus.com/">https://songruihua.blogbus.com/</a> ,etc)</p>]]></content>
       
       
       <categories>
@@ -15038,11 +15038,11 @@
       
         <tags>
             
-            <tag> 手机 </tag>
+            <tag> 批判 </tag>
             
             <tag> 军事 </tag>
             
-            <tag> 批判 </tag>
+            <tag> 手机 </tag>
             
         </tags>
       
@@ -15417,7 +15417,7 @@
       <link href="/archives/627747.html"/>
       <url>/archives/627747.html</url>
       
-        <content type="html"><![CDATA[<p>　　昨天我在某超市买了一盒饼干，却发现有些上当。 这盒饼干是由福建达利集团（FUJIAN DALI GROUP）济南达利食品有限公司制造的名为”低糖芝麻酥”的饼干，饼干盒的正面印有演员许晴的相片，条形码是”6 911988 006721”，规格（我用普通塑料直尺测量得出）约是26cmX11.5cmX20cm(长X宽X高),生产日期是”20051031C1”。  </p><p>　　从图中不难看出里面的问题：实际装的饼干只有盒高的一半（约10cm）。 啊哈！多么”聪明”的包装啊，又是多么愚蠢的包装啊！以前我一直喜欢”英达利蛋黄饼”，价格便宜，包装朴素不搞花架子，里面有约3&#x2F;4的空间被饼干添满（100%满是不可能的），昨天打算换一下口味吧，还吃了亏。我不知道出现这种包装的饼干是达利福建总部的还是济南分公司的责任，或者就是总部给各分公司授意要如此包装。但是不管怎样，在达利集团或其济南分公司对”半盒饼干”作出合理解释（公开或私下都可以）之前，我发誓不会再购买任何印有”福建达利集团”字样的商品。  </p><p>　　我不是在乎那几个钱，我是气不过，哪怕达利集团把饼干的价格提高一倍但把盒子装满，任由消费者选择也行，搞这种把戏欺骗消费者，终究不是企业生存和发展的长久之道，靠花几个钱请许晴，赵薇等人作广告只能暂时使企业”扬名”，企业不能做一锤子买卖啊！  </p><p>　 另外我还发现饼干盒上的饼干图片上的芝麻比实际的饼干要多，而包装上有没有象方便面上的”图片仅供参考，请以实物为准”的字样，这是不是也是欺骗消费者的行为？ 附：如果您也曾购买福建达利集团的产品并遇到了同样的情况，欢迎您和我联系（ruihuas##hotmail.com），我在此给出福建达利集团的联系方法，如果您愿意您可以和福建达利集团直接联系，在这篇日志发表之后我会和福建达利集团联系的。  </p><p>电话：0595-87325577<br>网址：<a href="https://www.dali-group.com/">https://www.dali-group.com/</a><br>电子邮箱： <a href="mailto:&#100;&#x61;&#108;&#x69;&#102;&#x6f;&#111;&#x64;&#x40;&#112;&#117;&#98;&#x32;&#46;&#x71;&#x7a;&#46;&#102;&#x6a;&#46;&#99;&#x6e;">dalifood@pub2.qz.fj.cn</a></p>]]></content>
+        <content type="html"><![CDATA[<p>　　昨天我在某超市买了一盒饼干，却发现有些上当。 这盒饼干是由福建达利集团（FUJIAN DALI GROUP）济南达利食品有限公司制造的名为”低糖芝麻酥”的饼干，饼干盒的正面印有演员许晴的相片，条形码是”6 911988 006721”，规格（我用普通塑料直尺测量得出）约是26cmX11.5cmX20cm(长X宽X高),生产日期是”20051031C1”。  </p><p>　　从图中不难看出里面的问题：实际装的饼干只有盒高的一半（约10cm）。 啊哈！多么”聪明”的包装啊，又是多么愚蠢的包装啊！以前我一直喜欢”英达利蛋黄饼”，价格便宜，包装朴素不搞花架子，里面有约3&#x2F;4的空间被饼干添满（100%满是不可能的），昨天打算换一下口味吧，还吃了亏。我不知道出现这种包装的饼干是达利福建总部的还是济南分公司的责任，或者就是总部给各分公司授意要如此包装。但是不管怎样，在达利集团或其济南分公司对”半盒饼干”作出合理解释（公开或私下都可以）之前，我发誓不会再购买任何印有”福建达利集团”字样的商品。  </p><p>　　我不是在乎那几个钱，我是气不过，哪怕达利集团把饼干的价格提高一倍但把盒子装满，任由消费者选择也行，搞这种把戏欺骗消费者，终究不是企业生存和发展的长久之道，靠花几个钱请许晴，赵薇等人作广告只能暂时使企业”扬名”，企业不能做一锤子买卖啊！  </p><p>　 另外我还发现饼干盒上的饼干图片上的芝麻比实际的饼干要多，而包装上有没有象方便面上的”图片仅供参考，请以实物为准”的字样，这是不是也是欺骗消费者的行为？ 附：如果您也曾购买福建达利集团的产品并遇到了同样的情况，欢迎您和我联系（ruihuas##hotmail.com），我在此给出福建达利集团的联系方法，如果您愿意您可以和福建达利集团直接联系，在这篇日志发表之后我会和福建达利集团联系的。  </p><p>电话：0595-87325577<br>网址：<a href="https://www.dali-group.com/">https://www.dali-group.com/</a><br>电子邮箱： <a href="mailto:&#100;&#97;&#108;&#x69;&#102;&#x6f;&#x6f;&#100;&#64;&#x70;&#x75;&#x62;&#x32;&#x2e;&#x71;&#x7a;&#x2e;&#102;&#106;&#46;&#x63;&#x6e;">dalifood@pub2.qz.fj.cn</a></p>]]></content>
       
       
       <categories>
