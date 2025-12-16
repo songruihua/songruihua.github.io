@@ -361,164 +361,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/reading-notes-matlab-01.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/reading-notes-matlab-01.html" itemprop="url">读书笔记：MATLAB（01）</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-11-15T00:21:59+08:00">
-                2011-11-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天开始写读书笔记，第一本书是《高等应用数学问题的MATLAB求解》。 MATLAB语言是科学研究者首选的计算机数学语言。大多数学生缺乏对应用数学问题的全面了解，不清楚什么问题能用数学描述，什么样的数学问题能求解，以至于走了很多弯路。通过学习MATLAB语言可以使数学问题求解能力显著提高，即使对某些数学公式理解不够深刻，只要学习了MATLAB语言也能容易地求解类似问题，毕竟科学研究者和工程技术人员通常不考虑为什么这样做，而只考虑结果是什么。借助MATLAB数学基础不深厚的人同样能轻易利用计算机解决高深的应用数学问题。 <strong>第1章 计算机数学语言概述</strong> <strong>1.1为什么学习计算机数学语言</strong> 并不是所有数学问题都能手工推导的，手工推导有时是不易、不可靠、不精确甚至是不可能的，所以需要计算机的帮助。用计算机的方式有两种，其一是数值分析，其二是计算机语言，前者只能解数值计算问题，后者还可以解决像公式推导这样的问题。 许多专门的学科在介绍原理与方法时一般采用简单的例子，回避高阶和复杂的例子，这样得到的方法和结论只是理论上的，用于解决现实的实际问题往往是比较困难的，所以需要借助计算机数学语言。 <strong>1.2 数学问题的解析解与数值解</strong> 数学家往往关注解析解以及解的存在性的严格证明，而工程技术人员通常只关心最后的数值解。数学上，解析解不存在的情况很普遍，例如圆周率就没有解析解，工程技术人员也不关心圆周率是怎么求得的，只是想知道能满足精度要求的数值，一般的计算取3.1416即可，粗略的计算取3.14也未尝不可。 <strong>第2章 MATLAB语言程序设计基础</strong> MATLAB的主要特点： 简介高效 一条语句顶C&#x2F;C++数百条 科学运算能力强大 MATLAB以矩阵为基本单元 绘图功能 论文中必须给出二维或三维图形 工具箱 为各专业量身定制 动态系统仿真 转用ANSYS等专业软件 <strong>2.1 MATLAB程序设计语言基础</strong> <strong>2.1.1 MATLAB语言的变量和常量</strong> 变量必须由字母打头，且区分大小写。 MATLAB保留的变量： eps——浮点运算误差限，默认2.2201e-16，若某个值小于eps则会被视为0 i,j——循环变量，用于纯虚数量，应恢复i&#x3D;sqrt(-1) inf——无穷大，-inf为无穷小，若除数为0，MATLAB也不会中止运算，而是给出一个“除0”警告，并将结果赋成inf NaN——not a number不定式，用于0&#x2F;0，inf&#x2F;inf运算 lasterr、lastwarn、pi <strong>2.1.2 数据结构</strong> 数值型数据：一般为double()，在图形处理等计算中通常使用uint8()uint16()int8()int32()等，u表示无正负号，数字表示位数。 符号型数据：用于推导公式和解析解法，使用前首先需要将采用的变量申明为符号变量 syms list props，例如syms a b，props可以是real,positive等。 变精度算法函数vpa()可以将符号型数值以任意精度显示出来，vpa(pi)将显示圆周率的32位有效数字， vpa(pi,100)将显示圆周率的100位有效数字，pi也可以换成矩阵。 其他数据结构：字符串型数据、多位数组、单元数组、类于对象。 <strong>2.1.3 MATLAB的基本语句结构</strong> 分两种：直接赋值语句、函数调用语句 直接赋值语句： 末尾带分号则不会显示运算结果，不带则直接显示 如果没有指定变量，则结果赋予保留变量ans 注释以%打头 矩阵输入：A&#x3D;[1,2,3;4 5,6;7 8 9] 函数调用语句:[返回变量列表]&#x3D;函数名(输入变量列表) 一个函数名对应一个.m文件或MATLAB内部函数。 []可以用逗号和空格分隔[U,S,V]，(X,Y,Z)只能用逗号分隔，为了避免混乱以后所有分隔用逗号完成。 <strong>2.1.4 冒号表达式与子矩阵提取</strong> v1&#x3D;1:0.2:pi 向量v1&#x3D;1 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0 v2&#x3D;1:pi v2&#x3D;1 2 3 v3&#x3D;pi:-1:1 v3&#x3D;3.1416 2.1416 1.1416 v4&#x3D;1:-1:pi Empty matrix 提取子矩阵： :表示整行或整列 end表示最后一行或一列 B1&#x3D;A(1:2:end,[2,3,4]) %奇数行234列 B2&#x3D;A([1,2,3],[2,3,4]) %123行234列 B1&#x3D;A(end:-1:1,:) %上下翻转，最后一行排在第一行，列排序不变。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/truecrypt.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2044,12 +1886,170 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/pisces-man.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/pisces-man.html" itemprop="url">双鱼男——虽不信，但······</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-09-28T00:37:34+08:00">
+                2011-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%89%AF%E6%B7%A1%E9%BE%99%E9%97%A8/" itemprop="url" rel="index">
+                    <span itemprop="name">扯淡龙门</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>声明：我不信星座，但下文有些部分在我身上有所体现，权当笔记吧。</strong> <strong>双鱼男一直没有写。因为很难写。难写在于2点。1是双鱼男的基本特性与双鱼女没有特别大的区别。2 是双鱼座的特性非常符合女子特性，如果放在男人身上势必再次形成新的矛盾点，加上双鱼本身就是具有两面性，使双鱼男比之双鱼女更加矛盾复杂。</strong> <strong>这是个具有极大的精神世界的星座。这在双鱼女那里表现出了极其和谐的结合，符合了女生的温柔细腻。而这在双鱼男这里则形成极大地矛盾与抵触。作为男人，无 法长时间沉浸在自怨自哀的精神世界中。所以，大多数双鱼男都极力抑制这种特征的表现，他们大多数时候都在刻意掩饰，所以，双鱼男比双鱼女有着更多的复杂面 具。但是，这毕竟只是掩饰，一旦他们需要双鱼的精神世界的时候出现，依然可以表现出双鱼应有的惊人水平。所以，即使伪装的极其完美的双鱼男，在直觉洞察和 想象力上也绝对无人可及。</strong> <strong>然而，其他的双鱼特性，在双鱼男这里变得有些不同，最为显著的是，情感丰富和理想主义观念。这两条是双鱼座的基本标签。情感丰富的女人必然女人味十足，而 情感丰富的男人则不是什么太好的事情，因为这直接导致一个严重的问题，多情。是的，我们的双鱼男人们，绝对是12星座最多情的男子。但是，请注意，是多 情，不是滥情，更不是花心。这一点请务必理解。多情在于他们比之其他男人更懂得爱情是什么。更懂得珍惜共同的记忆，共同的快乐。所以，他们不会轻易忘怀任 何过往。这点上，让双鱼男收到的褒贬不一。当然，我们是可以想象这样的特性会造成怎样的结果。这是个很难说明白的事情，他们只是学不会放开手。忘记了爱情 从来都是自私而不可允许他人分享的东西。</strong> 关于双鱼男的理想主义则很有意思。双鱼女的理想主义多集中在情感方面，在对于其他现实问题上，却基本能冷静的面对。而双鱼男则更有遁世的倾向，几乎所有方 面，他们都选择了一种逃避残酷现实的应对，因为理想主义的幻想，不象细腻伤感的精神世界那样让双鱼男抵触，所以，在大多数的双鱼男身上，关于理想主义的色 彩可以轻易找到。其实，我觉得人感性一点，理想主义一点并没有什么不好，这让人活的更有情趣，更懂得浪漫。 双鱼男的关键字----- 多情，慵懒 <img src="https://songruihua-image.googlecode.com/files/pisces-men-are-easy-going.jpg" title="双鱼男"> <strong>对 于双鱼座这个星座，我始终认为是个很诗情画意的星座。他们无处不在的感性世界，让他们始终能够生活的充满了戏剧色彩。这很好，但是当事人未必这么认为。这 就像你看一部灾难片，对你们来说是娱乐，对故事的人物来说是灾难。双鱼男始终感伤波折的感情生活，那背后是多少日夜，多少人的眼泪和叹息阿。 ** ** 但凡被双鱼男吸引的女生，大多是对纯粹雄性动物特点的男人不怎么来电的，粗鲁，冷漠，无情，是不属于双鱼男人的。他们几乎可以应付各种性格类型的女生。他 们和女生的交往手段，往往是单纯而充满柔情的。他们不适合刺激而富有变化的恋爱，他们更需要的是精神上的默契和内心的呼应。但是过多地对精神世界的需求， 反而暴露了自己和对方的不默契。事实上，我们得相信，这个世界上真正能够心灵相通的伴侣并不易见。大多数情况下，我们如果不过多去思考这个问题并没有什 么，而双鱼男的强调，使这个问题暴露在阳光之下。原本没有在意的另一半也开始在思考这个问题，致使双方都变得挑剔。这是大而划之的分析，事实情况中可能并 没有如此宣称，但是无需质疑的就是真正原因都是缘于这里。</strong> 双鱼是欠缺行动力的星座，这也是他们在现实世界的格格不入之一。而且，这点上在双鱼男身上尤其明显。双鱼男人的慵懒尽管是优雅的，却依然诟病与人。他们很 少主动去改变什么，因为他们关注的东西不在于此。但是，这样的解释显然无法得到别人的理解。而这样的特征也造成了双鱼男们喜欢暧昧的另一明证。或许，真的 双鱼座的特点不适合男人。有时候，我都觉得双鱼男人太委屈。 所以，很有趣的是，我一直以为善良温柔的双鱼男人会比其他星座更少的被指责。然而，现实是对于双鱼男的评价严重两极分化，好的会认为双鱼男人，温柔，细 腻，充满浪漫情调，而不喜欢的则认为双鱼男人，简单，孩子气，不现实，和其他女性关系不清不明。其实，无论哪一方，你们所看到的双鱼男子的特点都没错，也 都不对。因为无非是善意的去看待，去分析，还是恶意的去看待，去分析的问题。人都有两面性，也都很难理解通透。更别说交杂各种矛盾和不合性质的双鱼男人 了。 但是，我依然给予你们一些意见。 1虽然双鱼男们喜欢夸耀自己的包容能力，但是实际上一类女子他们是处理不来的。就是个性张扬，强调自由，而且快人快语，不喜欢拖泥带水的女生。 2 和双鱼男子的交往，有时候需要你的更清晰的暗示，双鱼男子中真正的爱情高手并不多。他们会接触你们，但是不知道怎么开口让关系更进一步。 3 双鱼男子脾气很好？也许吧，但是他们依然会愤怒，会受伤，会离开。 4 你受不了他们的不切实际的幻想？无法理解他们的想法？我想说的是，只要他们受得了你就好。不要受他们的影响，你未必需要理解这些。 5 你怀疑你的双鱼在和他人暧昧？或者是和前女友依然旧情不断？那么，你有两个选择，要么选择暂且不多想，因为大多数时候，双鱼男并没有真正要出轨的心思，可能只是你的误解。要么你就清楚地告诉对方你的想法。我想，他们会给你一个合理解释的。 我认为，对于双鱼男就像一种很可口但是很特殊的食物，一定要对胃口，不然再好吃你也受不了。所以，在你痛苦之前，在你不知所措之前，更在你狠心分手之后又 后悔之前，请先搞清楚，你是否能够接受这样的男子。很多时候，爱情最重要的一条就是，不是你一厢情愿就可以成功的。爱他，就要懂得他</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
 
-    <a class="extend prev" rel="prev" href="/page/16/">&lt;&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/18/">&gt;&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/16/">&lt;&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="extend next" rel="next" href="/page/18/">&gt;&gt;</a>
 
   </nav>
 
@@ -2102,7 +2102,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">517</span>
+                  <span class="site-state-item-count">509</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2124,7 +2124,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">485</span>
+                  <span class="site-state-item-count">481</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

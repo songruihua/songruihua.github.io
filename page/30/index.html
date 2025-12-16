@@ -361,1120 +361,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/how-to-personalize-wordpress-to-your-language.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/how-to-personalize-wordpress-to-your-language.html" itemprop="url">个性化地汉化WordPress</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-12-03T01:45:04+08:00">
-                2008-12-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">小品软件</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用WordPress有一段时间了，一直以来有一个困扰我很久的问题——该使用英文原版还是中文版。 经常换主题的朋友可能发现一点，有些主题如果是英文博客，看起来就挺不错的，可用到自己的网站上，当中文取代了英文，同一个主题怎么就那么难看呢？这是因为，目前WP圈子里流传的漂亮主题多是老外弄的，他们当然是按照英文站点来设计的，大家知道，英文字体比中文多很多，并且英文的字号大小都挺适合在屏幕上显示的，但中文就不同，默认字体也就宋体、黑体那么几个，字号太小了屏幕上看不清，太大了难看。 WP的管理后台也是如此，设计团队在设计时采用了不同的字体、字号，从而使后台看起来很舒服，如果换成中文，好么，清一色的宋体，或雅黑，能好看的了吗？英文原版的后台虽然保持了原汁原味，但也有缺点，对前台中文支持不好，比如月份，中文博客一般使用“2000年01月”，但英文却是“January 2000”，整个网页都是中文的，偶然冒出个英文显得不和谐统一，还有很多这样的例子。就由于对前台支持不够好，我一直以来用的是WP中文版，直到今天我发现了自己对WP汉化的方法。 网上的中文版本对WP汉化比较彻底，前后台一起汉化，而自己做的化，可以只汉化前台的，后台保留英文，两全其美。 WP的汉化，并没有修改核心文件，而是通过添加一个mo格式的语言文件，这样能保证中文版的稳定性和兼容性。也就是一种对比性文件，比如左侧是英文“Add new”，右侧中文“写新日志”，也就是做个表面功夫，那么如果只将前台的英文单词修改，后台的保留英文就可以实现，前台中文，后台英文了。 方法是，先安装中文版WP，mo文件存在于&#x2F;wp-content&#x2F;languages&#x2F;zh_CN.mo，如果正在使用英文版，可下载一个中文版，将其中的mo文件放到相应的目录下，将wp-config.php文件中的define (‘WPLANG’, ‘’);改成define (‘WPLANG’, ‘zh_CN’);就可以使用zh_CN.mo中的中文了。 现在，要修改mo文件了，但这个文件是不能直接修改的，因为它是由一个zh_CN.po文件生成的，我们要做的就是修改po文件，重新生成一个mo文件就行了，po文件也在&#x2F;wp-content&#x2F;languages&#x2F;里，修改它需要专门的软件，我推荐poedit这款软件。 <a target="_blank" rel="noopener" href="https://www.google.cn/search?hl=zh-CN&q=%E4%B8%8B%E8%BD%BD+poedit&btnG=Google+%E6%90%9C%E7%B4%A2&meta=lr=lang_zh-TW%7Clang_zh-CN%7Clang_en&aq=f&aq=f&sourceid=Mozilla-search">下载</a>并安装后，点击po文件就会打开poedit软件，你会发现左侧原文是英文，右侧是中文，默认是对所有英文进行翻译的，怎么不翻译呢，选中一行，按下Alt+C，会将英文原文复制到右侧的中文，这行就不会显示中文了，但是我发现，poedit不能将所有行的原文复制到中文，而又有这么多行，总不能按几千次Alt+C吧，别担心，一会我会介绍怎么样实现自动执行重复性工作，先跳过这一步。 <img src="https://pe.images22.51img1.com/6000/songruihua2/e577bab4d815eff684cad97829292877.jpg" alt="poedit"> 当将所有行的原文复制到中文后，整个po文件就没有一个中文了，接下来要做的就是结合自己的需要将少数的几个再改回中文，比如我，我需要在前台显示月份就将第8011行的右侧改成了“01月”，当然要改12次了，还有第8151行的右侧改成了“星期一”，要改7次，还有AM改上午，PM改下午，我就改了这几个，其他的还是英文，如果你需要改其他的可以使用Ctrl+F搜索，找出在哪一行，然后修改就行了。将这个po文件另存为，在新的po文件同一目录下会生成一个新的mo文件，将其命名为zh_CN.mo上传覆盖旧的mo文件，就OK了。这样除了前台少数的几个地方会显示中文外，后台是全英文的。 <strong>怎么样实现自动执行重复性工作</strong> <a target="_blank" rel="noopener" href="https://www.google.cn/search?hl=zh-CN&q=%E4%B8%8B%E8%BD%BD+autohotkey&btnG=Google+%E6%90%9C%E7%B4%A2&meta=lr=lang_zh-TW%7Clang_zh-CN%7Clang_en&aq=f&aq=f&sourceid=Mozilla-search">下载AutoHotKey</a>这个软件，安装后从开始菜单打开AutoScriptWriter，这是一个记录按键敲打、鼠标点击的工具，按下Record红色按钮，激活poedit窗口，点击其中的任意一行，按下Alt+C，再按下“<strong>下方向键</strong>”，点击屏幕左上角的stop按钮，回到AutoScriptWriter窗口，将其中的以<code>MouseClick</code>开头的行删除，以<code>Sleep</code>开头的行删除，在<code>Send, {ALTDOWN}c{ALTUP}{DOWN}</code>行之上插入<code>Loop 300{</code>，在其之下插入<code>}</code> 如果你将po文件放在了C:\zh_CN.po那么，最终的代码应该是这样的</p>
-<blockquote>
-<p><code>WinWait, poEdit : C:\zh_CN.po, IfWinNotActive, poEdit : C:\zh_CN.po, , WinActivate, poEdit : C:\zh_CN.po, WinWaitActive, poEdit : C:\zh_CN.po, Loop 300 { Send, {ALTDOWN}c{ALTUP}{DOWN}</code> }</p>
-</blockquote>
-<p>其中300是每双击鼠标一次，Alt+C就要被自动重复按下300次，可根据需要自己改，我就很变态的改成了10000，爽！ <img src="https://p7.images22.51img1.com/6000/songruihua2/7daa640f3e5e4f7cc9867042a5588eab.jpg" alt="autohotkey"> 代码修改完后，点击AutoScriptWriter左侧的SAVE按钮保存成ahk格式的文件，名字随便起。然后双击执行新生成的ahk文件，瞧好吧！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/wordpress-27-rc1-release.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/wordpress-27-rc1-release.html" itemprop="url"> WordPress 2.7 RC1发布 </a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-12-02T20:04:08+08:00">
-                2008-12-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">网络爬虫</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Wordpress.org 官方博客今天发布了<a target="_blank" rel="noopener" href="https://wordpress.org/development/2008/12/wordpress-27-release-candidate-1/">WordPress 2.7 RC1</a>版，此版本是正式版之前的最后一个版本（final leg），接下来马上就是正式版了。 RC即Release Candidate ，预发行版本，跟最终正式版相差无几，官方在此版本中实现了280项之前的承诺，并且重新设计了管理后台的界面，使用了图标设计大赛的<a target="_blank" rel="noopener" href="https://wordpress.org/development/2008/11/the-results-of-project-icon/">获奖设计</a>，并且推荐所有人（而非仅高级用户）下载安装（<a target="_blank" rel="noopener" href="https://codex.wordpress.org/WordPress_Backups">注意备份</a>）。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/my-blog-history.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/my-blog-history.html" itemprop="url">我的博客历程</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-12-01T00:37:38+08:00">
-                2008-12-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">网络爬虫</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>最早写东西是在2005年末，在MSN Spaces上，忍受着牛一样的速度和巨幅广告，所能鼓捣的就是几个模块，来回地拖动，最高级的就是几个音乐播放器，同志们啊，当时安装个播放器，放首歌就叫高级设置了，再想想现在的WordPress，不能比啊，在MSN时间很短也就一两个月。 第二个地方在blogspot上，一是冲着Google，二是spot可以修改网页代码，我就是在那段时间学习了HTML和CSS。终于有一次，我再也不能忍受GoooFoooW了，离开了。 第三个地方是donews，当时是因为对keso很崇拜，就和他在一个主机上开了博客，甚至还抄袭了他的模板，donews用的是WordPress，但当时没在意这一点，也是由于donews上不能上传主题和插件，当时没能体会到WordPress的优点，但有一点donews上不能修改代码，只能对已有主题进行CSS修饰，那时我对代码已经有点痴迷了，实在不能忍受这个，又走了。 第四个是blogbus，我对blogbus的感情很深，喜欢bus上的气氛，bus也能修改代码，于是在那里我继续沉溺于&lt;&gt;和{}之间，当时我购买了第一个域名songruihua.cn，后来不要了，改.com域名了。当时我不停地抄袭知名网站的设计，比如Mozilla.org的官方网站，原因就是对Firefox的着迷——我这个人很喜欢爱屋及乌，现在的主题就抄袭了WordPress.org的设计。 第五个是yo2，当时是在了解到WordPress的强大之后才觉得离开bus找个WordPress的BSP，整了段时间，觉得不爽了，伴随着不停地搜索，对WordPress的了解也逐渐深入，申请了现在的域名songruihua.com，之所以放弃.cn域名是因为Google App不让.cn注册，用不了自己域名的邮箱。后来逐渐讨厌yo2的种种限制，最不能忍受的是不让自己上传插件，用WordPress不能自由选择插件，不如不用啊。有一次，发了篇朱镕基的演讲视频（优酷网上的，绝对不含敏感内容），被yo2告知含有关键词，不让公开发表，一起之下又走了。 第六个地方是免费主机，有了一定的WordPress使用经验，加上有自己的域名，我当然要自己搭建WordPress平台了，在论坛上逛了一圈，在000webhost上弄了个免费空间，建站一个月，被封三四次，最后一次被封时，我决定买主机。 第七个，也就是现在这个地方，我用上了收费主机，托<a target="_blank" rel="noopener" href="https://www.a-boss.com/" title="RobaY">RobaY</a>的福，用的是全球第一大域名注册商Godaddy的主机，并且是独立IP，加上.com独立顶级域名和WordPress最新版，我想从硬件上我已经达到了最高点，所欠缺的就是内容了。 好了，从2005年末到2008年末，三年时间了，我想该歇歇了。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3070753551/" title="my-blog-history by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3019/3070753551_3f8b96ff2e_o.jpg" alt="my-blog-history"></a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/hello-world.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/hello-world.html" itemprop="url">Hello world!</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-11-29T10:55:37+08:00">
-                2008-11-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">网络爬虫</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to WordPress. This is your first post. Edit or delete it, then start blogging! WordPress is a state-of-the-art publishing platform with a focus on aesthetics, web standards, and usability. WordPress is both free and priceless at the same time. More simply, WordPress is what you use when you want to work with your blogging software, not fight it. New to blogging? Learn more about WordPress, then follow the three easy steps below to start blogging in minutes. Or, for the ultimate in ease of use, get a free blog on WordPress.com.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/recent.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/recent.html" itemprop="url">近况</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-11-29T03:44:49+08:00">
-                2008-11-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%8D%E5%A5%BD%E5%88%86%E7%B1%BB/" itemprop="url" rel="index">
-                    <span itemprop="name">不好分类</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>入学时：进门免费拿锁，出门放回原处，莲蓬头不少。 一年后：锁自带，丢失物品不管，4点左右去能抢到莲蓬头。 现在：水是凉的，心也凉了… 实指望能洗个热水澡治治感冒，但估计有加重了，也是我最近玩儿命blabla，搞的上火了，嗓子疼，嘴里干，鼻涕、痰都来了。 这几天都不敢在外面吃饭了，一直吃食堂，开学后我饭卡消费不足百元，都便宜门口的小饭店了，还是食堂的饭养人啊，一碗小米粥，一盘芹菜，一碟花生，一个馒头，吃饱吃好，消费不高。 学习还是不如意，都大三了，要学习了，我总是在每天晚上10点钟这样告诫自己，怀念马老啊… 郭德纲还在北京说他的相声，我却发现我更喜欢天津小剧场、小茶馆的相声，但都是老人儿在撑台面，年轻一辈儿的新秀太少了，那个裘英俊怎么就干上电台主持了呢，那么好的一个相声苗子。 越来越不喜欢白纸黑字了，曾经在高中买的打算在大学读的书很多，但就看完了一本《围城》，别的都没看，总有一天我会后悔的。 自觉前途渺茫，有人说建筑行业有前途，有人说干好的没几个，都没人来给指导指导。 创业这个词，到底仅仅是政府为了缓解大学生就业压力而传播的一个词汇，在国内的经济环境下，只能说创业很难很难，尤其建筑行业，不要求什么创新、毅 力、顽强等俗词，俗，俗，太俗，要的是经验，技术可以不高，但一定要有经验，照这以前的样子做，不出岔子就是成功，创新那是高科技的事，建筑就图一踏实。 前不久，在三晋召开七人峰会时，祥子一哥们出车祸死了，大伙在会议上对生死有一番讨论，乐也说，悲也活，乐和乐和得了，不想那么多了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/use-custom-fields-to-determine-the-achievement-of-the-page.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/use-custom-fields-to-determine-the-achievement-of-the-page.html" itemprop="url">使用自定义字段实现对页面的判断</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-11-29T03:42:40+08:00">
-                2008-11-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">网络爬虫</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>我的导航栏中有些标签卡并不是只包含一个页面。例如“关于”，就包含了&#x2F;about，&#x2F;about&#x2F;myself，&#x2F;about &#x2F;loveblog，&#x2F;about&#x2F;copyright，&#x2F;about&#x2F;contact等多个页面，再比如“开源”则包含更多的页面，有 wordpress，firefox还有跟下一层的诸多页面。 我想在无论是哪一级页面被显示时，标签卡都要突出显示，例如在&#x2F;about和&#x2F;about&#x2F;copyright两个页面中，我都希望“关于”标签卡突出显示。 以前我是这样实现的：</p>
-<blockquote>
-<p> &lt;li class&#x3D;”<?php if ( is\_page(’about’)||is\_page(’copyright’) ) { echo ‘current-cat’; } ?>”&gt;<a href=”/about/”>关于</a></li></p>
-</blockquote>
-<p>但是这样有两个弊端： 1.当子页面很多时，需要使用很多的||来定义“或”，会使代码看起来很乱。 2.有时候会有相同名称的子页面，如&#x2F;about&#x2F;books和&#x2F;firefox&#x2F;books，这样如果仅仅定义 is_page(’books’)会产生混乱。 所以，我放弃了这种使用||标记的代码，而使用更为灵活的自定义字段。</p>
-<blockquote>
-<p>&lt; ?php if (get_post_meta($post-&gt;ID, <strong>page_about</strong>)) { ?&gt; &lt;li **class&#x3D;”current-cat”** &gt;<a title=”About” href=”/about/”>关于</a></li> &lt; ?php } else { &gt; <li><a title=”About” href=”/about/”>关于</a></li> &lt; ?php }?&gt;</p>
-</blockquote>
-<p>在需要归类于“关于”的日志或者页面的编辑页下方自定义字段，字段名中填写page_about，字段值中随意写，这样就可以在所有被定义了 page_about字段名的日志或页面显示时，使class&#x3D;”current-cat”生效，依赖CSS中对“类”的定义，即可突出显示“关于”。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/google-campus-speaking-tour-hebut-station.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/google-campus-speaking-tour-hebut-station.html" itemprop="url">Google校园巡讲——河工大站</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-10-16T13:57:48+08:00">
-                2008-10-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB/" itemprop="url" rel="index">
-                    <span itemprop="name">网络爬虫</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Google China的CTO今晚会在河北工业大学北辰校区大学生活动中心举办讲座，时间是19：00。顶图是海报，被我撕下来了，下图是宣传页，整个教室都是这个。 不知晚上会不会人满为患，上周的话剧就是满场，不知在“百度”漫天飞的河工校园，是否有Google的众多fans去挤爆礼堂。 <img src="https://farm4.static.flickr.com/3187/2946365814_03cd3f8caa.jpg"> <img src="https://farm4.static.flickr.com/3198/2945486783_d7be3544bc_m.jpg"><img src="https://farm4.static.flickr.com/3208/2946349964_f359fab5bd_m.jpg"></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/mr-zhurongji-speech.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1936,12 +822,1119 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/new-samsung-j708-cellphone.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/new-samsung-j708-cellphone.html" itemprop="url">新手机三星J708</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-09-10T14:21:49+08:00">
+                2008-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A1%AC%E4%BB%B6%E7%8E%A9%E5%AE%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">硬件玩家</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106143729/" title="samsung_j708 by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3135/3106143729_a74dbe5e41_o.jpg" alt="samsung_j708"></a> 国美1199元</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/27th-nerc-age-proportion-of-candidates.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/27th-nerc-age-proportion-of-candidates.html" itemprop="url">河工大第27次计算机等级考试考生年龄比例</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-08-24T01:09:58+08:00">
+                2008-08-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8F%88%E5%9C%9F%E5%8F%88%E6%9C%A8/" itemprop="url" rel="index">
+                    <span itemprop="name">又土又木</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://s.songruihua.com/images/27th-nerc-age-proportion-of-candidates.jpg" alt="计算机等级考试"></p>
+<p>具体指的是河北工业大学的，只是为了显示一下Office2007的强大，没别的意思！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/on-discard-the-windows-xp-tomatolei-edition.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/on-discard-the-windows-xp-tomatolei-edition.html" itemprop="url">论番茄花园的倒掉</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-08-22T11:38:03+08:00">
+                2008-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106976676/" title="tomatolei by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3198/3106976676_f43cc2db70_o.jpg" alt="tomatolei"></a>最近坊间突然流传“番茄花园”网站倒下了，传言站长以及主要关系人被抓，就像前一段时间QQ珊瑚虫一样。番茄花园网站最出名的就是未经授权的改版WindowsXP，也就是盗版XP，这种东西南京珠江路上多得是。 对于软件行业专业人士来看，番茄花园的倒掉那是迟早的事，因为这毕竟是盗版，是违法行为，是很自然的事，但根据目前的网络的评论，大多数人同情番茄花园，我不敢以大众为敌，只能讲讲盗版的危害，剩下的大伙各自理解吧。 西方发达国家维持其经济和社会的繁荣，很重要的靠两个手段，一个是自由而信用的市场经济体制，另外一个就是严厉的知识产权保护制度。 自由而信用的市场经济体制那是符合欧美国情的，但是否符合中国国情，我对此没有研究，不予评价。但我从事计算机软件行业7年多，对知识产权算是有些感性的认识。 考察国内的软件行业，可以发现绝大部分软件研发企业从事的都是行业软件，而通用软件则少有问津，只有杀毒软件是这领域的死水微澜。为什么会有这种现象?无他，盗版耳。 各个行业都由其自身的特点，要发展各个行业首先得研究各个行业的特点。比如房地产行业是资金密集型行业，手工作坊行业是劳动密集型行业，而软件行业是知识密集型行业。因此房地产行业的核心就是钱，手工作坊的核心就是廉价劳动力，软件行业的核心就是知识产权。要发展一个行业，应当在其核心上多做文章，同样一个行业的毁掉，也一定是在核心上出现大问题，所谓成也核心败也核心。比如房地产行业，以前国家的宏观调控没有抓住房地产行业的钱这个核心上，因此无论力度如何都没起多大作用，现在银根一抓，立马现行。 因此要发展软件行业，应当紧紧的抓住知识产权这个核心。但是知识产权相对于传统的生产资料是一个很异怪的东西，它看不见摸不着，外行人不易理解。可以说，知识产权对于软件行业，就像粮食对一个国家一样。 战国时齐国只准种粮食，不准种桑树，而且国王命令官员必须穿丝制衣服，于是齐国内丝绸供小于需，价格上涨，齐国周边的鲁国和梁国见有利可图停止种粮改种桑树，从而放弃的粮食生产。几年后齐王下令不准穿丝制衣物，不出口粮食。结果鲁和梁饥荒内战，不战而亡，不得不归顺齐国。 以前美国默认自己的软件产品在中国国内盗版，国人见有利可图，纷纷用盗版，而不使用价格较高的正版软件，而盗版带来的损失美国不屑于顾，惨的是国产软件的作者颗粒无收，民族软件行业得不到发展，从而导致我们依赖美国。现在美国的知识产权的大棒呼啸而来，要是顺从美国，做美国的附庸，那我们死路一条，那我们该怎么办? 还好30年的改革开放使得中国的综合实力不算弱，总体上是趋于独立的，少数行业的不独立的情况经过治理还是可以改善的。美国的知识产权的大棒由高层接招吧，但治理国内软件行业的不独立不发展的现状是我可以关心的。 如何治理中国软件业的不独立，最基本的就是根据软件行业的知识密集的特点，下重手抓知识产权保护。理论上是可以立竿见影的，实际上是不能一刀切的。无他，中国特色。 从国家战略上，可以搞个8年计划，其内容主要有“逐年加大知识产权保护力度;对国外建立保护性壁垒，逐年消弱;对国内建立自由的软件行业市场制度，逐年改善;减少金融政策支持，加大制度支持”。 加强知识产权保护，这是发展软件行业的基本功。软件行业是知识密集型行业，不是资金密集型行业，不需要政府大量的金融税收等的支持。对软件行业投完钱后撒手不管，那是赶马的人只拍马腿不拍马屁股，马儿拍断了腿也不会动。对此管理层应当多多调研，认清楚究竟什么是软件行业的命脉。 对于公众应当加强宣传，是否使用盗版不是道德问题，而应当升级为严肃的法律问题，盗版应当是刑事犯罪。管理层应当使用各种手段让公众放弃使用廉价的美国盗版软件，转而使用价格比较高的正版软件。就像战国的齐王强令官员无论家境如何必须穿昂贵的丝绸衣服一样，这样做会在短期内带来不小的争议和实际利益的损失，但符合国家长期的战略利益，对此管理层必须强硬。 “对我建立保护性壁垒，逐年消弱”，国内软件业的羸弱那是明显的，对外必须建立一定的保护壁垒，使得长期遭受国外巨头和盗版摧残的国内软件得以休息养生。发达国家从来就是反对发展中国家建立市场壁垒，对此美国必然是反对的。不过别人反对不等于不做，发展中国家要发展，对外必须顶住压力建立一定的壁垒。 不过“生于忧患，死于安乐”，完全的封闭，制造一个安乐窝，那民族软件肯定是没出息的。而且再坚硬的壁垒迟早会被发达国家打破，以其城墙被攻破造成天下大乱，不如主动逐步开放，严阵以待。完全的开放和完全的封闭都是死胡同，只有合理的开放结合合理的壁垒那才是中庸之道。中庸，国人的最爱啊。 “对国内建立自由的软件行业市场制度，逐年改善”，这个比较难，目前中国是不充分自由的有中国特色的社会主义市场经济。在这个大市场制度下建立一个自由的小市场制度，那基本上比较难，不过仍然可以有所作为。首先是压制地方保护主义;政府要对中小软件公司倾斜，政府采购中必须为中小企业留相当的份额。 对于通用软件市场，建立自由的市场制度相对比较容易。因为通用软件是商业产品，就像汽车家电一样。只要产品好，企业运营得当，市场竞争还是比较公平的。 “ 少金融政策支持，加大制度支持”，目前管理层发展软件行业有一个误区，就是只要给钱给政策，一切都会好的。软件行业由于其知识密集型，使得它没有大厂房，不需要地皮，只需要在写字楼租几个房间，没有大批的生产资料的进出，没有仓储和物流，成本低，所需要的只有人才和知识产权，它的大部分成本和价值都蕴藏在人才和知识产权中。对于这样的行业，它要那么多资金干嘛，它只需要人才和知识产权。只要做好人才和知识产权的文章，软件企业就可以踌躇满志，杀向市场了。对于人才和知识产权，管理层最应该做的就是制度支持了，其他的最好少做点。管理层不应当过于保护企业，尽管这是善意的，过于保护那就是溺爱，自古有几个备受溺爱的人变英雄?倒是十有九个成了败家子。 对于人才，首先建立城市的人文环境，使得人文环境适合进行科技研发。法律制度很多是公平合理的，而人文环境会扭曲它们的执行。古人为了请人才，亲自抬轿子，三顾茅庐，光着脚奔跑，无所不用其极。现在的管理层也应当有这样的胸怀，加大对科技人才的人文关怀，整体提高科技人才的社会地位，最好有相当多的具有科技背景的人担任重要职位。由于科技人才整体的社会交际能力和钻营能力低于平均水平，在目前的主流人文环境下科技人才的社会地位真的是不高的。 对于人才应当赏罚分明，有贡献必须有奖励，小贡献小奖励，大贡献大奖励，对于这些，管理层精于治人，应当比我清楚得多。 对于制度，首先建立和强化知识产权保护制度。还有一个就是知识产权交易制度。还有的就是制度的透明执行。国人从来是“不患寡而患不均”，而不均就是不透明的产物。只要制度透明执行，寡不寡就不是问题了。 兵马未动，粮草先行。知识产权就是软件行业的粮草啊。为了发展民族软件行业，建设中国的信息化社会，巩固国家政治经济安全，必须严厉保护知识产权，这是中国软件业的发展的必由路，无可回避。希望大家能想一下自己的短期的既得利益，比较一下中国长期的战略利益，分析一下西方发达国家的阴谋，面对廉价的盗版软件和高价的正版软件，您会选择那个? &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<strong>作者：袁永福(<a target="_blank" rel="noopener" href="https://www.xdesigner.cn/">https://www.xdesigner.cn/</a>)</strong>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 我说：国人多不用盗版，就跟多不吃洋快餐一样的原因——消费不起，都是美国垄断的东西，价格是人家的全球定价，老美们可能觉得不贵，在中国可就顶吃仨月猪肉炖粉条的高价，这怪不得国人。盗版还是要用的，一个番茄倒下去，千万个西红柿站起来。但是，用归用，说归说，我们还是需要做些事情来应对亡我之心不死的帝国主义的攻击，在网上看到多篇讨论番茄事件的评论文章，不是灌水就是扯淡，就找到很少的有深度的文章，在此选登一篇。 PS：受番茄事件的影响，国内很多提供类似盗版系统下载的论坛都停止了下载服务，深度、雨林木风的Windows XP，盛世雄风的Windows 2003都在避风头，还好我已经提前bla bla bla……</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/what-an-old-programmer-say.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/what-an-old-programmer-say.html" itemprop="url">一个老程序员的心里话说到人的心坎</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-08-21T00:15:36+08:00">
+                2008-08-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A4%BE%E4%BC%9A%E7%99%BE%E6%80%81/" itemprop="url" rel="index">
+                    <span itemprop="name">社会百态</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>诸位，咱当电子工程师也是十余年了，不算有出息，环顾四周，也没有看见几个有出息的！回顾工程师生涯，感慨万千，愿意讲几句掏心窝子的话，也算给咱们师弟师妹们提个醒，希望他们比咱们强！ [1] 好好规划自己的路，不要跟着感觉走！根据个人的理想决策安排，绝大部分人并不指望成为什么院士或教授，而是希望活得滋润一些，爽一些。那么，就需要慎重安排自己的轨迹。从哪个行业入手，逐渐对该行业深入了解，不要频繁跳槽，特别是不要为了一点工资而转移阵地，从长远看，这点钱根本不算什么，当你对一个行业有那么几年的体会，以后钱根本不是问题。频繁地动荡不是上策，最后你对哪个行业都没有摸透，永远是新手！ [2]可以做技术，切不可沉湎于技术。千万不可一门心思钻研技术！给自己很大压力，如果你的心思全部放在这上面，那么注定你将成为孔乙己一类的人物！适可而止为之，因为技术只不过是你今后前途的支柱之一，而且还不是最大的支柱，除非你只愿意到老还是个工程师！ [3] 不要去做技术高手，只去做综合素质高手！在企业里混，我们时常瞧不起某人，说他“什么都不懂，凭啥拿那么多钱，凭啥升官！”这是普遍的典型的工程师的迂腐之言。8051很牛吗？人家能上去必然有他的本事，而且是你没有的本事。你想想，老板搞经营那么多年，难道见识不如你这个新兵？人家或许善于管理，善于领会老板意图，善于部门协调等等。因此务必培养自己多方面的能力，包括管理，亲和力，察言观色能力，攻关能力等，要成为综合素质的高手，则前途无量，否则只能躲在角落看示波器！技术以外的技能才是更重要的本事！！从古到今，美国***，一律如此！ [4]多交社会三教九流的朋友！不要只和工程师交往，认为有共同语言，其实更重要的是和其他类人物交往，如果你希望有朝一日当老板或高层管理，那么你整日面对的就是这些人。了解他们的经历，思维习惯，爱好，学习他们处理问题的模式，了解社会各个角落的现象和问题，这是以后发展的巨大的本钱，没有这些以后就会笨手笨脚，跌跌撞撞，遇到重重困难，交不少学费，成功的概率大大降低！ [5]知识涉猎不一定专，但一定要广！多看看其他方面的书，金融，财会，进出口，税务，法律等等，为以后做一些积累，以后的用处会更大！会少交许多学费！！ [6] 抓住时机向技术管理或市场销售方面的转变！要想有前途就不能一直搞开发，适当时候要转变为管理或销售，前途会更大，以前搞技术也没有白搞，以后还用得着。搞管理可以培养自己的领导能力，搞销售可以培养自己的市场概念和思维，同时为自己以后发展积累庞大的人脉！应该说这才是前途的真正支柱！！！ [7] 逐渐克服自己的心里弱点和性格缺陷！多疑，敏感，天真（贬义，并不可爱），犹豫不决，胆怯，多虑，脸皮太薄，心不够黑，教条式思维。。。这些工程师普遍存在的性格弱点必须改变！很难吗？只在床上想一想当然不可能，去帮朋友守一个月地摊，包准有效果，去实践，而不要只想！不克服这些缺点，一切不可能，甚至连项目经理都当不好–尽管你可能技术不错！ [8]工作的同时要为以后做准备！建立自己的工作环境！及早为自己配置一个工作环境，装备电脑，示波器（可以买个二手的），仿真器，编程器等，业余可以接点活，一方面接触市场，培养市场感觉，同时也积累资金，更重要的是准备自己的产品，咱搞技术的没有钱，只有技术，技术的代表不是学历和证书，而是产品，拿出象样的产品，就可技术转让或与人合作搞企业！先把东西准备好，等待机会，否则，有了机会也抓不住！ [9]要学会善于推销自己！不仅要能干，还要能说，能写，善于利用一切机会推销自己，树立自己的品牌形象，很必要！要创造条件让别人了解自己，不然老板怎么知道你能干？外面的投资人怎么相信你？提早把自己推销出去，机会自然会来找你！搞个个人主页是个好注意！！特别是培养自己在行业的名气，有了名气，高薪机会自不在话下，更重要的是有合作的机会… [10]该出手时便出手！永远不可能有100%把握！！！条件差不多就要大胆去干，去闯出自己的事业，不要犹豫，不要彷徨，干了不一定成功，但至少为下一次冲击积累了经验，不干永远没出息，而且要干成必然要经历失败。不经历风雨，怎么见彩虹，没有人能随随便便成功！ &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 转自<a target="_blank" rel="noopener" href="https://bbs.ssxf.org/read.php?tid=40738">盛世雄风论坛</a> by snui007</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/my-wallpaper-for-windows-server-2003.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/my-wallpaper-for-windows-server-2003.html" itemprop="url">我的壁纸——For Windows 2003</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-08-16T22:12:53+08:00">
+                2008-08-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106982064/" title="001 by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3051/3106982064_64deebf1b2.jpg" alt="001"></a> 上面的壁纸是在微软官方Windows Server 2008网站上下载的壁纸，形象是08的机器人，我添加了自己的logo、我的域名、firefox的logo（像一个篮球）、我用的杀毒软件ESET Smart Security的logo，又把右上角的Microsoft标志灭了，又把Windows Server 2008的“8”去掉了一半，成了2003，大功告成！ 最近刚刚换上Windows 2003企业版，确实比较好用。体会最深的一点是在我的512内存笔记本上，打开Firefox上会网，打开Photoshop做会子图，再打开2个TM，让这些软件共同工作一会，然后都关了。猜怎么着，系统依然十分流畅，在桌面打开属性菜单，瞬间完成，再看内存占用——46%！我刚开机时可是55%，开了这么多软件内存竟然释放的这么快，同样的操作在XP上进行的话，只有重启了，非如此系统不能流畅运行（又仨小时后也能释放内存，但我等不了）。 Windows2003拥有比WINXP更加强大的内存管理，在稳定性、程序响应速度方面更超越XP。是因为Windows2003 的设计初衷导致个人用户需要经过很多手段、方法调整后才能正常使用这个如此强大的系统，如果不这样，从2000，XP转向2003的用户会感觉很不习惯，致使很多个人用户对Windows2003望而却步。 现在，你有了新的选择了！ Windows2003个人精简版将令你完全改观！它的易用性、定性、安全性会让你感到兴奋！在众多的精简版本中，又以<a target="_blank" rel="noopener" href="https://bbs.ssxf.org/">盛世雄风论坛</a>的冷风精简的03企业版为最成熟的版本，冷风多年接触2003的精简工作，其作品十分适合已经熟悉XP操作的用户使用，其最新作品是080808版。 <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106151301/" title="sysinfo2003 by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3022/3106151301_f3cf2164d2_o.jpg" alt="sysinfo2003"></a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/support-symantec-on-taiwan.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/support-symantec-on-taiwan.html" itemprop="url">支持赛门铁克，支持祖国统一</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-08-11T22:43:58+08:00">
+                2008-08-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106153009/" title="symantec by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3027/3106153009_b5673baf58_o.gif" alt="symantec"></a> <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106983804/" title="good-symantec by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3122/3106983804_bcd92ba6fc_o.jpg" alt="good-symantec"></a> <a target="_blank" rel="noopener" href="https://www.symantec.com/norton-beta/internet-security/">https://www.symantec.com/norton-beta/internet-security/</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/rising-antivirus-sleeping-in-radio.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/rising-antivirus-sleeping-in-radio.html" itemprop="url">瑞星在收音机里睡觉</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2008-08-06T22:29:31+08:00">
+                2008-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a target="_blank" rel="noopener" href="https://www.flickr.com/photos/rhsong/3106157863/" title="rising by rhsong, on Flickr"><img src="https://farm4.static.flickr.com/3010/3106157863_61128c68ba_o.gif" alt="rising"></a>县城电台，上午在广告的时候，估计是电脑自动的，无人值守。结果不一会就听见收音机里传出了小狮子打呼噜的声音，每天都这样，时间挺准的，估计是设置的自动. 瑞星保护你的电脑远离病毒！！！哈哈哈哈</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
   <nav class="pagination">
 
-    <a class="extend prev" rel="prev" href="/page/29/">&lt;&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/31/">&gt;&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/29/">&lt;&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><a class="page-number" href="/page/32/">32</a><span class="space">&hellip;</span><a class="page-number" href="/page/51/">51</a><a class="extend next" rel="next" href="/page/31/">&gt;&gt;</a>
 
   </nav>
 
@@ -1994,7 +1987,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">517</span>
+                  <span class="site-state-item-count">509</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2016,7 +2009,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">485</span>
+                  <span class="site-state-item-count">481</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
