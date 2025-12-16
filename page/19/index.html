@@ -361,337 +361,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/hk4win-0-8.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/hk4win-0-8.html" itemprop="url">HK4WIN快捷键程序  第0.8版本发布</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-06-19T18:07:01+08:00">
-                2011-06-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
-                    <span itemprop="name">小品软件</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="HK4WIN-简介"><a href="#HK4WIN-简介" class="headerlink" title="HK4WIN 简介"></a>HK4WIN 简介</h3><p>HK4WIN (<em>HotKeys for WINdows</em>) 是一款针对Windows系统的快捷键程序，HK4WIN可使得经常使用的系统功能通过快捷键的方式触发。此次新发布的0.8版本新加入很多功能，同时修正了0.7版本中的若干bug，推荐下载、更新。</p>
-<p><a href="https://www.songruihua.com/hk4win-dl"><img src="https://songruihua-image.googlecode.com/files/down2.jpg"></a></p>
-<h3 id="更新详情："><a href="#更新详情：" class="headerlink" title="更新详情："></a>更新详情：</h3><p><strong>0.8 Build 20110620</strong></p>
-<p>1.从0.7版本开始加入的“快捷键功能开关”设计不够合理，导致许多功能在刚启动HK4WIN时有效，但过一会自动失效，经检查原因是：每一个被加上 “开关”的功能在触发之前都要读取ini文件以检查是开还是关，这导致某些功能失效。0.8版本做出改进：在HK4WIN启动的时候读取所有开关状态并保 存在内存中，这样每次判断开关状态就不必读取ini文件了，直接从内存读取即可，但这导致修改开关之后必须按 Ctrl+Alt+Shift+F5 重启HK4WIN才能生效。</p>
-<p>2.彻底解决Win+C打开控制面板不稳定的bug。</p>
-<p>3.Win+N新建文件夹时不再是系统默认的“新建文件夹”，而是以当前日期和时间命名（例如“2011-05-26 [16.09.19]”），但仍需要按回车或单击空白处才能完成新建，所以可以在按回车前修改。</p>
-<p>4.如果关闭了“双击鼠标右键最大化功能”(Fn0324)，Firefox等软件的鼠标手势功能会失效，Excel也会出现一些问题，0.8版本已修复此bug。</p>
-<p>5.在0.7版本中删去了“Alt+鼠标左&#x2F;右键（按下Alt不放，鼠标左键任意位置移动窗口，鼠标右键任意位置缩放窗口）”功能，原因是该功能与系统自 身的“按住Alt双击显示属性”冲突，但有人的确需要该功能，所以0.8版本重新加入，但快捷键变更为RAlt即右侧的Alt键，这样一来“按住Alt双 击显示属性”功能就必须使用左侧Alt键了（LAlt），这样就避免了冲突。如果不习惯这样的安排，可将Fn0334设为0以关闭此功能。</p>
-<p>6.加入自动更新功能：每逢周三周日第一次启动HK4WIN（以及生成ini文件时）后，会联网下载一个大小仅仅约为5KB的txt文本文件，这个文件会 携带是否有更新的信息，HK4WIN如果发现有更新会下载新版的HK4WIN.exe（1M左右）以取代旧版本，旧版本会转移到一个名为 OlderVersion的文件夹。自动升级功能需要一个名为HK4WIN_LU的文件，该文件会包含在自0.8版本始的所有版本中，HK4WIN_LU 同样也是开源的，绝不会有什么“流氓行为”（自动更新绝不会从您的电脑向外发送任何文件、信息，仅仅是从官方网站下载txt文件，即“只入不出”），如果 您安装了防火墙软件，推荐允许其联网以及时获取最新版本的HK4WIN。如果确实不需要自动更新功能可按下Ctrl+Alt+Shift+Z打开设置窗 口，搜索“[UserSetting]”（不带引号），在[UserSetting]下找到DisableLiveUpdate，将等号后的值由0改为1 即可禁用自动更新。</p>
-<p>7.中国有不少Google的拥趸，但有时Google会“莫名其妙”的打不开，这时有些人会极不情愿地打开百度，查看被严重阉割过的搜索结果，这种情况 很令人恼火。0.8版本新加入如下功能：用鼠标左键选中想要搜索的关键词，按F3键可自动使用Google搜索选中的关键词，如果不幸被“莫名其妙”会自 动打开百度搜索同样的关键词。希望这种“<strong>中国特色</strong>”的功能可以缓解一下广大群众日益不稳定的情绪。 默认按F3使用“谷歌香港”搜 索，按Shift+F3使用百度搜索，也可以根据需要修改这两个快捷键使用的搜索引擎：按下Ctrl+Alt+Shift+Z打开设置窗口，搜索 “[UserSetting]”（不带引号），在[UserSetting]下找到SearchEngine_F3和 SearchEngine_Shift_F3，修改等号后的值即可，1代表谷歌香港，2代表Google国际，3代表百度。</p>
-<p>8.增强屏幕右下角用滚轮调整音量的稳定性：鼠标滚轮控制音量(Fn0301)不再限于“任务栏”上，只要鼠标在屏幕右下角就可以调整，这意味着即使在全屏模式下（游戏或视频）仍然可以通过鼠标调整音量。</p>
-<p>9.在开始按钮上滚动滚轮直接可打开Flip3D，之前的版本需要先按下滚轮。我有一个体会：微软设计的Flip3D界面很华丽，甚至有些人升级 Vista或Win7就是因为喜欢Flip3D和Aero，微软也把这种“高调的华丽”当做一个卖点，但微软为Flip3D功能设置了Win+Tab的键 很不人性化，因为我每次想要启动Flip3D都要想一想到底是按Win+Tab呢还是Alt+Tab，并且由于习惯使然和标准键盘的按键位置我总是按下后 者，为此我专门设计了用滚轮启动Flip3D的功能，在Win7中只要在开始按钮上滚一下鼠标滚轮就搞定，能想到这么一个好点子，<strong>我骄傲！</strong></p>
-<p>10.在窗口标题栏上实现滚轮控制：标题栏向上滚轮最大化窗口，向下滚轮恢复&#x2F;最小化窗口，按下滚轮关闭窗口，以上这些操作均不必选中窗口，即目标窗口不必在“最前”，只要鼠标放在窗口标题栏上就可对其操作。另外任务栏上向下滚轮最小化所有窗口（显示桌面）。 按 下Ctrl+Alt+Shift+Z打开设置窗口，搜索WheelDown_MinFx，它的值决定了在Firefox4+的标签页栏向下滚动鼠标滚轮是 否将其最小化，如果你平时上网时打开很多标签页，需要用滚轮左右滑动标签页栏，建议保持默认值0（不最小化），如果打开的标签页不多则建议修改为1，这样 可以方便地将Firefox最小化。InstantMinimizeWindow的值决定了在已经最大化的窗口的标题栏上向下滚轮实现什么操作，1为直接 最小化（默认），0为“向下还原”到最大化之前的大小。</p>
-<p>11.RShift+滚轮(Fn0339)调整当前任意窗口的透明度。为防止窗口“找不到”了，对透明度有所限制，不能太过透明。想要调整某个窗口的透明度，必须先将其置于其他窗口之前，这一点和上面的“10.在窗口标题栏上实现滚轮控制”有所不同。</p>
-<p>12.定时自动关机功能得到加强：同时按左右Ctrl键启动定时关机功能，有两种定时模式。模式一为倒计时模式，可直接输入一个整数，例如30，那么电脑 会在半小时即30分钟后自动关机，这种模式支持最长3天内的自动关机，所以最大限值4320；模式二为定时模式，可输入一个具体的时间，即直接指定自动关 机时间(24小时制)，例如21:05，这种模式仅支持24小时内的自动关机。 另外，如果要每天执行自动关机，可以按 Ctrl+Alt+Shift+Z 打开设置窗口，搜索AutoShutdownTime，将其等号后改为具体时间，例如17:35，这样每天下午5点半下班后电脑会自动关机，就不要总想着 关电脑这事了。注意修改完成之后记得保存，并且需要按 Ctrl+Alt+Shift+F5 重启HK4WIN才能生效，如果关机时电脑处于睡眠或休眠状态则自动关机无效，如果HK4WIN被中途关闭同样无效。</p>
-<p><a href="https://www.songruihua.com/hk4win-dl"><img src="https://songruihua-image.googlecode.com/files/down2.jpg"></a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/2011-hell-again.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="宋瑞华">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="宋瑞华">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/archives/2011-hell-again.html" itemprop="url">2011 高考祝福：献给即将握住自己命运的孩子们</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">发表于</span-->
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-06-07T21:48:20+08:00">
-                2011-06-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <!--span class="post-meta-item-text">分类于</span-->
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%89%AF%E6%B7%A1%E9%BE%99%E9%97%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">扯淡龙门</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-		  
-		  
-		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
-		  
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天是2011年高考第一天，我祝福参加高考的同学们一切顺利，祝大家考出好成绩！ 每年就算再忙，我也会在这个时候祝福上考场的同学们。因为我从没忘记自己也曾经是这大军的一分子。正因为我经历过那段时光，所以每年一次的祝福，我再忙也不会忘，这是献给过去的自己的一份祭品。 今年，全国高考报名人数为933万人，较去年减少了24万人，录取率达72.3%。随着时间推移，正有越来越多的人选择高考之外的道路来证明自己。在每年看着学生们攻克书山题海，家长们操碎了心的这幕活剧的过程中，其实我们的生活正悄然改变着。 这几天，正是高三同学们做最后一套模拟题，然后就放假去睡那坐卧不安的“放松觉”的时候，南方科技大学录取的第一批新生，正在争取不参加高考的权利，而他们的校长也因为受到莫名的阻力而烦恼着。这是高考这个制度正在日益被撬动的最新注解。如果有足够的胆量和勇气，也不用在意家人的担忧，高考其实并不是每个人必经的人生炼狱。 但是，今天的主角依然无可争议的是那933万把自己命运交给这次考试的孩子们。他们当中，有从小学习一直很好，承载着家里几代人希望的好苗子；有带着村里爹妈还没捂热的辛苦钱，梦想花个十年二十年，和城里孩子一起喝咖啡的娃儿；有自己想发展兴趣爱好，却无奈在家长重压下放下，一门心思扑到学习上的同学……他们仍是这个社会18岁里的大多数，他们仍是当年的我。 为了这些同学，我仍要献上从不减量的祝福。首先，竭尽全力考好眼前的考试是最重要的；但是，我仍有更多的话想说。 高考也许是考生们作为孩子，最后一次听从父母长辈的安排，最后一次为了满足他们的愿望，而决定自己的人生路。从这以后，一切就都看自己的了。他们可能没法选择喜欢的大学，但可以选择自己喜欢的方式来度过大学四年。喜欢不喜欢课程都没关系，因为可以随便翘课。在大学，课堂不仅在校园内，只要愿意的话，你可以走遍世界——前提是跟导师打好招呼。 而大学之后，如何证明自己，方式可能更加五花八门。你可以出国——其他同学也许比你多出去两年；也可以考研，考公务员——重温一下高考这样紧张的日子。当然，也可以出外闯荡，丰富自己的人生体验，也可以安心的念完所有课程，回家乡找一份稳定的工作。这里有一点最大的不同——就是我们的命运，从这一刻起，开始掌握在我们自己手中。 这一刻，第一天的考试已经结束了，大多数孩子不管睡着睡不着应该已经躺在床上了。如果考生访客朋友还能抽空来看我的博客，那就能看到我满载的这份祝福。愿将要握住自己命运的孩子们，都能一切顺利。 再一次祝各位考生好运！ 剽窃自：<a target="_blank" rel="noopener" href="https://www.cnbeta.com/articles/144979.htm">cnBeta.com LJ</a> 2011.06.07</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-      
-
-
-    <footer class="post-footer">
-      
-
-      
-
-
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/17-nc-boy-sell-kidney-for-ipad.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1902,7 +1571,7 @@
             <p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p>
 <p>现公布原代码：</p>
 <blockquote>
-<p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#x64;&#x65;&#108;&#x66;&#x64;&#x40;&#115;&#x6f;&#110;&#103;&#114;&#x75;&#x69;&#104;&#117;&#97;&#46;&#99;&#x6f;&#x6d;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p>
+<p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#100;&#x65;&#x6c;&#102;&#x64;&#x40;&#115;&#x6f;&#110;&#103;&#x72;&#x75;&#x69;&#104;&#117;&#x61;&#46;&#99;&#x6f;&#109;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p>
 <p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p>
 <p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p>
 <p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p>
@@ -1913,6 +1582,336 @@
 <p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p>
 </blockquote>
 <p>Technorati : 软件<br>Del.icio.us : <a target="_blank" rel="noopener" href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a target="_blank" rel="noopener" href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/hk4win-delfd.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/hk4win-delfd.html" itemprop="url">一键实现“安全删除硬件”</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-03-09T23:39:14+08:00">
+                2011-03-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一键实现”安全删除硬件”，<a href="https://www.songruihua.com/hk4win" title="点击下载"><strong>点击下载</strong></a> 本程序并运行后，可实现 Win+Delete 组合键自动”安全删除硬件”，再也不要在右下角找那个绿色小东西了。除此之外，还有其他更多功能。如不能点击上面的链接可复制以下网址：<a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p>
+<p>现公布原代码：</p>
+<blockquote>
+<p>;***************************************************************************<br>;<br>; Program : DelFD (已被包含于HK4WIN)<br>; Coder : Song Ruihua 宋瑞华<br>; Updated : Wed Mar 9 16:29:37 2011<br>;<br>; Email:<a href="mailto:&#x64;&#101;&#x6c;&#x66;&#100;&#x40;&#115;&#111;&#x6e;&#x67;&#x72;&#x75;&#x69;&#x68;&#117;&#97;&#46;&#99;&#111;&#x6d;">delfd@songruihua.com</a><br>; 官网: <a href="https://www.songruihua.com/hk4win">https://www.songruihua.com/hk4win</a></p>
+<p>; HAS BEEN TESTED ONLY ON WINDOWS XP PRO SP3 SIMPLIFIED CHINESE EDITION<br>; 只在WINDOWS XP PRO SP3简体中文版上做过测试，无关键性错误<br>;****************************************************************************</p>
+<p>&lt;#Del:: ;左Win+Del触发快捷键<br>KeyWait, LWin ;等待左Win键被释放后才继续执行<br>RETRY_TO_ROMOVE_FD: ;重试标记（删除失败时从此开始重试）<br>DriveGet, HAVE_FD, List , REMOVABLE ;将可移动设备的驱动器号（IJKL…）存储于变量HAVE_FD</p>
+<p>If(HAVE_FD&lt;&gt;””) ;如果HAVE_FD不是空的，即存在可移动设备<br>{<br>StringLeft, REMOVED_FD, HAVE_FD, 1 ;将变量HAVE_FD的最左端的字符(I)存储于REMOVED_FD(欲删之)<br>DriveGet, FD_LABEL, label,%REMOVED_FD%:;读取欲删设备的卷标（如：优盘A）</p>
+<p>Gosub, DelDev ;执行删除操作（见下）  </p>
+<p>DriveGet, HAVE_FD_2, List , REMOVABLE ;再次将可移动设备的驱动器号（JKL…）存储于变量HAVE_FD_2<br>StringLeft, NEXT_FD, HAVE_FD_2, 1 ;将变量HAVE_FD_2的最左端的字符(J)存储于NEXT_FD<br>DriveGet, FD_LABEL_2, label,%NEXT_FD%: ;读取欲删设备的卷标（如：优盘B）<br>if(REMOVED_FD&lt;&gt;NEXT_FD) ;如REMOVED_FD不等于NEXT_FD，则说明成功删除优盘A(I:)<br>{<br>StringLen, HAVE_FD_2_COUNT, HAVE_FD_2 ;目前有几个可移动设备（存于HAVE_FD_2_COUNT）<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件删除.wav ;声音提示<br>if(HAVE_FD_2_COUNT&#x3D;0) ;如目前没有可移动设备了（0个）<br>MsgBox, 262192, HK4WIN, 已安全删除 %FD_LABEL% (%REMOVED_FD%:)<code>n电脑上已无可移动设备,30   else ;否则提示目前有几个可移动设备，以及下次将删除那个设备   MsgBox, 262192, HK4WIN, 已安全删除 %FD\_LABEL% (%REMOVED\_FD%:)\</code>n电脑上仍插有 %HAVE_FD_2_COUNT% 个可移动设备`n再次按下 LWin+Del 将删除 %FD_LABEL_2% (%NEXT_FD%:),30<br>}<br>else ;如REMOVED_FD等于NEXT_FD，则说明优盘A(I:)未成功删除<br>{<br>SoundPlay, %A_WinDir%\Media\Windows XP 硬件故障.wav ;声音提示<br>if WinActive(“弹出”) and WinActive(“ahk_class #32770”) ;关闭Windows系统的删除失败提示<br>send,{Enter}<br>MsgBox, 262165, 请不要拔出可移动设备！！！, 无法安全删除 %FD_LABEL% (%REMOVED_FD%:) `n`n操作建议：`n1.关闭杀毒软件；`n2.关闭QQ，因其会偷偷扫描用户磁盘；`n3.关闭其他可能正在使用此设备的软件；`n4.您是否正在进行复制粘贴操作；`n5.稍后重试 (LWin+Del)；`n6.关机后拔出此设备。<br>IfMsgBox, Retry ;如用户选择重试，则返回”重试标记”处再次执行<br>Goto, RETRY_TO_ROMOVE_FD<br>else ;如用户选择取消，则结束<br>return<br>}</p>
+<p>}<br>else ;如果HAVE_FD是空的，即不存在可移动设备<br>{<br>MsgBox, 16, HK4WIN未发现可移动设备, 您的电脑未连接任何可移动设备。&#96;n如果您的设备未被正确识别，可按Win+Shift+Del强制删除。,10<br>}<br>return</p>
+<p>&lt;#&lt;+Del::Gosub, DelDev ;如设备未被正确识别，可按LWin+LShift+Del强制删除</p>
+<p>DelDev: ;开始执行删除操作<br>BlockInput ,On ;锁定键盘和鼠标，以避免用户误操作<br>Run %A_WinDir%\system32\control.exe hotplug.dll ;打开”安全删除硬件”窗口<br>WinWait 安全删除硬件 ;等待”安全删除硬件”窗口打开，以避免误操作<br>ControlGet,STOP_BUTTON,Enabled,,Button2 ;检测”停止”按钮是否可用<br>If STOP_BUTTON{ ;如”停止”按钮可用<br>ControlSend,Button2,s ;按下”停止”按钮<br>WinWait 停用硬件设备 ;等待”停用硬件设备”窗口<br>ControlSend,Button1,{Enter} ;按下”确认”按钮<br>}<br>WinWaitClose 停用硬件设备 ;等待”停用硬件设备”窗口关闭，以避免误操作<br>WinClose 安全删除硬件 ;关闭”安全删除硬件”窗口<br>WinWaitClose 安全删除硬件 ;等待”安全删除硬件”窗口关闭，以避免误操作<br>BlockInput ,Off ;解除键盘和鼠标锁定<br>sleep,100 ;休息一下<br>if WinActive(“ahk_class CabinetWClass”) and (WinActive(“我的电脑”) or WinActive(“计算机”))<br>send,{F5} ;如果是”我的电脑”或”计算机”窗口则刷新一下<br>return</p>
+</blockquote>
+<p>Technorati : 软件<br>Del.icio.us : <a target="_blank" rel="noopener" href="https://del.icio.us/tag/%E8%BD%AF%E4%BB%B6">软件</a><br>Zooomr : <a target="_blank" rel="noopener" href="https://www.zooomr.com/search/photos/?q=%E8%BD%AF%E4%BB%B6">软件</a><br>Flickr : <a target="_blank" rel="noopener" href="https://www.flickr.com/photos/tags/%E8%BD%AF%E4%BB%B6">软件</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+
+
+
+      
+
+
+    <footer class="post-footer">
+      
+
+      
+
+
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.songruihua.com/archives/hk4win.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="宋瑞华">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="宋瑞华">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/hk4win.html" itemprop="url">HK4WIN——电脑快捷键</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">发表于</span-->
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2011-03-04T23:36:25+08:00">
+                2011-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <!--span class="post-meta-item-text">分类于</span-->
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E5%93%81%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">小品软件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+		  
+		  
+		  <!--span id="busuanzi_container_page_pv">本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span-->
+		  
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>HK4WIN &#x3D; HotKeys for WINdows 我写的一款针对Windows系统的快捷键程序，HK4WIN可使得经常使用的系统功能通过快捷键的方式触发，例如日常工作中经常要插拔优盘，“安全删除硬件”功能几乎人人都用过，使用HK4WIN之后，可以通过Win+Delete快捷键自动移除优盘，再比如我们经常要打开“我的电脑”，然后双击某一个盘符（如D:），这是经常要做的事情，如果按下快捷键Win+Alt+D就可直接打开D盘，是不是很方便呢？总之有很多的常用功能都可以通过快捷键来完成。 系统要求 本程序在正版简体中文版XP Pro SP3、Win7 SP1和Win8(0.14版本开始支持Win8)上测试无关键性错误，其他操作系统未作测试。 <strong>您一旦安装、复制或以其它方式使用“HK4WIN”，即表示您同意接受<a href="https://www.songruihua.com/hk4win">《HK4WIN软件最终用户许可协议》</a>各项条件的约束。如您不同意本其中的条件，请不要下载、安装或使用“HK4WIN”。</strong></p>
+<p><strong><a href="https://www.songruihua.com/hk4win">点击下载</a></strong></p>
 
           
         
@@ -2019,7 +2018,7 @@
                 <!--a href="/archives/%20%7C%7C%20archive"-->
 				 <a href="/archives">
               
-                 <span class="site-state-item-count">496</span>
+                 <span class="site-state-item-count">494</span>
                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2041,7 +2040,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">464</span>
+                  <span class="site-state-item-count">462</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
