@@ -9,4 +9,4 @@ comments: true
 注册方法：
 1、微信扫一扫下面的二维码，加微信，发个红包。
 2、发机器码，稍后我给你注册码。
-![wechat](https://s.songruihua.com/images/static/songruihua-wechat.jpg)
+![wechat](https://songruihua-s.github.io/images/static/songruihua-wechat.jpg)
